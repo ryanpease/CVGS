@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.dll" total="175" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2016-11-01" time="17:56:10">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.8745" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.4\bin" machine-name="DESKTOP-DTATPO7" user="Ryan" user-domain="DESKTOP-DTATPO7" />
+  <culture-info current-culture="en-CA" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.dll" executed="True" result="Success" success="True" time="0.758" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="VideoGameStore" executed="True" result="Success" success="True" time="0.753" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="0.753" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="AddressTest" executed="True" result="Success" success="True" time="0.127" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.AddressTest.AddressTest_AddressIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.034" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.AddressTest.AddressTest_CityWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.AddressTest.AddressTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.AddressTest.AddressTest_PostalCodeWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.AddressTest.AddressTest_ProvinceIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.AddressTest.AddressTest_StreetAddressWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.AddressTest.AddressTest_Validation_AddressWithLowerCase_ShouldMakeFirstLetterOfEachWord" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.AddressTest.AddressTest_Validation_PostalCodeWithLowerCase_ShouldMakeUpperCase" executed="True" result="Success" success="True" time="0.068" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.AddressTest.AddressTest_Validation_PostalCodeWithSpace_ShouldRemoveSpace" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Credit_CardTest" executed="True" result="Success" success="True" time="0.009" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.Credit_CardTest.Credit_CardTest_CardNumberWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Credit_CardTest.Credit_CardTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Credit_CardTest.Credit_CardTest_CreditCardIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Credit_CardTest.Credit_CardTest_ExpiryDateWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Credit_CardTest.Credit_CardTest_IsExpiredWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Credit_CardTest.Credit_CardTest_IsFlaggedWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Customer_AddressTest" executed="True" result="Success" success="True" time="0.005" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.Customer_AddressTest.Customer_AddressTest_AddressIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Customer_AddressTest.Customer_AddressTest_AddressNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Customer_AddressTest.Customer_AddressTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Customer_AddressTest.Customer_AddressTest_CustomerIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Customer_GameTest" executed="True" result="Success" success="True" time="0.007" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.Customer_GameTest.Customer_GameTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Customer_GameTest.Customer_GameTest_CustomerGameIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Customer_GameTest.Customer_GameTest_CustomerIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Customer_GameTest.Customer_GameTest_DatePurchasedWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Customer_GameTest.Customer_GameTest_GameIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Customer_GameTest.Customer_GameTest_RatingWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="CustomerTest" executed="True" result="Success" success="True" time="0.040" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_BirthDateWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_CustomerConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_CustomerIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_DateJoinedWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_EmailWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_FavoriteCategoryWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_FavoritePlatformWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_FirstNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_GenderWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_IsInactiveWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_IsLockedOutWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_IsMemberWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_IsOnEmailListWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_LastNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_LoginFailuresWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_NotesWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_PasswordWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_PhoneNumberWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_UsernameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_Validation_FirstNameLowerCase_ShouldCapitalizeFirstLetter" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_Validation_LastNameLowerCase_ShouldCapitalizeFirstLetter" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.CustomerTest.CustomerTest_Validation_PhoneNumberWithDashes_ShouldRemoveDashes" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="DeveloperTest" executed="True" result="Success" success="True" time="0.030" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.DeveloperTest.DeveloperTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.DeveloperTest.DeveloperTest_ContactEmailWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.DeveloperTest.DeveloperTest_ContactNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.DeveloperTest.DeveloperTest_ContactPhoneNumberWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.DeveloperTest.DeveloperTest_DeveloperIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.DeveloperTest.DeveloperTest_DeveloperNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.DeveloperTest.DeveloperTest_Validation_ContactNameLowerCase_ShouldCapitalizeFirstLetterOfEachWord" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.DeveloperTest.DeveloperTest_Validation_PhoneNumberWithDashes_ShouldRemoveDashes" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Employee_AddressTest" executed="True" result="Success" success="True" time="0.017" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.Employee_AddressTest.Employee_AddressTest_AddressIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Employee_AddressTest.Employee_AddressTest_AddressNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Employee_AddressTest.Employee_AddressTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Employee_AddressTest.Employee_AddressTest_EmployeeIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="EmployeeTest" executed="True" result="Success" success="True" time="0.058" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_BirthDateWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_DateHiredWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_EmailWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_EmployeeIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_FirstNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_GenderWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_IsAdminWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_IsInactiveWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_IsLockedOutWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_LastNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_LoginFailuresWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_NotesWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_PasswordWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_PhoneNumberWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_Validation_FirstNameLowerCase_ShouldCapitalizeFirstLetter" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_Validation_LastNameLowerCase_ShouldCapitalizeFirstLetter" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.EmployeeTest.EmployeeTest_Validation_PhoneNumberWithDashes_ShouldRemoveDashes" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Friend_ListTest" executed="True" result="Success" success="True" time="0.009" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.Friend_ListTest.Friend_ListTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Friend_ListTest.Friend_ListTest_CustomerIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Friend_ListTest.Friend_ListTest_DateAddedWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Friend_ListTest.Friend_ListTest_FriendIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Friend_ListTest.Friend_ListTest_IsFamilyWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="GameTest" executed="True" result="Success" success="True" time="0.051" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_CostWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_DescriptionWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_DeveloperIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_GameIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_GameNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_GenreIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_IsDiscontinuedWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_IsDownloadableWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_IsOnSaleWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_IsPhysicalCopyWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_ListPriceWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_OnHandWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_PublisherIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_ReleaseDateWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_Validation_DescriptionLowerCase_ShouldCapitalizeFirstLetterOfEachSentence" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_Validation_DescriptionLowerCase_ShouldCapitalizeFirstLetterOfEachSentenceEvenSingleWordSentences" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_Validation_DescriptionUpperCase_ShouldCapitalizeFirstLetterOfEachSentence" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_Validation_DescriptionUpperCase_ShouldCapitalizeFirstLetterOfEachSentenceEvenSingleWordSentences" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GameTest.GameTest_Validation_NameLowerCase_ShouldCapitalizeFirstLetters" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="GenreTest" executed="True" result="Success" success="True" time="0.036" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.GenreTest.GameTest_Validation_DescriptionLowerCase_ShouldCapitalizeFirstLetterOfEachSentence" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GenreTest.GameTest_Validation_DescriptionUpperCase_ShouldCapitalizeFirstLetterOfEachSentence" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GenreTest.GenreTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GenreTest.GenreTest_DescriptionWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GenreTest.GenreTest_GenreIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GenreTest.GenreTest_GenreNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GenreTest.GenreTest_Validation_DescriptionLowerCase_ShouldCapitalizeFirstLetterOfEachSentenceEvenSingleWordSentences" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GenreTest.GenreTest_Validation_DescriptionUpperCase_ShouldCapitalizeFirstLetterOfEachSentenceEvenSingleWordSentences" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.GenreTest.GenreTest_Validation_NameLowerCase_ShouldCapitalizeFirstLetters" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Invoice_AddressTest" executed="True" result="Success" success="True" time="0.019" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.Invoice_AddressTest.Invoice_AddressTest_AddressIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Invoice_AddressTest.Invoice_AddressTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Invoice_AddressTest.Invoice_AddressTest_InvoiceAddressIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Invoice_AddressTest.Invoice_AddressTest_InvoiceIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Invoice_AddressTest.Invoice_AddressTest_IsBillingAddressWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="InvoiceTest" executed="True" result="Success" success="True" time="0.029" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.InvoiceTest.InvoiceTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.InvoiceTest.InvoiceTest_CreditCardIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.InvoiceTest.InvoiceTest_CustomerIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.InvoiceTest.InvoiceTest_InvoiceDateWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.InvoiceTest.InvoiceTest_InvoiceIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.InvoiceTest.InvoiceTest_IsInvoiceClosedWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.InvoiceTest.InvoiceTest_ShipDateWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Line_ItemTest" executed="True" result="Success" success="True" time="0.018" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.Line_ItemTest.Line_ItemTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Line_ItemTest.Line_ItemTest_GameIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Line_ItemTest.Line_ItemTest_InvoiceIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Line_ItemTest.Line_ItemTest_LineItemIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Line_ItemTest.Line_ItemTest_QuantityWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="ProvinceTest" executed="True" result="Success" success="True" time="0.016" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.ProvinceTest.ProvinceTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.ProvinceTest.ProvinceTest_ProvinceCodeWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.ProvinceTest.ProvinceTest_ProvinceIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.ProvinceTest.ProvinceTest_ProvinceNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="PublisherTest" executed="True" result="Success" success="True" time="0.029" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.PublisherTest.PublisherTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.PublisherTest.PublisherTest_ContactEmailWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.PublisherTest.PublisherTest_ContactNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.PublisherTest.PublisherTest_ContactPhoneWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.PublisherTest.PublisherTest_PublisherNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.PublisherTest.PublisherTest_Validation_ContactNameLowerCase_ShouldCapitalizeFirstLetterOfEachWord" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.PublisherTest.PublisherTest_Validation_PhoneNumberWithDashes_ShouldRemoveDashes" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="ReviewTest" executed="True" result="Success" success="True" time="0.028" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.ReviewTest.ReviewTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.ReviewTest.ReviewTest_CustomerIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.ReviewTest.ReviewTest_GameIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.ReviewTest.ReviewTest_IsApprovedWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.ReviewTest.ReviewTest_IsDeletedWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.ReviewTest.ReviewTest_ReviewDateWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.ReviewTest.ReviewTest_ReviewIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Store_Event_CustomerTest" executed="True" result="Success" success="True" time="0.015" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.Store_Event_CustomerTest.Store_Event_CustomerTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_Event_CustomerTest.Store_Event_CustomerTest_CustomerIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_Event_CustomerTest.Store_Event_CustomerTest_StoreEventCustomerIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_Event_CustomerTest.Store_Event_CustomerTest_StoreEventIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Store_Event_EmployeeTest" executed="True" result="Success" success="True" time="0.015" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.Store_Event_EmployeeTest.Store_Event_EmployeeTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_Event_EmployeeTest.Store_Event_EmployeeTest_EmployeeIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_Event_EmployeeTest.Store_Event_EmployeeTest_StoreEventEmployeeIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_Event_EmployeeTest.Store_Event_EmployeeTest_StoreEventIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Store_EventTest" executed="True" result="Success" success="True" time="0.078" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_Event_Test_AddressIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_Event_Test_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_Event_Test_DescriptionWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_Event_Test_EndDateWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_Event_Test_IsCancelledWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_Event_Test_IsFullWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_Event_Test_IsMembersOnlyWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_Event_Test_MaxRegistrantsWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_Event_Test_StartDateWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_Event_Test_StoreEventIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_Event_Test_StoreEventNameWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_EventTest_Validation_DescriptionLowerCase_ShouldCapitalizeFirstLetterOfEachSentence" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_EventTest_Validation_DescriptionLowerCase_ShouldCapitalizeFirstLetterOfEachSentenceEvenSingleWordSentences" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_EventTest_Validation_DescriptionUpperCase_ShouldCapitalizeFirstLetterOfEachSentence" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_EventTest_Validation_DescriptionUpperCase_ShouldCapitalizeFirstLetterOfEachSentenceEvenSingleWordSentences" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Store_EventTest.Store_EventTest_Validation_NameLowerCase_ShouldCapitalizeFirstLetters" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Wish_ListTest" executed="True" result="Success" success="True" time="0.021" asserts="0">
+                <results>
+                  <test-case name="VideoGameStore.Tests.Wish_ListTest.Wish_ListTest_ConstructorWithNoValues_ShouldPass" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Wish_ListTest.Wish_ListTest_CustomerIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Wish_ListTest.Wish_ListTest_DateAddedWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Wish_ListTest.Wish_ListTest_GameIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="VideoGameStore.Tests.Wish_ListTest.Wish_ListTest_WishListIDWithCorrectType_ShouldPass" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

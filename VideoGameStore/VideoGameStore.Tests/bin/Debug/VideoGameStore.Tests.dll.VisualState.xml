@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1196]C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.dll</TopNode>
+  <SelectedNode>[0-1196]C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.dll</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1196]C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1197]VideoGameStore" Expanded="true" />
+    <Node UniqueName="[0-1198]VideoGameStore.Tests" Expanded="true" />
+    <Node UniqueName="[0-1000]VideoGameStore.Tests.AddressTest" Expanded="true" />
+    <Node UniqueName="[0-1010]VideoGameStore.Tests.Credit_CardTest" Expanded="true" />
+    <Node UniqueName="[0-1017]VideoGameStore.Tests.Customer_AddressTest" Expanded="true" />
+    <Node UniqueName="[0-1022]VideoGameStore.Tests.Customer_GameTest" Expanded="true" />
+    <Node UniqueName="[0-1119]VideoGameStore.Tests.CustomerTest" Expanded="true" />
+    <Node UniqueName="[0-1029]VideoGameStore.Tests.DeveloperTest" Expanded="true" />
+    <Node UniqueName="[0-1057]VideoGameStore.Tests.Employee_AddressTest" Expanded="true" />
+  </Nodes>
+</VisualState>

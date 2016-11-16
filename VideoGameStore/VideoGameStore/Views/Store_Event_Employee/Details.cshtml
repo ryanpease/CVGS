@@ -1,0 +1,34 @@
+﻿@model VideoGameStore.Models.Store_Event_Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Store_Event_Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Store_Event.store_event_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Store_Event.store_event_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.store_event_employee_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

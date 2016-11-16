@@ -1,0 +1,4 @@
+C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\RPClassLibrary\bin\Debug\RPClassLibrary.dll
+C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\RPClassLibrary\bin\Debug\RPClassLibrary.pdb
+C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.dll
+C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.pdb
