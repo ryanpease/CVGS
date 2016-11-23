@@ -177,6 +177,6 @@ namespace RPClassLibrary
                 value = newValue;
             }
             return value;
-        }        
+        } 
     }
 }

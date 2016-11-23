@@ -17,10 +17,9 @@ namespace VideoGameStore.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Address()
         {
-            this.Customer_Address = new HashSet<Customer_Address>();
-            this.Employee_Address = new HashSet<Employee_Address>();
             this.Invoice_Address = new HashSet<Invoice_Address>();
             this.Store_Event = new HashSet<Store_Event>();
+            this.User_Address = new HashSet<User_Address>();
         }
     
         public int address_id { get; set; }
@@ -31,12 +30,10 @@ namespace VideoGameStore.Models
     
         public virtual Province Province { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Customer_Address> Customer_Address { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Employee_Address> Employee_Address { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Invoice_Address> Invoice_Address { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Store_Event> Store_Event { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User_Address> User_Address { get; set; }
     }
 }

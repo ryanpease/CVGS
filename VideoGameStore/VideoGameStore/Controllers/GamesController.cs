@@ -1,11 +1,4 @@
-﻿/* Filename: GamesController.cs
- * Description: This class is responsible for interaction with the Game data.
- * 
- * Revision History:
- *     Ryan Pease, 2016-10-23: Created
-*/
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -57,7 +50,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "game_id,game_name,description,cost,list_price,on_hand,developer_id,publisher_id,genre_id,release_date,is_on_sale,is_discontinued,is_downloadable,is_physical_copy")] Game game)
+        public ActionResult Create([Bind(Include = "game_id,game_name,description,cost,list_price,on_hand,developer_id,publisher_id,genre_id,release_date,is_on_sale,is_discontinued,is_downloadable,is_physical_copy,image_location")] Game game)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +88,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "game_id,game_name,description,cost,list_price,on_hand,developer_id,publisher_id,genre_id,release_date,is_on_sale,is_discontinued,is_downloadable,is_physical_copy")] Game game)
+        public ActionResult Edit([Bind(Include = "game_id,game_name,description,cost,list_price,on_hand,developer_id,publisher_id,genre_id,release_date,is_on_sale,is_discontinued,is_downloadable,is_physical_copy,image_location")] Game game)
         {
             if (ModelState.IsValid)
             {

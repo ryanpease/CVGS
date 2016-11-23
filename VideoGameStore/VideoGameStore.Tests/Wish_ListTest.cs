@@ -44,8 +44,8 @@ namespace VideoGameStore.Tests
         }
 
         [Test]
-        // This test is responsible for checking the customer_id field
-        public void Wish_ListTest_CustomerIDWithCorrectType_ShouldPass()
+        // This test is responsible for checking the user_id field
+        public void Wish_ListTest_UserIDWithCorrectType_ShouldPass()
         {
             // Arrange
             Wish_List wishList = new Wish_List();
@@ -53,10 +53,10 @@ namespace VideoGameStore.Tests
             int actual;
 
             // Act
-            wishList.customer_id = expected;
+            wishList.user_id = expected;
 
             // Assert
-            actual = wishList.customer_id;
+            actual = wishList.user_id;
             Assert.AreEqual(expected, actual);
         }
 

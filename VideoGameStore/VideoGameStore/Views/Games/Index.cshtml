@@ -43,7 +43,7 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.is_physical_copy)
-        </th>
+        </th>        
         <th>
             @Html.DisplayNameFor(model => model.Developer.developer_name)
         </th>
@@ -59,7 +59,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            <img src="~/images/covers/@Html.DisplayFor(modelItem => item.image_location)" style="height:200px; width:200px;"/>
+            <img src="~/images/covers/@Html.DisplayFor(modelItem => item.image_location)" style="height:200px; width:200px;" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.game_name)

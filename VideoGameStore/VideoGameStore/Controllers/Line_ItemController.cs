@@ -49,7 +49,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "line_item_id,invoice_id,game_id,quantity")] Line_Item line_Item)
+        public ActionResult Create([Bind(Include = "line_item_id,invoice_id,game_id,quantity,price")] Line_Item line_Item)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "line_item_id,invoice_id,game_id,quantity")] Line_Item line_Item)
+        public ActionResult Edit([Bind(Include = "line_item_id,invoice_id,game_id,quantity,price")] Line_Item line_Item)
         {
             if (ModelState.IsValid)
             {

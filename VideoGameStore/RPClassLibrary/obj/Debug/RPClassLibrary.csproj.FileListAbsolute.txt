@@ -2,3 +2,7 @@ C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\RP
 C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\RPClassLibrary\bin\Debug\RPClassLibrary.pdb
 C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.dll
 C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.pdb
+C:\Users\Ryan\Desktop\no auth - VideoGameStore\VideoGameStore\RPClassLibrary\bin\Debug\RPClassLibrary.dll
+C:\Users\Ryan\Desktop\no auth - VideoGameStore\VideoGameStore\RPClassLibrary\bin\Debug\RPClassLibrary.pdb
+C:\Users\Ryan\Desktop\no auth - VideoGameStore\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.dll
+C:\Users\Ryan\Desktop\no auth - VideoGameStore\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.pdb

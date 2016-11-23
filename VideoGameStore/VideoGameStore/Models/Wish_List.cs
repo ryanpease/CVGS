@@ -15,11 +15,11 @@ namespace VideoGameStore.Models
     public partial class Wish_List
     {
         public int wish_list_id { get; set; }
-        public int customer_id { get; set; }
+        public int user_id { get; set; }
         public int game_id { get; set; }
         public System.DateTime date_added { get; set; }
     
-        public virtual Customer Customer { get; set; }
         public virtual Game Game { get; set; }
+        public virtual User User { get; set; }
     }
 }

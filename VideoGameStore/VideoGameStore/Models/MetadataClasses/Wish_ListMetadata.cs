@@ -19,8 +19,8 @@ namespace VideoGameStore.Models
         [Display(Name = "Wish List ID")]
         public int wish_list_id { get; set; }
         [Required]
-        [Display(Name = "Customer ID")]
-        public int customer_id { get; set; }
+        [Display(Name = "User ID")]
+        public int user_id { get; set; }
         [Required]
         [Display(Name = "Game ID")]
         public int game_id { get; set; }

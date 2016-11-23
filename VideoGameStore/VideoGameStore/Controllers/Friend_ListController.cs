@@ -17,7 +17,7 @@ namespace VideoGameStore.Controllers
         // GET: Friend_List
         public ActionResult Index()
         {
-            var friend_List = db.Friend_List.Include(f => f.Customer).Include(f => f.Customer1);
+            var friend_List = db.Friend_List.Include(f => f.User).Include(f => f.User1);
             return View(friend_List.ToList());
         }
 
@@ -39,8 +39,8 @@ namespace VideoGameStore.Controllers
         // GET: Friend_List/Create
         public ActionResult Create()
         {
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username");
-            ViewBag.friend_id = new SelectList(db.Customers, "customer_id", "username");
+            ViewBag.friend_id = new SelectList(db.Users, "user_id", "username");
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "customer_id,friend_id,is_family,date_added")] Friend_List friend_List)
+        public ActionResult Create([Bind(Include = "user_id,friend_id,is_family,date_added")] Friend_List friend_List)
         {
             if (ModelState.IsValid)
             {
@@ -58,8 +58,8 @@ namespace VideoGameStore.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", friend_List.customer_id);
-            ViewBag.friend_id = new SelectList(db.Customers, "customer_id", "username", friend_List.friend_id);
+            ViewBag.friend_id = new SelectList(db.Users, "user_id", "username", friend_List.friend_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", friend_List.user_id);
             return View(friend_List);
         }
 
@@ -75,8 +75,8 @@ namespace VideoGameStore.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", friend_List.customer_id);
-            ViewBag.friend_id = new SelectList(db.Customers, "customer_id", "username", friend_List.friend_id);
+            ViewBag.friend_id = new SelectList(db.Users, "user_id", "username", friend_List.friend_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", friend_List.user_id);
             return View(friend_List);
         }
 
@@ -85,7 +85,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "customer_id,friend_id,is_family,date_added")] Friend_List friend_List)
+        public ActionResult Edit([Bind(Include = "user_id,friend_id,is_family,date_added")] Friend_List friend_List)
         {
             if (ModelState.IsValid)
             {
@@ -93,8 +93,8 @@ namespace VideoGameStore.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", friend_List.customer_id);
-            ViewBag.friend_id = new SelectList(db.Customers, "customer_id", "username", friend_List.friend_id);
+            ViewBag.friend_id = new SelectList(db.Users, "user_id", "username", friend_List.friend_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", friend_List.user_id);
             return View(friend_List);
         }
 

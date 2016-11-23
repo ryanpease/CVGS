@@ -22,16 +22,16 @@ namespace VideoGameStore.Models
         }
     
         public int invoice_id { get; set; }
-        public int customer_id { get; set; }
+        public int user_id { get; set; }
         public int credit_card_id { get; set; }
         public System.DateTime invoice_date { get; set; }
         public Nullable<System.DateTime> ship_date { get; set; }
         public bool is_invoice_closed { get; set; }
     
         public virtual Credit_Card Credit_Card { get; set; }
-        public virtual Customer Customer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Invoice_Address> Invoice_Address { get; set; }
+        public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Line_Item> Line_Item { get; set; }
     }

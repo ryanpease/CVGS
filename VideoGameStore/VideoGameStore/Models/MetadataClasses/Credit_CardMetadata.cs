@@ -20,8 +20,8 @@ namespace VideoGameStore.Models
         [Display(Name = "Credit Card ID")]
         public int credit_card_id { get; set; }
         [Required]
-        [Display(Name = "Customer ID")]
-        public int customer_id { get; set; }
+        [Display(Name = "User ID")]
+        public int user_id { get; set; }
         [Required]        
         [RegularExpression(@"\d{16}", ErrorMessage = "Invalid credit card number, please use only 16 digits (e.g. 0000111122223333).")]
         [Display(Name = "Card Number")]

@@ -28,8 +28,8 @@ namespace VideoGameStore.Tests
         }
 
         [Test]
-        // This test is responsible for checking the customer_id field
-        public void Friend_ListTest_CustomerIDWithCorrectType_ShouldPass()
+        // This test is responsible for checking the user_id field
+        public void Friend_ListTest_UserIDWithCorrectType_ShouldPass()
         {
             // Arrange
             Friend_List friendList = new Friend_List();
@@ -37,10 +37,10 @@ namespace VideoGameStore.Tests
             int actual;
 
             // Act
-            friendList.customer_id = expected;
+            friendList.user_id = expected;
 
             // Assert
-            actual = friendList.customer_id;
+            actual = friendList.user_id;
             Assert.AreEqual(expected, actual);
         }
 

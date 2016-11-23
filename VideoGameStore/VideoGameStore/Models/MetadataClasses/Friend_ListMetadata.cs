@@ -15,8 +15,8 @@ namespace VideoGameStore.Models
 {
     public class Friend_ListMetadata
     {
-        [Display(Name = "Customer ID")]
-        public int customer_id { get; set; }
+        [Display(Name = "User ID")]
+        public int user_id { get; set; }
         [Display(Name = "Friend ID")]
         public int friend_id { get; set; }
         [Display(Name = "Family?")]

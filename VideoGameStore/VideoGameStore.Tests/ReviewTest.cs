@@ -45,8 +45,8 @@ namespace VideoGameStore.Tests
         }
 
         [Test]
-        // This test is responsible for checking the customer_id field
-        public void ReviewTest_CustomerIDWithCorrectType_ShouldPass()
+        // This test is responsible for checking the user_id field
+        public void ReviewTest_UserIDWithCorrectType_ShouldPass()
         {
             // Arrange
             Review review = new Review();
@@ -54,8 +54,8 @@ namespace VideoGameStore.Tests
             int actual;
 
             // Act
-            review.customer_id = expected;
-            actual = review.customer_id;
+            review.user_id = expected;
+            actual = review.user_id;
 
             // Assert
             Assert.AreEqual(expected, actual);

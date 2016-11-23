@@ -15,6 +15,9 @@
             @Html.DisplayNameFor(model => model.quantity)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Game.game_name)
         </th>
         <th>
@@ -27,6 +30,9 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Game.game_name)
