@@ -78,46 +78,53 @@ namespace RPClassLibrary
 
         public static string CapitalizeSentences(string value)
         {
-            string newValue = "";            
-            string[] values = value.ToLower().Split('.');            
-            for (int i = 0; i < values.Length; i++)
+            if (value == null)
             {
-                string[] words = values[i].Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
-                for (int j = 0; j < words.Length; j++)
-                {
-                    if (i == 0 && j == 0)
-                    {
-                        if (j == (words.Length -1))
-                        {
-                            newValue += Capitalize(words[j], false) + ".";
-                        }
-                        else
-                        {
-                            newValue += Capitalize(words[j], false) + " ";
-                        }                        
-                    }
-                    else if (j == 0)
-                    {
-                        if (j == (words.Length -1))
-                        {
-                            newValue += " " + Capitalize(words[j], false) + ".";
-                        }
-                        else
-                        {
-                            newValue += " " + Capitalize(words[j], false) + " ";
-                        }                        
-                    }
-                    else if (j == (words.Length - 1))
-                    {
-                        newValue += words[j] + ".";                        
-                    }                    
-                    else
-                    {
-                        newValue += words[j] + " ";
-                    }                                                                               
-                }                
+                value = "";
             }
-            value = newValue;
+            else
+            {
+                string newValue = "";
+                string[] values = value.ToLower().Split('.');
+                for (int i = 0; i < values.Length; i++)
+                {
+                    string[] words = values[i].Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+                    for (int j = 0; j < words.Length; j++)
+                    {
+                        if (i == 0 && j == 0)
+                        {
+                            if (j == (words.Length - 1))
+                            {
+                                newValue += Capitalize(words[j], false) + ".";
+                            }
+                            else
+                            {
+                                newValue += Capitalize(words[j], false) + " ";
+                            }
+                        }
+                        else if (j == 0)
+                        {
+                            if (j == (words.Length - 1))
+                            {
+                                newValue += " " + Capitalize(words[j], false) + ".";
+                            }
+                            else
+                            {
+                                newValue += " " + Capitalize(words[j], false) + " ";
+                            }
+                        }
+                        else if (j == (words.Length - 1))
+                        {
+                            newValue += words[j] + ".";
+                        }
+                        else
+                        {
+                            newValue += words[j] + " ";
+                        }
+                    }
+                }
+                value = newValue;
+            }                        
             return value;
         }
 

@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F7E5AE4B-A0E2-40AE-A337-E30A539FE4F3}</ProjectGuid>
+    <ProjectGuid>{02378A91-9A01-45D6-901A-5F4FFC5ED72F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VideoGameStore.Tests</RootNamespace>
@@ -38,9 +38,6 @@
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="RPClassLibrary">
-      <HintPath>..\RPClassLibrary\bin\Debug\RPClassLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -117,13 +114,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RPClassLibrary\RPClassLibrary.csproj">
+      <Project>{4118deb4-5ead-448f-baea-4936d6ebe70b}</Project>
+      <Name>RPClassLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VideoGameStore\VideoGameStore.csproj">
-      <Project>{D6324B58-16F4-4CE6-8CD6-7ADD2DB88EFC}</Project>
+      <Project>{ADE25C25-35AB-40A0-B0B4-54F0C7CAB738}</Project>
       <Name>VideoGameStore</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

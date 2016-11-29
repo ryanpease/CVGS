@@ -6,3 +6,8 @@ C:\Users\Ryan\Desktop\no auth - VideoGameStore\VideoGameStore\RPClassLibrary\bin
 C:\Users\Ryan\Desktop\no auth - VideoGameStore\VideoGameStore\RPClassLibrary\bin\Debug\RPClassLibrary.pdb
 C:\Users\Ryan\Desktop\no auth - VideoGameStore\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.dll
 C:\Users\Ryan\Desktop\no auth - VideoGameStore\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.pdb
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\RPClassLibrary\bin\Debug\RPClassLibrary.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\RPClassLibrary\bin\Debug\RPClassLibrary.pdb
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.pdb
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.csprojResolveAssemblyReference.cache

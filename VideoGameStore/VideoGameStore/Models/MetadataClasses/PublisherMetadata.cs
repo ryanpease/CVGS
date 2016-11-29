@@ -37,15 +37,9 @@ namespace VideoGameStore.Models
     {
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
-            publisher_name = RPValidations.Capitalize(publisher_name, true);
-            if (!string.IsNullOrWhiteSpace(contact_name))
-            {
-                contact_name = RPValidations.Capitalize(contact_name, true);
-            }
-            if (!string.IsNullOrWhiteSpace(contact_phone))
-            {
-                contact_phone = RPValidations.FormatPhoneNumber(contact_phone);
-            }
+            publisher_name = RPValidations.Capitalize(publisher_name, true);            
+            contact_name = RPValidations.Capitalize(contact_name, true);                        
+            contact_phone = RPValidations.FormatPhoneNumber(contact_phone);            
             yield return ValidationResult.Success;
         }
     }
