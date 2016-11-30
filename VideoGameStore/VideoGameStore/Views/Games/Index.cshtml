@@ -53,10 +53,15 @@
         <th>
             @Html.DisplayNameFor(model => model.Publisher.publisher_name)
         </th>
+
+        <th>Average Rating</th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@{  int counter = 0;
+    string[] data = ViewData["AverageRatings"] as string[];
+    foreach (var item in Model)
+    {
     <tr>
         <td>
             <img src="~/images/covers/@Html.DisplayFor(modelItem => item.image_location)" style="height:200px; width:200px;" />
@@ -100,12 +105,32 @@
         <td>
             @Html.DisplayFor(modelItem => item.Publisher.publisher_name)
         </td>
+
+        @{
+            if (counter + 1 <= data.Length)
+            {
+                <td>
+                    @data[counter] / 5
+                </td>
+                counter++;
+            }
+
+            else if (counter + 1 >= data.Length || data[counter] == "N/A")
+            {
+                <td>
+                    N/A
+                </td>
+            }
+
+        }
+
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.game_id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.game_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.game_id })
+            @Html.ActionLink("Edit", "Edit", new { id = item.game_id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.game_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.game_id })
         </td>
     </tr>
+    }
 }
 
 </table>
