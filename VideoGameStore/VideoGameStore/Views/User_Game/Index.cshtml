@@ -1,16 +1,24 @@
 ﻿@model IEnumerable<VideoGameStore.Models.User_Game>
 
+
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Library";
 }
 
-<h2>Index</h2>
+<h2>@User.Identity.Name's Library</h2>
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
+</p>*@
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Game.image_location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Game.description)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.date_purchased)
         </th>
@@ -20,14 +28,20 @@
         <th>
             @Html.DisplayNameFor(model => model.Game.game_name)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.User.username)
-        </th>
-        <th></th>
+        </th>*@
+        @*<th></th>*@
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            <img src="~/images/covers/@Html.DisplayFor(modelItem => item.Game.image_location)" style="height:200px; width:200px;" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Game.description)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.date_purchased)
         </td>
@@ -37,13 +51,14 @@
         <td>
             @Html.DisplayFor(modelItem => item.Game.game_name)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.User.username)
-        </td>
+        </td>*@
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.user_game_id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.user_game_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.user_game_id })
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.user_game_id }) |*@
+            @Html.ActionLink("Details", "Details", "Games", new { id=item.game_id }, null) |
+            Download(coming soon)
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.user_game_id })*@
         </td>
     </tr>
 }

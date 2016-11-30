@@ -49,6 +49,7 @@ namespace VideoGameStore.Controllers
 
                     authManager.SignIn(identity);
 
+
                     return RedirectToAction("Index", "Home");
                 }
 

@@ -31,14 +31,18 @@
                     <li>@Html.ActionLink("Games", "Index", "Games")</li>
                     <li>@Html.ActionLink("Events", "Index", "Events")</li>
                     <li>@Html.ActionLink("Reports", "Index", "Reports")</li>
-                    <li>@Html.ActionLink("Profiles", "Index", "Profiles")</li>   
+                    <li>@Html.ActionLink("Profiles", "Index", "Profiles")</li> 
+                    @if(User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Library", "Index", "User_Game")</li>
+                    }
                 </ul>
                 <ul class="nav navbar-nav navbar-right">                    
                     
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li>
-                                @Html.ActionLink("Hello " + @User.Identity.Name + "!", "Index", "Home", new { area = "" }, new { @class = "navbar-right" })
+                                @Html.ActionLink("Hello " + @User.Identity.Name + "!", "Index", "User_Game", new { area = "" }, new { @class = "navbar-right" })
                             </li>
                             <li>
                                 <a href="@Url.Action("Logout", "Auth")">Logout</a>
