@@ -1,4 +1,4 @@
-﻿@model IEnumerable<VideoGameStore.Models.Game>
+@model IEnumerable<VideoGameStore.Models.Game>
 
 @{
     ViewBag.Title = "Games";
@@ -74,54 +74,6 @@
         }
     @foreach (var item in Model)
     {
-<<<<<<< HEAD
-    <tr>
-        <td>
-            <img src="~/images/covers/@Html.DisplayFor(modelItem => item.image_location)" style="height:200px; width:200px;" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.game_name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cost)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.list_price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.on_hand)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.release_date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.is_on_sale)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.is_discontinued)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.is_downloadable)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.is_physical_copy)
-        </td>       
-        <td>
-            @Html.DisplayFor(modelItem => item.Developer.developer_name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Genre.genre_name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Publisher.publisher_name)
-        </td>
-        <td>
-        @{
-            if (counter + 1 <= data.Length)
-=======
         <tr>
             <td>
                 <img src="~/images/covers/@Html.DisplayFor(modelItem => item.image_location)" style="height:200px; width:200px;" />
@@ -175,23 +127,17 @@
             </td>
        
             @if (counter + 1 <= data.Length)
->>>>>>> acd7a26277a52f96ca53e8104ebe434ae03142c2
             {
-                <p>
+                <td>
                     @data[counter] / 5
-                </p>
+                </td>
                 counter++;
             }
-<<<<<<< HEAD
-
-            else
-=======
             else if (counter + 1 >= data.Length || data[counter] == "N/A")
->>>>>>> acd7a26277a52f96ca53e8104ebe434ae03142c2
             {
-                <p>
+                <td>
                     N/A
-                </p>
+                </td>
             }
                               
             <td>
@@ -200,16 +146,6 @@
                     <p>@Html.ActionLink("Edit", "Edit", new { id = item.game_id }) </p>
                 }
 
-<<<<<<< HEAD
-        }
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.game_id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.game_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.game_id })
-        </td>
-    </tr>
-=======
                 <p>@Html.ActionLink("Details", "Details", new { id = item.game_id })</p>
 
                 @if (this.User.IsInRole("Admin"))
@@ -228,6 +164,5 @@
                 }
             </td>
         </tr>
->>>>>>> acd7a26277a52f96ca53e8104ebe434ae03142c2
     }
 </table>
