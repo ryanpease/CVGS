@@ -18,14 +18,14 @@ USE VideoGameStoreDB;
 INSERT INTO User 
 	(username, email, user_password, first_name, last_name, phone, gender, birthdate, date_joined, is_employee, is_admin, is_member)
 VALUES
-	('ryan', 'ryan@ryan.com', 'password', 'Ryan', 'Pease', '0000000000', 'M', '1900-01-01', STR_TO_DATE('2010-01-01', '%Y-%m-%d'), 1, 1, 0),
-    ('greg', 'greg@greg.com', 'password', 'Greg', 'Shalay', '1111111111', 'M', '1900-02-02', STR_TO_DATE('2010-02-02', '%Y-%m-%d'), 1, 1, 0),
-    ('john', 'john@john.com', 'password', 'John', 'Lambert', '2222222222', 'M', '1900-03-03', STR_TO_DATE('2010-03-03', '%Y-%m-%d'), 1, 1, 0),
-    ('david', 'dave@dave.com', 'password', 'David', 'Klumpenhower', '3333333333', 'M', '1900-04-04', STR_TO_DATE('2010-04-04', '%Y-%m-%d'), 1, 1, 0),
-	('random', 'guy@guy.com', 'password', 'That', 'Guy', '4444444444', 'M', '1900-05-05', STR_TO_DATE('2015-02-22', '%Y-%m-%d'), 1, 0, 0),
-    ('roger1', 'roger@gmail.com', 'password', 'Roger', 'Wilco', '0000000000', 'M', '1999-09-09', STR_TO_DATE('2015-01-01', '%Y-%m-%d'), 0, 0, 1),
-    ('superstar', 'star@super.com', 'password', 'Mister', 'Mister', '1234567890', 'M', '1985-11-22', STR_TO_DATE('2015-04-04', '%Y-%m-%d'), 0, 0, 0),
-    ('mstaken', 'notfake@hotmail.com', 'password', 'Barbara', 'Gordon', '9999999999', 'F', '1988-02-18', STR_TO_DATE('2016-06-06', '%Y-%m-%d'), 0, 0, 1);
+	('ryan', 'ryan@ryan.com', 'ANagF5pACw8bWXD3JRuCtA8SegZ8nsMBHrXDO2ft2O+pBFoS00eAioot+4kkYTZxFg==', 'Ryan', 'Pease', '0000000000', 'M', '1900-01-01', STR_TO_DATE('2010-01-01', '%Y-%m-%d'), 1, 1, 0),
+    ('greg', 'greg@greg.com', 'ACjM6xRoDtVixePBySFp844cN8GN7TgDGPw2ghFmkwcj+0cXj8J9XHtdYl7ICO4P5w==', 'Greg', 'Shalay', '1111111111', 'M', '1900-02-02', STR_TO_DATE('2010-02-02', '%Y-%m-%d'), 1, 1, 0),
+    ('john', 'john@john.com', 'AC9w3EG4H92LQdYvuvLfSi2QOzz5WCFEHRNlOnA4hE9W7GfFMc0EKyCpnqnmS/EAJw==', 'John', 'Lambert', '2222222222', 'M', '1900-03-03', STR_TO_DATE('2010-03-03', '%Y-%m-%d'), 1, 1, 0),
+    ('david', 'dave@dave.com', 'ANAHXTULQR22pvARxPERchZ7mL/AdmHRbaAzD25Iup7NT9aE/aE84/YjXH2dYKPS3g==', 'David', 'Klumpenhower', '3333333333', 'M', '1900-04-04', STR_TO_DATE('2010-04-04', '%Y-%m-%d'), 1, 1, 0),
+	('random', 'guy@guy.com', 'AHDDN6k6I51+SJxkpeTxRbeG3yXM4eBBOCRNBXp+kF2yiy0FycZtPUt78klPQNYWOQ==', 'That', 'Guy', '4444444444', 'M', '1900-05-05', STR_TO_DATE('2015-02-22', '%Y-%m-%d'), 1, 0, 0),
+    ('roger1', 'roger@gmail.com', 'ALycndFcL1u8itCwRZUr9MTaf2xe93+GLaxonMfepgGqdDPOVF7rrTMMdpBD8AuTRQ==', 'Roger', 'Wilco', '0000000000', 'M', '1999-09-09', STR_TO_DATE('2015-01-01', '%Y-%m-%d'), 0, 0, 1),
+    ('superstar', 'star@super.com', 'AJwYg5lVHP43UTIP+0CTnFbnPhXxuwExFH86HyiQFllVmEVKTPVrJEdQIP4iIZgSEg==', 'Mister', 'Mister', '1234567890', 'M', '1985-11-22', STR_TO_DATE('2015-04-04', '%Y-%m-%d'), 0, 0, 0),
+    ('mstaken', 'notfake@hotmail.com', 'AEagFJfUwU0fDJUmVUaE6OkrvinCwcy/yvL9/3MBPzdQn3L5VC7iQXNttw6Y9ilPUw==', 'Barbara', 'Gordon', '9999999999', 'F', '1988-02-18', STR_TO_DATE('2016-06-06', '%Y-%m-%d'), 0, 0, 1);
     
     
 -- FRIEND_LIST
