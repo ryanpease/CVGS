@@ -18,7 +18,8 @@ namespace VideoGameStore.Controllers
         // GET: User_Game
         public ActionResult Index()
         {
-            int userID = 1;//GetUserID();
+            int userID = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+            //int userID = 1;//GetUserID();
             var user_Game = db.User_Game.Include(u => u.Game).Include(u => u.User).Where(u => u.user_id == userID);
             var game = (from g in db.Games join u in db.User_Game on g.game_id equals u.game_id where u.user_id == userID select new {g.description, g.image_location, g.game_name, u.rating, u.date_purchased, u.game_id});
             return View(user_Game.ToList());
