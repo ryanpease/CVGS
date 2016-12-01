@@ -185,8 +185,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="Binders\CartModelBinder.cs" />
     <Compile Include="Controllers\AddressesController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\Credit_CardController.cs" />
     <Compile Include="Controllers\DevelopersController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
@@ -214,6 +216,8 @@
     <Compile Include="Models\Address.cs">
       <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CartIndexViewModel.cs" />
     <Compile Include="Models\Credit_Card.cs">
       <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
@@ -464,6 +468,8 @@
     <Content Include="Views\Wish_List\Edit.cshtml" />
     <Content Include="Views\Wish_List\Index.cshtml" />
     <Content Include="Views\Profiles\Index.cshtml" />
+    <Content Include="Views\Cart\Summary.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

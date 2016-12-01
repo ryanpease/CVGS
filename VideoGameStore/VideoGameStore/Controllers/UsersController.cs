@@ -14,6 +14,7 @@ namespace VideoGameStore.Controllers
     {
         private VideoGameStoreDBContext db = new VideoGameStoreDBContext();
 
+        [AllowAnonymous]
         // GET: Users
         public ActionResult Index()
         {
@@ -56,12 +57,14 @@ namespace VideoGameStore.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Users/Create
         public ActionResult Create()
         {
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         // POST: Users/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -79,6 +82,7 @@ namespace VideoGameStore.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // GET: Users/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -94,6 +98,7 @@ namespace VideoGameStore.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // POST: Users/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -110,6 +115,7 @@ namespace VideoGameStore.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Users/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -125,6 +131,7 @@ namespace VideoGameStore.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Admin")]
         // POST: Users/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
