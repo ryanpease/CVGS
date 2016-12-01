@@ -20,3 +20,4 @@ C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\RPClassLibra
 C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.dll
 C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.pdb
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.csprojResolveAssemblyReference.cache
