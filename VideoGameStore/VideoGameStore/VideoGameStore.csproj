@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{47448061-37B3-4CAD-9AE8-848B4B5E0F93}</ProjectGuid>
+    <ProjectGuid>{ADE25C25-35AB-40A0-B0B4-54F0C7CAB738}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -49,12 +49,12 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
@@ -89,8 +89,28 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -159,61 +179,18 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Owin">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Owin">
-      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin">
-      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb">
-      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security">
-      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Facebook">
-      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Cookies">
-      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.OAuth">
-      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Google">
-      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Twitter">
-      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
-      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="Binders\CartModelBinder.cs" />
     <Compile Include="Controllers\AddressesController.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\Credit_CardController.cs" />
-    <Compile Include="Controllers\CustomersController.cs" />
-    <Compile Include="Controllers\Customer_AddressController.cs" />
-    <Compile Include="Controllers\Customer_GameController.cs" />
     <Compile Include="Controllers\DevelopersController.cs" />
-    <Compile Include="Controllers\EmployeesController.cs" />
-    <Compile Include="Controllers\Employee_AddressController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\Friend_ListController.cs" />
     <Compile Include="Controllers\GamesController.cs" />
@@ -222,72 +199,53 @@
     <Compile Include="Controllers\InvoicesController.cs" />
     <Compile Include="Controllers\Invoice_AddressController.cs" />
     <Compile Include="Controllers\Line_ItemController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProfilesController.cs" />
     <Compile Include="Controllers\ProvincesController.cs" />
     <Compile Include="Controllers\PublishersController.cs" />
     <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Controllers\ReviewsController.cs" />
-    <Compile Include="Controllers\SalesReportController.cs" />
-    <Compile Include="Controllers\Store_Event_CustomerController.cs" />
-    <Compile Include="Controllers\Store_Event_EmployeeController.cs" />
+    <Compile Include="Controllers\Sales_ReportController.cs" />
+    <Compile Include="Controllers\Store_Event_UserController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\User_AddressController.cs" />
+    <Compile Include="Controllers\User_GameController.cs" />
     <Compile Include="Controllers\Wish_ListController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CartIndexViewModel.cs" />
     <Compile Include="Models\Credit_Card.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Customer.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Customer_Address.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Customer_Game.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Developer.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Employee.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Employee_Address.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Friend_List.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Game.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Genre.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Invoice.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Invoice_Address.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Line_Item.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\MetadataClasses\AddressMetadata.cs" />
     <Compile Include="Models\MetadataClasses\Credit_CardMetadata.cs" />
-    <Compile Include="Models\MetadataClasses\CustomerMetadata.cs" />
-    <Compile Include="Models\MetadataClasses\Customer_AddressMetadata.cs" />
-    <Compile Include="Models\MetadataClasses\Customer_GameMetadata.cs" />
     <Compile Include="Models\MetadataClasses\DeveloperMetadata.cs" />
-    <Compile Include="Models\MetadataClasses\EmployeeMetadata.cs" />
-    <Compile Include="Models\MetadataClasses\Employee_AddressMetadata.cs" />
     <Compile Include="Models\MetadataClasses\Friend_ListMetadata.cs" />
     <Compile Include="Models\MetadataClasses\GameMetadata.cs" />
     <Compile Include="Models\MetadataClasses\GenreMetadata.cs" />
@@ -299,50 +257,58 @@
     <Compile Include="Models\MetadataClasses\ReviewMetadata.cs" />
     <Compile Include="Models\MetadataClasses\Sales_ReportMetadata.cs" />
     <Compile Include="Models\MetadataClasses\Store_EventMetadata.cs" />
-    <Compile Include="Models\MetadataClasses\Store_Event_CustomerMetadata.cs" />
-    <Compile Include="Models\MetadataClasses\Store_Event_EmployeeMetadata.cs" />
+    <Compile Include="Models\MetadataClasses\Store_Event_UserMetadata.cs" />
+    <Compile Include="Models\MetadataClasses\UserMetadata.cs" />
+    <Compile Include="Models\MetadataClasses\User_AddressMetadata.cs" />
+    <Compile Include="Models\MetadataClasses\User_GameMetadata.cs" />
     <Compile Include="Models\MetadataClasses\Wish_ListMetadata.cs" />
     <Compile Include="Models\Province.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Publisher.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Review.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Sales_Report.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Store_Event.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Store_Event_Customer.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+    <Compile Include="Models\Store_Event_User.cs">
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Store_Event_Employee.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\VideoGameStoreDBModel.Context.cs">
+    <Compile Include="Models\User_Address.cs">
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User_Game.cs">
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VideoGameStoreModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VideoGameStoreDBModel.Context.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\VideoGameStoreDBModel.cs">
+    <Compile Include="Models\VideoGameStoreModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\VideoGameStoreDBModel.Designer.cs">
+    <Compile Include="Models\VideoGameStoreModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VideoGameStoreDBModel.edmx</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Wish_List.cs">
-      <DependentUpon>VideoGameStoreDBModel.tt</DependentUpon>
+      <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup.cs" />
+    <Compile Include="SharedDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -355,29 +321,27 @@
     <Content Include="images\covers\final_fantasy_vii.jpg" />
     <Content Include="images\covers\mass_effect.jpg" />
     <Content Include="images\covers\super_mario_world.jpg" />
-    <Content Include="Models\VideoGameStoreDBModel.Context.tt">
+    <Content Include="Models\VideoGameStoreModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VideoGameStoreDBModel.edmx</DependentUpon>
-      <LastGenOutput>VideoGameStoreDBModel.Context.cs</LastGenOutput>
+      <DependentUpon>VideoGameStoreModel.edmx</DependentUpon>
+      <LastGenOutput>VideoGameStoreModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\VideoGameStoreDBModel.tt">
+    <Content Include="Models\VideoGameStoreModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VideoGameStoreDBModel.edmx</DependentUpon>
-      <LastGenOutput>VideoGameStoreDBModel.cs</LastGenOutput>
+      <DependentUpon>VideoGameStoreModel.edmx</DependentUpon>
+      <LastGenOutput>VideoGameStoreModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Scripts\ai.0.22.19-build00125.js" />
-    <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\VideoGameStoreDBModel.edmx">
+    <EntityDeploy Include="Models\VideoGameStoreModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>VideoGameStoreDBModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>VideoGameStoreModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\VideoGameStoreDBModel.edmx.diagram">
-      <DependentUpon>VideoGameStoreDBModel.edmx</DependentUpon>
+    <Content Include="Models\VideoGameStoreModel.edmx.diagram">
+      <DependentUpon>VideoGameStoreModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -405,49 +369,9 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Games\Create.cshtml" />
-    <Content Include="Views\Games\Delete.cshtml" />
-    <Content Include="Views\Games\Details.cshtml" />
-    <Content Include="Views\Games\Edit.cshtml" />
-    <Content Include="Views\Games\Index.cshtml" />
-    <Content Include="Views\Customers\Create.cshtml" />
-    <Content Include="Views\Customers\Delete.cshtml" />
-    <Content Include="Views\Customers\Details.cshtml" />
-    <Content Include="Views\Customers\Edit.cshtml" />
-    <Content Include="Views\Customers\Index.cshtml" />
-    <Content Include="Views\Events\Create.cshtml" />
-    <Content Include="Views\Events\Delete.cshtml" />
-    <Content Include="Views\Events\Details.cshtml" />
-    <Content Include="Views\Events\Edit.cshtml" />
-    <Content Include="Views\Events\Index.cshtml" />
-    <Content Include="Views\SalesReport\Details.cshtml" />
-    <Content Include="Views\SalesReport\Index.cshtml" />
+    <Content Include="Views\Auth\Login.cshtml" />
+    <Content Include="Views\Auth\Register.cshtml" />
     <Content Include="Views\Reports\Index.cshtml" />
-    <Content Include="Views\Employees\Create.cshtml" />
-    <Content Include="Views\Employees\Delete.cshtml" />
-    <Content Include="Views\Employees\Details.cshtml" />
-    <Content Include="Views\Employees\Edit.cshtml" />
-    <Content Include="Views\Employees\Index.cshtml" />
     <Content Include="Views\Addresses\Create.cshtml" />
     <Content Include="Views\Addresses\Delete.cshtml" />
     <Content Include="Views\Addresses\Details.cshtml" />
@@ -458,31 +382,21 @@
     <Content Include="Views\Credit_Card\Details.cshtml" />
     <Content Include="Views\Credit_Card\Edit.cshtml" />
     <Content Include="Views\Credit_Card\Index.cshtml" />
-    <Content Include="Views\Customer_Address\Create.cshtml" />
-    <Content Include="Views\Customer_Address\Delete.cshtml" />
-    <Content Include="Views\Customer_Address\Details.cshtml" />
-    <Content Include="Views\Customer_Address\Edit.cshtml" />
-    <Content Include="Views\Customer_Address\Index.cshtml" />
-    <Content Include="Views\Customer_Game\Create.cshtml" />
-    <Content Include="Views\Customer_Game\Delete.cshtml" />
-    <Content Include="Views\Customer_Game\Details.cshtml" />
-    <Content Include="Views\Customer_Game\Edit.cshtml" />
-    <Content Include="Views\Customer_Game\Index.cshtml" />
     <Content Include="Views\Developers\Create.cshtml" />
     <Content Include="Views\Developers\Delete.cshtml" />
     <Content Include="Views\Developers\Details.cshtml" />
     <Content Include="Views\Developers\Edit.cshtml" />
     <Content Include="Views\Developers\Index.cshtml" />
-    <Content Include="Views\Employee_Address\Create.cshtml" />
-    <Content Include="Views\Employee_Address\Delete.cshtml" />
-    <Content Include="Views\Employee_Address\Details.cshtml" />
-    <Content Include="Views\Employee_Address\Edit.cshtml" />
-    <Content Include="Views\Employee_Address\Index.cshtml" />
     <Content Include="Views\Friend_List\Create.cshtml" />
     <Content Include="Views\Friend_List\Delete.cshtml" />
     <Content Include="Views\Friend_List\Details.cshtml" />
     <Content Include="Views\Friend_List\Edit.cshtml" />
     <Content Include="Views\Friend_List\Index.cshtml" />
+    <Content Include="Views\Games\Create.cshtml" />
+    <Content Include="Views\Games\Delete.cshtml" />
+    <Content Include="Views\Games\Details.cshtml" />
+    <Content Include="Views\Games\Edit.cshtml" />
+    <Content Include="Views\Games\Index.cshtml" />
     <Content Include="Views\Genres\Create.cshtml" />
     <Content Include="Views\Genres\Delete.cshtml" />
     <Content Include="Views\Genres\Details.cshtml" />
@@ -518,25 +432,48 @@
     <Content Include="Views\Reviews\Details.cshtml" />
     <Content Include="Views\Reviews\Edit.cshtml" />
     <Content Include="Views\Reviews\Index.cshtml" />
-    <Content Include="Views\Store_Event_Customer\Create.cshtml" />
-    <Content Include="Views\Store_Event_Customer\Delete.cshtml" />
-    <Content Include="Views\Store_Event_Customer\Details.cshtml" />
-    <Content Include="Views\Store_Event_Customer\Edit.cshtml" />
-    <Content Include="Views\Store_Event_Customer\Index.cshtml" />
-    <Content Include="Views\Store_Event_Employee\Create.cshtml" />
-    <Content Include="Views\Store_Event_Employee\Delete.cshtml" />
-    <Content Include="Views\Store_Event_Employee\Details.cshtml" />
-    <Content Include="Views\Store_Event_Employee\Edit.cshtml" />
-    <Content Include="Views\Store_Event_Employee\Index.cshtml" />
+    <Content Include="Views\Sales_Report\Create.cshtml" />
+    <Content Include="Views\Sales_Report\Delete.cshtml" />
+    <Content Include="Views\Sales_Report\Details.cshtml" />
+    <Content Include="Views\Sales_Report\Edit.cshtml" />
+    <Content Include="Views\Sales_Report\Index.cshtml" />
+    <Content Include="Views\Events\Create.cshtml" />
+    <Content Include="Views\Events\Delete.cshtml" />
+    <Content Include="Views\Events\Details.cshtml" />
+    <Content Include="Views\Events\Edit.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
+    <Content Include="Views\Store_Event_User\Create.cshtml" />
+    <Content Include="Views\Store_Event_User\Delete.cshtml" />
+    <Content Include="Views\Store_Event_User\Details.cshtml" />
+    <Content Include="Views\Store_Event_User\Edit.cshtml" />
+    <Content Include="Views\Store_Event_User\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\User_Address\Create.cshtml" />
+    <Content Include="Views\User_Address\Delete.cshtml" />
+    <Content Include="Views\User_Address\Details.cshtml" />
+    <Content Include="Views\User_Address\Edit.cshtml" />
+    <Content Include="Views\User_Address\Index.cshtml" />
+    <Content Include="Views\User_Game\Create.cshtml" />
+    <Content Include="Views\User_Game\Delete.cshtml" />
+    <Content Include="Views\User_Game\Details.cshtml" />
+    <Content Include="Views\User_Game\Edit.cshtml" />
+    <Content Include="Views\User_Game\Index.cshtml" />
     <Content Include="Views\Wish_List\Create.cshtml" />
     <Content Include="Views\Wish_List\Delete.cshtml" />
     <Content Include="Views\Wish_List\Details.cshtml" />
     <Content Include="Views\Wish_List\Edit.cshtml" />
     <Content Include="Views\Wish_List\Index.cshtml" />
     <Content Include="Views\Profiles\Index.cshtml" />
+    <Content Include="Views\Cart\Summary.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Profile\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -547,13 +484,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\RPClassLibrary\RPClassLibrary.csproj">
       <Project>{4118deb4-5ead-448f-baea-4936d6ebe70b}</Project>
       <Name>RPClassLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -571,9 +508,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50937</DevelopmentServerPort>
+          <DevelopmentServerPort>49819</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50937/</IISUrl>
+          <IISUrl>http://localhost:49819/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -17,7 +17,7 @@ namespace VideoGameStore.Controllers
         // GET: Credit_Card
         public ActionResult Index()
         {
-            var credit_Card = db.Credit_Card.Include(c => c.Customer);
+            var credit_Card = db.Credit_Card.Include(c => c.User);
             return View(credit_Card.ToList());
         }
 
@@ -39,7 +39,7 @@ namespace VideoGameStore.Controllers
         // GET: Credit_Card/Create
         public ActionResult Create()
         {
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username");
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username");
             return View();
         }
 
@@ -48,7 +48,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "credit_card_id,customer_id,card_number,expiry_date,is_expired,is_flagged")] Credit_Card credit_Card)
+        public ActionResult Create([Bind(Include = "credit_card_id,user_id,card_number,expiry_date,is_expired,is_flagged")] Credit_Card credit_Card)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +57,7 @@ namespace VideoGameStore.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", credit_Card.customer_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", credit_Card.user_id);
             return View(credit_Card);
         }
 
@@ -73,7 +73,7 @@ namespace VideoGameStore.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", credit_Card.customer_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", credit_Card.user_id);
             return View(credit_Card);
         }
 
@@ -82,7 +82,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "credit_card_id,customer_id,card_number,expiry_date,is_expired,is_flagged")] Credit_Card credit_Card)
+        public ActionResult Edit([Bind(Include = "credit_card_id,user_id,card_number,expiry_date,is_expired,is_flagged")] Credit_Card credit_Card)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace VideoGameStore.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", credit_Card.customer_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", credit_Card.user_id);
             return View(credit_Card);
         }
 

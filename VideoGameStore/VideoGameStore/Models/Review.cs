@@ -15,13 +15,13 @@ namespace VideoGameStore.Models
     public partial class Review
     {
         public int review_id { get; set; }
-        public int customer_id { get; set; }
+        public int user_id { get; set; }
         public int game_id { get; set; }
         public System.DateTime review_date { get; set; }
         public bool is_approved { get; set; }
         public bool is_deleted { get; set; }
     
-        public virtual Customer Customer { get; set; }
         public virtual Game Game { get; set; }
+        public virtual User User { get; set; }
     }
 }

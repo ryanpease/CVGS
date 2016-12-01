@@ -17,8 +17,7 @@ namespace VideoGameStore.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Store_Event()
         {
-            this.Store_Event_Customer = new HashSet<Store_Event_Customer>();
-            this.Store_Event_Employee = new HashSet<Store_Event_Employee>();
+            this.Store_Event_User = new HashSet<Store_Event_User>();
         }
     
         public int store_event_id { get; set; }
@@ -34,8 +33,6 @@ namespace VideoGameStore.Models
     
         public virtual Address Address { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Store_Event_Customer> Store_Event_Customer { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Store_Event_Employee> Store_Event_Employee { get; set; }
+        public virtual ICollection<Store_Event_User> Store_Event_User { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace VideoGameStore.Controllers
         // GET: Invoices
         public ActionResult Index()
         {
-            var invoices = db.Invoices.Include(i => i.Credit_Card).Include(i => i.Customer);
+            var invoices = db.Invoices.Include(i => i.Credit_Card).Include(i => i.User);
             return View(invoices.ToList());
         }
 
@@ -40,7 +40,7 @@ namespace VideoGameStore.Controllers
         public ActionResult Create()
         {
             ViewBag.credit_card_id = new SelectList(db.Credit_Card, "credit_card_id", "credit_card_id");
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username");
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "invoice_id,customer_id,credit_card_id,invoice_date,ship_date,is_invoice_closed")] Invoice invoice)
+        public ActionResult Create([Bind(Include = "invoice_id,user_id,credit_card_id,invoice_date,ship_date,is_invoice_closed")] Invoice invoice)
         {
             if (ModelState.IsValid)
             {
@@ -59,7 +59,7 @@ namespace VideoGameStore.Controllers
             }
 
             ViewBag.credit_card_id = new SelectList(db.Credit_Card, "credit_card_id", "credit_card_id", invoice.credit_card_id);
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", invoice.customer_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", invoice.user_id);
             return View(invoice);
         }
 
@@ -76,7 +76,7 @@ namespace VideoGameStore.Controllers
                 return HttpNotFound();
             }
             ViewBag.credit_card_id = new SelectList(db.Credit_Card, "credit_card_id", "credit_card_id", invoice.credit_card_id);
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", invoice.customer_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", invoice.user_id);
             return View(invoice);
         }
 
@@ -85,7 +85,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "invoice_id,customer_id,credit_card_id,invoice_date,ship_date,is_invoice_closed")] Invoice invoice)
+        public ActionResult Edit([Bind(Include = "invoice_id,user_id,credit_card_id,invoice_date,ship_date,is_invoice_closed")] Invoice invoice)
         {
             if (ModelState.IsValid)
             {
@@ -94,7 +94,7 @@ namespace VideoGameStore.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.credit_card_id = new SelectList(db.Credit_Card, "credit_card_id", "credit_card_id", invoice.credit_card_id);
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", invoice.customer_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", invoice.user_id);
             return View(invoice);
         }
 

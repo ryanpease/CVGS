@@ -1,89 +1,292 @@
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\ApplicationInsights.config
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\roslyn\csc.exe
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\roslyn\vbc.exe
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\roslyn\VBCSCompiler.exe
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\VideoGameStore.dll.config
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\VideoGameStore.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\VideoGameStore.pdb
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Antlr3.Runtime.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\DataAnnotationsExtensions.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\EntityFramework.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\EntityFramework.SqlServer.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Web.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.ApplicationInsights.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\MySql.Data.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\MySql.Data.Entity.EF6.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Newtonsoft.Json.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Owin.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\RPClassLibrary.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.Helpers.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.Mvc.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.Optimization.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.Razor.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Razor.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\WebGrease.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\RPClassLibrary.pdb
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\EntityFramework.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\EntityFramework.SqlServer.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Web.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.ApplicationInsights.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\MySql.Data.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\MySql.Data.Entity.EF6.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.Helpers.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.Mvc.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.Optimization.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.Razor.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Razor.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Antlr3.Runtime.pdb
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Newtonsoft.Json.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.csprojResolveAssemblyReference.cache
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.dll
-C:\Users\Ryan\Documents\School\Semester 5\PROG3050\Assignments\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.pdb
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\ApplicationInsights.config
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\roslyn\csc.exe
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\roslyn\vbc.exe
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\roslyn\VBCSCompiler.exe
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\VideoGameStore.dll.config
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\VideoGameStore.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\VideoGameStore.pdb
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Antlr3.Runtime.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\DataAnnotationsExtensions.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\EntityFramework.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\EntityFramework.SqlServer.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Web.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\MySql.Data.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Newtonsoft.Json.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Owin.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\RPClassLibrary.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.Helpers.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.Mvc.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.Optimization.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.Razor.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\WebGrease.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\RPClassLibrary.pdb
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\EntityFramework.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\EntityFramework.SqlServer.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Web.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\MySql.Data.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\MySql.Data.Entity.EF6.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.Helpers.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.Mvc.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.Optimization.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.Razor.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Antlr3.Runtime.pdb
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\bin\Newtonsoft.Json.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.pdb
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\ApplicationInsights.config
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\csc.exe
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\System.Collections.Immutable.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\System.Reflection.Metadata.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\vbc.exe
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\VBCSCompiler.exe
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\VBCSCompiler.exe.config
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\VideoGameStore.dll.config
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\VideoGameStore.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\VideoGameStore.pdb
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Antlr3.Runtime.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\DataAnnotationsExtensions.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\EntityFramework.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\EntityFramework.SqlServer.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Agent.Intercept.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.DependencyCollector.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.PerfCounterCollector.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Web.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.WindowsServer.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.ApplicationInsights.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Cookies.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Web.Infrastructure.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\MySql.Data.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\MySql.Data.Entity.EF6.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Newtonsoft.Json.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Owin.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\RPClassLibrary.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Helpers.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Mvc.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Optimization.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Razor.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Deployment.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Razor.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\WebGrease.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\RPClassLibrary.pdb
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\EntityFramework.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\EntityFramework.SqlServer.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.DependencyCollector.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Web.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.WindowsServer.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.ApplicationInsights.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Cookies.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\MySql.Data.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\MySql.Data.Entity.EF6.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Helpers.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Mvc.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Optimization.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Razor.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Deployment.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Razor.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Antlr3.Runtime.pdb
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\bin\Newtonsoft.Json.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.csprojResolveAssemblyReference.cache
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.pdb
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.csprojResolveAssemblyReference.cache
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.pdb
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\ApplicationInsights.config
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\csc.exe
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\vbc.exe
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\VBCSCompiler.exe
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\VideoGameStore.dll.config
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\VideoGameStore.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\VideoGameStore.pdb
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Antlr3.Runtime.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\DataAnnotationsExtensions.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\EntityFramework.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\EntityFramework.SqlServer.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Web.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\MySql.Data.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Newtonsoft.Json.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Owin.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\RPClassLibrary.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Helpers.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Mvc.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Optimization.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Razor.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\WebGrease.dll
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\RPClassLibrary.pdb
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\EntityFramework.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\EntityFramework.SqlServer.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Web.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\MySql.Data.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\MySql.Data.Entity.EF6.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Helpers.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Mvc.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Optimization.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Razor.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Antlr3.Runtime.pdb
+C:\Users\Greg\CVGS\VideoGameStore\VideoGameStore\bin\Newtonsoft.Json.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\ApplicationInsights.config
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\csc.exe
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\vbc.exe
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\VBCSCompiler.exe
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\VideoGameStore.dll.config
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\VideoGameStore.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\VideoGameStore.pdb
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Antlr3.Runtime.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\DataAnnotationsExtensions.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\EntityFramework.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\EntityFramework.SqlServer.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Web.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\MySql.Data.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Newtonsoft.Json.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Owin.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\RPClassLibrary.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Helpers.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Mvc.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Optimization.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Razor.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\WebGrease.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\RPClassLibrary.pdb
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\EntityFramework.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\EntityFramework.SqlServer.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.Web.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\MySql.Data.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\MySql.Data.Entity.EF6.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Helpers.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Mvc.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Optimization.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.Razor.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Antlr3.Runtime.pdb
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\bin\Newtonsoft.Json.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore\obj\Debug\VideoGameStore.pdb

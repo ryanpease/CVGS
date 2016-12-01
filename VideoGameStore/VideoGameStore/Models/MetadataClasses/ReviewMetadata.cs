@@ -20,8 +20,8 @@ namespace VideoGameStore.Models
         [Display(Name = "Review ID")]
         public int review_id { get; set; }
         [Required]
-        [Display(Name = "Customer ID")]
-        public int customer_id { get; set; }
+        [Display(Name = "User ID")]
+        public int user_id { get; set; }
         [Required]
         [Display(Name = "Game ID")]
         public int game_id { get; set; }

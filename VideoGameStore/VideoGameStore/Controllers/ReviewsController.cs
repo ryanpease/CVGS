@@ -17,7 +17,7 @@ namespace VideoGameStore.Controllers
         // GET: Reviews
         public ActionResult Index()
         {
-            var reviews = db.Reviews.Include(r => r.Customer).Include(r => r.Game);
+            var reviews = db.Reviews.Include(r => r.Game).Include(r => r.User);
             return View(reviews.ToList());
         }
 
@@ -39,8 +39,8 @@ namespace VideoGameStore.Controllers
         // GET: Reviews/Create
         public ActionResult Create()
         {
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username");
             ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name");
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "review_id,customer_id,game_id,review_date,is_approved,is_deleted")] Review review)
+        public ActionResult Create([Bind(Include = "review_id,user_id,game_id,review_date,is_approved,is_deleted")] Review review)
         {
             if (ModelState.IsValid)
             {
@@ -58,8 +58,8 @@ namespace VideoGameStore.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", review.customer_id);
             ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name", review.game_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", review.user_id);
             return View(review);
         }
 
@@ -75,8 +75,8 @@ namespace VideoGameStore.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", review.customer_id);
             ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name", review.game_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", review.user_id);
             return View(review);
         }
 
@@ -85,7 +85,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "review_id,customer_id,game_id,review_date,is_approved,is_deleted")] Review review)
+        public ActionResult Edit([Bind(Include = "review_id,user_id,game_id,review_date,is_approved,is_deleted")] Review review)
         {
             if (ModelState.IsValid)
             {
@@ -93,8 +93,8 @@ namespace VideoGameStore.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", review.customer_id);
             ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name", review.game_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", review.user_id);
             return View(review);
         }
 

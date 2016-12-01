@@ -45,8 +45,8 @@ namespace VideoGameStore.Tests
         }
 
         [Test]
-        // This test is responsible for checking the customer_id field
-        public void InvoiceTest_CustomerIDWithCorrectType_ShouldPass()
+        // This test is responsible for checking the user_id field
+        public void InvoiceTest_UserIDWithCorrectType_ShouldPass()
         {
             // Arrange
             Invoice invoice = new Invoice();
@@ -54,10 +54,10 @@ namespace VideoGameStore.Tests
             int actual;
 
             // Act
-            invoice.customer_id = expected;
+            invoice.user_id = expected;
 
             // Assert
-            actual = invoice.customer_id;
+            actual = invoice.user_id;
             Assert.AreEqual(expected, actual);
         }
 

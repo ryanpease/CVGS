@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A50DBE06-C4A4-45F4-937E-D089B9F95345}</ProjectGuid>
+    <ProjectGuid>{02378A91-9A01-45D6-901A-5F4FFC5ED72F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VideoGameStore.Tests</RootNamespace>
@@ -34,9 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <Private>False</Private>
-    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
       <Private>True</Private>
@@ -90,11 +88,7 @@
   <ItemGroup>
     <Compile Include="AddressTest.cs" />
     <Compile Include="Credit_CardTest.cs" />
-    <Compile Include="Customer_AddressTest.cs" />
-    <Compile Include="Customer_GameTest.cs" />
     <Compile Include="DeveloperTest.cs" />
-    <Compile Include="EmployeeTest.cs" />
-    <Compile Include="Employee_AddressTest.cs" />
     <Compile Include="Friend_ListTest.cs" />
     <Compile Include="GameTest.cs" />
     <Compile Include="GenreTest.cs" />
@@ -103,13 +97,14 @@
     <Compile Include="Line_ItemTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
-    <Compile Include="CustomerTest.cs" />
     <Compile Include="ProvinceTest.cs" />
     <Compile Include="PublisherTest.cs" />
     <Compile Include="ReviewTest.cs" />
     <Compile Include="Store_EventTest.cs" />
-    <Compile Include="Store_Event_CustomerTest.cs" />
-    <Compile Include="Store_Event_EmployeeTest.cs" />
+    <Compile Include="Store_Event_UserTest.cs" />
+    <Compile Include="UserTest.cs" />
+    <Compile Include="User_AddressTest.cs" />
+    <Compile Include="User_GameTest.cs" />
     <Compile Include="Wish_ListTest.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -124,7 +119,7 @@
       <Name>RPClassLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\VideoGameStore\VideoGameStore.csproj">
-      <Project>{47448061-37B3-4CAD-9AE8-848B4B5E0F93}</Project>
+      <Project>{ADE25C25-35AB-40A0-B0B4-54F0C7CAB738}</Project>
       <Name>VideoGameStore</Name>
     </ProjectReference>
   </ItemGroup>

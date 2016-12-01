@@ -18,10 +18,10 @@
             @Html.DisplayNameFor(model => model.date_added)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Customer.username)
+            @Html.DisplayNameFor(model => model.User.username)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Customer1.username)
+            @Html.DisplayNameFor(model => model.User1.username)
         </th>
         <th></th>
     </tr>
@@ -35,10 +35,10 @@
             @Html.DisplayFor(modelItem => item.date_added)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Customer.username)
+            @Html.DisplayFor(modelItem => item.User.username)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Customer1.username)
+            @Html.DisplayFor(modelItem => item.User1.username)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |

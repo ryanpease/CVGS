@@ -17,7 +17,7 @@ namespace VideoGameStore.Controllers
         // GET: Wish_List
         public ActionResult Index()
         {
-            var wish_List = db.Wish_List.Include(w => w.Customer).Include(w => w.Game);
+            var wish_List = db.Wish_List.Include(w => w.Game).Include(w => w.User);
             return View(wish_List.ToList());
         }
 
@@ -39,8 +39,8 @@ namespace VideoGameStore.Controllers
         // GET: Wish_List/Create
         public ActionResult Create()
         {
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username");
             ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name");
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "wish_list_id,customer_id,game_id,date_added")] Wish_List wish_List)
+        public ActionResult Create([Bind(Include = "wish_list_id,user_id,game_id,date_added")] Wish_List wish_List)
         {
             if (ModelState.IsValid)
             {
@@ -58,8 +58,8 @@ namespace VideoGameStore.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", wish_List.customer_id);
             ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name", wish_List.game_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", wish_List.user_id);
             return View(wish_List);
         }
 
@@ -75,8 +75,8 @@ namespace VideoGameStore.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", wish_List.customer_id);
             ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name", wish_List.game_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", wish_List.user_id);
             return View(wish_List);
         }
 
@@ -85,7 +85,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "wish_list_id,customer_id,game_id,date_added")] Wish_List wish_List)
+        public ActionResult Edit([Bind(Include = "wish_list_id,user_id,game_id,date_added")] Wish_List wish_List)
         {
             if (ModelState.IsValid)
             {
@@ -93,8 +93,8 @@ namespace VideoGameStore.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.customer_id = new SelectList(db.Customers, "customer_id", "username", wish_List.customer_id);
             ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name", wish_List.game_id);
+            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", wish_List.user_id);
             return View(wish_List);
         }
 

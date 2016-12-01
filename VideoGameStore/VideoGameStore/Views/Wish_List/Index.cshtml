@@ -15,10 +15,10 @@
             @Html.DisplayNameFor(model => model.date_added)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Customer.username)
+            @Html.DisplayNameFor(model => model.Game.game_name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Game.game_name)
+            @Html.DisplayNameFor(model => model.User.username)
         </th>
         <th></th>
     </tr>
@@ -29,10 +29,10 @@
             @Html.DisplayFor(modelItem => item.date_added)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Customer.username)
+            @Html.DisplayFor(modelItem => item.Game.game_name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Game.game_name)
+            @Html.DisplayFor(modelItem => item.User.username)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.wish_list_id }) |

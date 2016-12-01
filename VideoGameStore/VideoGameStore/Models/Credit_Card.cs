@@ -21,13 +21,13 @@ namespace VideoGameStore.Models
         }
     
         public int credit_card_id { get; set; }
-        public int customer_id { get; set; }
+        public int user_id { get; set; }
         public long card_number { get; set; }
         public System.DateTime expiry_date { get; set; }
         public bool is_expired { get; set; }
         public bool is_flagged { get; set; }
     
-        public virtual Customer Customer { get; set; }
+        public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Invoice> Invoices { get; set; }
     }

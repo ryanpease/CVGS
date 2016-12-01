@@ -14,12 +14,12 @@ namespace VideoGameStore.Models
     
     public partial class Friend_List
     {
-        public int customer_id { get; set; }
+        public int user_id { get; set; }
         public int friend_id { get; set; }
         public bool is_family { get; set; }
         public System.DateTime date_added { get; set; }
     
-        public virtual Customer Customer { get; set; }
-        public virtual Customer Customer1 { get; set; }
+        public virtual User User { get; set; }
+        public virtual User User1 { get; set; }
     }
 }

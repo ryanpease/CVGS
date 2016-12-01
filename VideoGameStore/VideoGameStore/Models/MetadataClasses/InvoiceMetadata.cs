@@ -21,8 +21,8 @@ namespace VideoGameStore.Models
         [Display(Name = "Invoice ID")]
         public int invoice_id { get; set; }
         [Required]
-        [Display(Name = "Customer ID")]
-        public int customer_id { get; set; }
+        [Display(Name = "User ID")]
+        public int user_id { get; set; }
         [Required]
         [Display(Name = "Credit Card ID")]
         public int credit_card_id { get; set; }

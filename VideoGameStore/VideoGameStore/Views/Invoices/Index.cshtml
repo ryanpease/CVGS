@@ -24,7 +24,7 @@
             @Html.DisplayNameFor(model => model.Credit_Card.credit_card_id)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Customer.username)
+            @Html.DisplayNameFor(model => model.User.username)
         </th>
         <th></th>
     </tr>
@@ -44,7 +44,7 @@
             @Html.DisplayFor(modelItem => item.Credit_Card.credit_card_id)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Customer.username)
+            @Html.DisplayFor(modelItem => item.User.username)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.invoice_id }) |

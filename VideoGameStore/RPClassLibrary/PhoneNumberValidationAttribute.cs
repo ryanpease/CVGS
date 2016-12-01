@@ -30,7 +30,7 @@ namespace RPClassLibrary
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             ValidationResult result;
-            if (string.IsNullOrWhiteSpace(value.ToString()))
+            if (string.IsNullOrWhiteSpace((string)value))
             {
                 result = new ValidationResult(FormatErrorMessage(validationContext.DisplayName));
             }
