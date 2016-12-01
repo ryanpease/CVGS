@@ -1,31 +1,29 @@
-﻿using System;
+﻿/* Filename: CartController.cs
+ * Description: This class is responsible for handing the user authorization and authentication.
+ * 
+ * Revision History:
+ *     Ryan Pease, 2016-11-22: Created 
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VideoGameStore.Models;
 using System.Security.Claims;
+using System.Web.Helpers;
+using System.Data.Entity.Validation;
 
 namespace VideoGameStore.Controllers
 {
     [AllowAnonymous]
     public class AuthController : Controller
     {
-        //// GET: Auth
-        //[HttpGet]
-        //public ActionResult Login(string returnUrl)
-        //{
-        //    var model = new LoginModel
-        //    {
-        //        ReturnUrl = returnUrl
-        //    };
-        //    return View(model);
-        //}
-
         // GET: Auth
         [HttpGet]
         public ActionResult Login()
-        {            
+        {
             return View();
         }
 
@@ -34,58 +32,61 @@ namespace VideoGameStore.Controllers
         {
             if (ModelState.IsValid)
             {
+                string password = model.Password;
                 VideoGameStoreDBContext db = new VideoGameStoreDBContext();
-                var users = db.Users.Where(u => u.email == model.Email).Where(u => u.user_password == model.Password).ToList();
+                var users = db.Users.Where(u => u.email == model.Email).ToList();
                 if (users.Count == 1)
                 {
                     User user = users.FirstOrDefault();
-                    var identity = new ClaimsIdentity(new[] {
-                    new Claim(ClaimTypes.Name, user.first_name),
-                    new Claim(ClaimTypes.Email, user.email),
-                    },
-                        "ApplicationCookie");
-                    var context = Request.GetOwinContext();
-                    var authManager = context.Authentication;
+                    string hashedPassword = user.user_password;
+                    if (CheckPassword(password, hashedPassword))
+                    {
+                        var role = "";
+                        if (user.is_admin)
+                        {
+                            role = "Admin";
+                        }
+                        else if (user.is_employee)
+                        {
+                            role = "Employee";
+                        }
+                        else if (user.is_member)
+                        {
+                            role = "Member";    //necessary?
+                        }
+                        else
+                        {
+                            role = "Customer";
+                        }
+                        var identity = new ClaimsIdentity(new[] {
+                            new Claim(ClaimTypes.Name, user.first_name),
+                            new Claim(ClaimTypes.Email, user.email),
+                            new Claim(ClaimTypes.Role, role)
+                            },
+                            "ApplicationCookie");
+                        var context = Request.GetOwinContext();
+                        var authManager = context.Authentication;
 
-                    authManager.SignIn(identity);
+                        authManager.SignIn(identity);
 
-
-                    return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index", "Home");
+                    }
+                    ModelState.AddModelError("", "Incorrect password.");
+                    return View(model);
                 }
-
-                return View(model);
+                else
+                {
+                    ModelState.AddModelError("", "Email address not found.");
+                    return View(model);
+                }
             }
 
-            //if (user.email == "admin@admin.com" && user.user_password == "123456")
-            //{
-            //var identity = new ClaimsIdentity(new[] {
-            //new Claim(ClaimTypes.Name, "Ryan"),
-            //new Claim(ClaimTypes.Email, "ryan@email.com"),
-            //new Claim(ClaimTypes.Country, "Canada")
-            //},
-            //    "ApplicationCookie");
-            //var context = Request.GetOwinContext();
-            //var authManager = context.Authentication;
-
-            //authManager.SignIn(identity);
-
-            //return RedirectToAction("Index", "Home");
-            //}
             else
             {
                 ModelState.AddModelError("", "Invalid email or password.");
                 return View(model);
             }
         }
-
-        //private string GetRedirectUrl(string returnUrl)
-        //{
-        //    if (string.IsNullOrEmpty(returnUrl) || !Url.IsLocalUrl(returnUrl))
-        //    {
-        //        return Url.Action("Index", "Home");
-        //    }
-        //    return returnUrl;
-        //}
 
         public ActionResult Logout()
         {
@@ -106,16 +107,27 @@ namespace VideoGameStore.Controllers
         {
             if (ModelState.IsValid)
             {
+                string password = user.user_password;
+                string hashedPassword = Crypto.HashPassword(password);
+
+                user.user_password = hashedPassword;
+
                 VideoGameStoreDBContext db = new VideoGameStoreDBContext();
                 db.Users.Add(user);
                 db.SaveChanges();
-                return RedirectToAction("Index", "Home");                
+                return RedirectToAction("Index", "Home");
             }
             else
             {
                 ModelState.AddModelError("", "One or more fields are invalid");
                 return View();
-            }            
+            }
+        }
+
+        public bool CheckPassword(string plainTextPassword, string hashedPassword)
+        {
+            VideoGameStoreDBContext db = new VideoGameStoreDBContext();
+            return Crypto.VerifyHashedPassword(hashedPassword, plainTextPassword);
         }
     }
 }

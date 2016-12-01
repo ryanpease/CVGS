@@ -16,6 +16,7 @@ namespace VideoGameStore.Controllers
     {
         private VideoGameStoreDBContext db = new VideoGameStoreDBContext();
 
+        [AllowAnonymous]
         // GET: Games
         public ActionResult Index()
         {
@@ -25,6 +26,7 @@ namespace VideoGameStore.Controllers
             return View(games.ToList());
         }
 
+        [AllowAnonymous]
         // GET: Games/Details/5
         public ActionResult Details(int? id)
         {
@@ -40,6 +42,7 @@ namespace VideoGameStore.Controllers
             return View(game);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Games/Create
         public ActionResult Create()
         {
@@ -49,6 +52,7 @@ namespace VideoGameStore.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         // POST: Games/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -69,6 +73,7 @@ namespace VideoGameStore.Controllers
             return View(game);
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // GET: Games/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -87,6 +92,7 @@ namespace VideoGameStore.Controllers
             return View(game);
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // POST: Games/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -106,6 +112,7 @@ namespace VideoGameStore.Controllers
             return View(game);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Games/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -121,6 +128,7 @@ namespace VideoGameStore.Controllers
             return View(game);
         }
 
+        [Authorize(Roles = "Admin")]
         // POST: Games/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
