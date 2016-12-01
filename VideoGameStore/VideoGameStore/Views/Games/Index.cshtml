@@ -105,25 +105,25 @@
         <td>
             @Html.DisplayFor(modelItem => item.Publisher.publisher_name)
         </td>
-
+        <td>
         @{
             if (counter + 1 <= data.Length)
             {
-                <td>
+                <p>
                     @data[counter] / 5
-                </td>
+                </p>
                 counter++;
             }
 
-            else if (counter + 1 >= data.Length || data[counter] == "N/A")
+            else
             {
-                <td>
+                <p>
                     N/A
-                </td>
+                </p>
             }
 
         }
-
+        </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.game_id }) |
             @Html.ActionLink("Details", "Details", new { id = item.game_id }) |
