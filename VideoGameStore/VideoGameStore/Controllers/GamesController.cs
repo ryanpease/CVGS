@@ -151,9 +151,24 @@ namespace VideoGameStore.Controllers
 
         public string[] getGameIDS()
         {
-            string[] results = new string[120];
-
+            string[] results;
+            int num_of_games = 0;
             SharedDB.setConnectionString();
+            SharedDB.connection.Open();
+            using (SharedDB.connection)
+            {
+                SharedDB.command = new MySqlCommand("SELECT COUNT(game_id) FROM Game;", SharedDB.connection);
+                MySqlDataReader reader = SharedDB.command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        num_of_games = reader.GetInt32(0);
+                    }
+                }
+            }
+
+            results = new string[num_of_games];
             SharedDB.connection.Open();
             using (SharedDB.connection)
             {
@@ -162,7 +177,7 @@ namespace VideoGameStore.Controllers
                 MySqlDataReader reader = SharedDB.command.ExecuteReader();
                 if (reader.HasRows)
                 {
-                    string[] temp = new string[120];
+                    string[] temp = new string[num_of_games];
                     int counter = 0;
                     while (reader.Read())
                     {
