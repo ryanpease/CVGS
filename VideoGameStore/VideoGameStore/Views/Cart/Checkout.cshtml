@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Checkout";
+}
+
+<h2>Checkout</h2>
+
+<div class="form-horizontal">
+    <hr />
+    <div>
+        <h3>Address</h3>
+        @if (ViewBag.numAddresses > 0)
+        {
+            @Html.DropDownList("userAddress", null, htmlAttributes: new { @class = "form-control" })
+            
+        }     
+        <p>@Html.ActionLink("Add A New Address", "CreateUserAddress", "Addresses", null, new { @class = "btn btn-primary" })</p>
+        
+    </div>
+    <div>
+        <h3>Credit Card</h3>
+        @if (ViewBag.numCards > 0)
+            {
+                @Html.DropDownList("creditCards", null, htmlAttributes: new { @class = "form-control" })            
+        }
+        <p>@Html.ActionLink("Add A New Credit Card", "CreateUserCreditCard", "Credit_Card", null, new { @class = "btn btn-primary" })</p>
+    </div>
+</div>
+
+    user id
+
+    credit card id
+
+    address id
+
+    date = today
+
