@@ -17,24 +17,34 @@ namespace VideoGameStore.Controllers
         // GET: User_Address
         public ActionResult Index()
         {
-            var user_Address = db.User_Address.Include(u => u.Address).Include(u => u.User);
+            int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+            var user_Address = db.User_Address.Include(u => u.Address).Include(u => u.User).Where(u => u.user_id == user_id);
             return View(user_Address.ToList());
+            //return View();
         }
 
-        // GET: User_Address/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            User_Address user_Address = db.User_Address.Find(id);
-            if (user_Address == null)
-            {
-                return HttpNotFound();
-            }
-            return View(user_Address);
-        }
+        //public ActionResult SelectAddress()  -- was originally going to let user select address here - created CreateUserAddress in Address instead - remember to remove this and view for SelectAddress
+        //{
+        //    int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+        //    var user_Address = db.User_Address.Include(u => u.Address).Include(u => u.User).Where(u => u.user_id == user_id);
+        //    ViewBag.userAddress = new SelectList(user_Address, "address_id", "Address.street_address");
+        //    return View();
+        //}
+
+        // GET: User_Address/Details/5          -- necessary? just show details for address
+        //public ActionResult Details(int? id)        // problem with this as user_address is a composite key
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    User_Address user_Address = db.User_Address.Find(id);
+        //    if (user_Address == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(user_Address);
+        //}
 
         // GET: User_Address/Create
         public ActionResult Create()

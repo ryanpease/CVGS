@@ -14,7 +14,6 @@ using VideoGameStore.Models;
 
 namespace VideoGameStore.Controllers
 {
-    [AllowAnonymous]
     public class CartController : Controller
     {
         private VideoGameStoreDBContext db = new VideoGameStoreDBContext();
@@ -29,6 +28,7 @@ namespace VideoGameStore.Controllers
         //    });
         //}
 
+        [AllowAnonymous]
         public PartialViewResult Summary(Cart cart)
         {
             return PartialView(cart);
@@ -56,10 +56,31 @@ namespace VideoGameStore.Controllers
         //    return RedirectToAction("Index", new { returnUrl });
         //}
 
+        [AllowAnonymous]
         //GET: Cart
         public ViewResult Index(string returnUrl)
         {
             return View(new CartIndexViewModel { Cart = GetCart(), ReturnUrl = returnUrl });
+        }
+
+        [Authorize(Roles ="Customer, Admin, Employee")]  //user must be logged in/registered in order to check out
+        public ViewResult Checkout()
+        {
+            // get current user_id
+            int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+     
+            // create a list of the user's addresses and credit cards - these will be displayed in a dropdown list
+            var addresses = db.User_Address.Where(a => a.user_id == user_id).ToList();
+            var creditcards = db.Credit_Card.Where(c => c.user_id == user_id).ToList();
+            int numAddresses = addresses.Count();
+            int numCards = creditcards.Count();
+            ViewBag.numCards = numCards;
+            ViewBag.numAddresses = numAddresses;
+            ViewBag.user_id = user_id;
+            ViewBag.userAddress = new SelectList(addresses, "address_id", "Address.street_address");
+            ViewBag.creditCards = new SelectList(creditcards, "credit_card_id", "card_number");
+     
+            return View();
         }
 
         public RedirectToRouteResult AddToCart(int game_id, string returnUrl)
