@@ -27,7 +27,8 @@
         <tr>
             <td>@Html.ActionLink("Wish List", "Index", "Wish_List", new { id = item.user_id }, null)</td>
         </tr>
-        if (true)
+        //User.Identity.Name contains first_name for some reason not username
+        if (this.User.Identity.Name == item.username)
         {
             <tr>
                 <td>@Html.ActionLink("Library", "Index", "User_Game", new { id = item.user_id }, null)</td>
