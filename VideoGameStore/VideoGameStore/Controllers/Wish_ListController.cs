@@ -15,9 +15,9 @@ namespace VideoGameStore.Controllers
         private VideoGameStoreDBContext db = new VideoGameStoreDBContext();
 
         // GET: Wish_List
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            var wish_List = db.Wish_List.Include(w => w.Game).Include(w => w.User);
+            var wish_List = db.Wish_List.Where(f => f.user_id == id);
             return View(wish_List.ToList());
         }
 
@@ -37,10 +37,11 @@ namespace VideoGameStore.Controllers
         }
 
         // GET: Wish_List/Create
-        public ActionResult Create()
+        public ActionResult Create(int? id)
         {
             ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name");
-            ViewBag.user_id = new SelectList(db.Users, "user_id", "username");
+            //need a way to pass in the user_id of current user 
+            ViewBag.user_id = new SelectList(db.Users.Where(f => f.username == this.User.Identity.Name), "user_id", "username");
             return View();
         }
 
@@ -55,7 +56,7 @@ namespace VideoGameStore.Controllers
             {
                 db.Wish_List.Add(wish_List);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { id = wish_List.user_id });
             }
 
             ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name", wish_List.game_id);
@@ -91,7 +92,7 @@ namespace VideoGameStore.Controllers
             {
                 db.Entry(wish_List).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { id = wish_List.user_id });
             }
             ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name", wish_List.game_id);
             ViewBag.user_id = new SelectList(db.Users, "user_id", "username", wish_List.user_id);
@@ -121,7 +122,7 @@ namespace VideoGameStore.Controllers
             Wish_List wish_List = db.Wish_List.Find(id);
             db.Wish_List.Remove(wish_List);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", new { id = wish_List.user_id });
         }
 
         protected override void Dispose(bool disposing)

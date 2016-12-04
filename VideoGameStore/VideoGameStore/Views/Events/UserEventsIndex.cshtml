@@ -46,8 +46,6 @@
 
         foreach (var item in Model)
         {
-            if (user_events[counter] != null)
-            {
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.store_event_name)
@@ -104,5 +102,4 @@
             }
         }
         counter++;
-    }
 </table>

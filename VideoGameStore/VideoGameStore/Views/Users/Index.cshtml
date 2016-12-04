@@ -191,6 +191,7 @@
                     <p>@Html.ActionLink("Edit", "Edit", new { id = item.user_id })</p>
                     <p>@Html.ActionLink("Delete", "Delete", new { id = item.user_id })</p>
                 }
+                <p>@Html.ActionLink("Profile", "Index", "Profiles", new { id = item.user_id }, null)</p>
             </td>
         </tr>
     }
