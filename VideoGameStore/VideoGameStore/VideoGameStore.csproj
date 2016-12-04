@@ -284,6 +284,7 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserGameViewModel.cs" />
     <Compile Include="Models\User_Address.cs">
       <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>

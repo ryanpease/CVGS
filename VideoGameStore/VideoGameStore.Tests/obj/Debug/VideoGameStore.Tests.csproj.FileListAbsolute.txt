@@ -108,3 +108,5 @@ G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Micros
 G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\obj\Debug\VideoGameStore.Tests.csprojResolveAssemblyReference.cache
 G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\obj\Debug\VideoGameStore.Tests.dll
 G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\obj\Debug\VideoGameStore.Tests.pdb
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\MySql.Data.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\MySql.Data.xml
