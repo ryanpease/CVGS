@@ -208,6 +208,7 @@
     <Compile Include="Controllers\Store_Event_UserController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\User_AddressController.cs" />
+    <Compile Include="Controllers\User_DetailsController.cs" />
     <Compile Include="Controllers\User_GameController.cs" />
     <Compile Include="Controllers\Wish_ListController.cs" />
     <Compile Include="Global.asax.cs">
@@ -283,6 +284,7 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserGameViewModel.cs" />
     <Compile Include="Models\User_Address.cs">
       <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
@@ -470,6 +472,9 @@
     <Content Include="Views\Profiles\Index.cshtml" />
     <Content Include="Views\Cart\Summary.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Profiles\nonFriend.cshtml" />
+    <Content Include="Views\User_Details\Edit.cshtml" />
+    <Content Include="Views\User_Details\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
