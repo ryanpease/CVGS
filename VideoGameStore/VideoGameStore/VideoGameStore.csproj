@@ -283,6 +283,7 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserInvoiceViewModel.cs" />
     <Compile Include="Models\User_Address.cs">
       <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
@@ -470,6 +471,7 @@
     <Content Include="Views\Profiles\Index.cshtml" />
     <Content Include="Views\Cart\Summary.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Cart\Checkout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

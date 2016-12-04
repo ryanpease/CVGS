@@ -21,11 +21,40 @@ namespace VideoGameStore.Controllers
             return View(invoices.ToList());
         }
 
+        [Authorize(Roles = "Customer, Admin, Employee, Member")]
+        public ActionResult DisplayUserInvoice(int? invoice_id)
+        {
+            if (invoice_id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            else
+            {
+                Invoice invoice = db.Invoices.Where(i => i.invoice_id == invoice_id).FirstOrDefault();
+                int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+                if (invoice.user_id != user_id)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);     //change to something else? this is if the user trying to access this isn't the user who created the order
+                }
+                else
+                {
+                    User user = db.Users.Where(u => u.user_id == user_id).FirstOrDefault();
+                    int address_id = db.Invoice_Address.Where(a => a.invoice_id == invoice.invoice_id).FirstOrDefault().address_id;
+                    Address address = db.Addresses.Where(a => a.address_id == address_id).FirstOrDefault();
+                    Credit_Card credit_card = db.Credit_Card.Where(c => c.credit_card_id == invoice.credit_card_id).FirstOrDefault();
+                    IEnumerable<Line_Item> items = db.Line_Item.Where(l => l.invoice_id == invoice_id).Include(l => l.Game).ToList();
+                    //ViewBag.items = items;
+                    //return View(invoice);
+                    return View(new UserInvoiceViewModel { invoice = invoice, user = user, address = address, credit_card = credit_card, items = items });
+                }
+            }                       
+        }
+
         // GET: Invoices/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
-            {
+            {                
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Invoice invoice = db.Invoices.Find(id);
