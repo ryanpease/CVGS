@@ -73,9 +73,9 @@
     <NavigationProperty Name="Genre" Relationship="Self.game_genre_fk" FromRole="Game" ToRole="Genre" />
     <NavigationProperty Name="Publisher" Relationship="Self.game_publisher_fk" FromRole="Game" ToRole="Publisher" />
     <NavigationProperty Name="Line_Item" Relationship="Self.line_item_game_fk" FromRole="Game" ToRole="Line_Item" />
-    <NavigationProperty Name="Reviews" Relationship="Self.review_game_fk" FromRole="Game" ToRole="Review" />
     <NavigationProperty Name="User_Game" Relationship="Self.user_game_game_fk" FromRole="Game" ToRole="User_Game" />
     <NavigationProperty Name="Wish_List" Relationship="Self.wish_list_game_fk" FromRole="Game" ToRole="Wish_List" />
+    <NavigationProperty Name="Reviews" Relationship="VideoGameStoreDBModel.review_game_fk" FromRole="Game" ToRole="Review" />
   </EntityType>
   <EntityType Name="Genre">
     <Key>
@@ -144,19 +144,6 @@
     <Property Name="contact_email" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Games" Relationship="Self.game_publisher_fk" FromRole="Publisher" ToRole="Game" />
   </EntityType>
-  <EntityType Name="Review">
-    <Key>
-      <PropertyRef Name="review_id" />
-    </Key>
-    <Property Name="review_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="user_id" Type="Int32" Nullable="false" />
-    <Property Name="game_id" Type="Int32" Nullable="false" />
-    <Property Name="review_date" Type="DateTime" Nullable="false" />
-    <Property Name="is_approved" Type="Boolean" Nullable="false" />
-    <Property Name="is_deleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Game" Relationship="Self.review_game_fk" FromRole="Review" ToRole="Game" />
-    <NavigationProperty Name="User" Relationship="Self.review_user_fk" FromRole="Review" ToRole="User" />
-  </EntityType>
   <EntityType Name="Store_Event">
     <Key>
       <PropertyRef Name="store_event_id" />
@@ -212,11 +199,11 @@
     <NavigationProperty Name="Friend_List" Relationship="Self.friend_user_friend_fk" FromRole="User" ToRole="Friend_List" />
     <NavigationProperty Name="Friend_List1" Relationship="Self.friend_user_user_fk" FromRole="User" ToRole="Friend_List" />
     <NavigationProperty Name="Invoices" Relationship="Self.invoice_user_fk" FromRole="User" ToRole="Invoice" />
-    <NavigationProperty Name="Reviews" Relationship="Self.review_user_fk" FromRole="User" ToRole="Review" />
     <NavigationProperty Name="Store_Event_User" Relationship="Self.store_event_user_user_fk" FromRole="User" ToRole="Store_Event_User" />
     <NavigationProperty Name="User_Address" Relationship="Self.user_address_user_fk" FromRole="User" ToRole="User_Address" />
     <NavigationProperty Name="User_Game" Relationship="Self.user_game_user_fk" FromRole="User" ToRole="User_Game" />
     <NavigationProperty Name="Wish_List" Relationship="Self.wish_list_user_fk" FromRole="User" ToRole="Wish_List" />
+    <NavigationProperty Name="Reviews" Relationship="VideoGameStoreDBModel.review_user_fk" FromRole="User" ToRole="Review" />
   </EntityType>
   <EntityType Name="User_Address">
     <Key>
@@ -406,18 +393,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="review_game_fk">
-    <End Role="Game" Type="Self.Game" Multiplicity="1" />
-    <End Role="Review" Type="Self.Review" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Game">
-        <PropertyRef Name="game_id" />
-      </Principal>
-      <Dependent Role="Review">
-        <PropertyRef Name="game_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="user_game_game_fk">
     <End Role="Game" Type="Self.Game" Multiplicity="1" />
     <End Role="User_Game" Type="Self.User_Game" Multiplicity="*" />
@@ -475,18 +450,6 @@
       </Principal>
       <Dependent Role="Line_Item">
         <PropertyRef Name="invoice_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="review_user_fk">
-    <End Role="User" Type="Self.User" Multiplicity="1" />
-    <End Role="Review" Type="Self.Review" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="User">
-        <PropertyRef Name="user_id" />
-      </Principal>
-      <Dependent Role="Review">
-        <PropertyRef Name="user_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -562,7 +525,6 @@
     <EntitySet Name="Line_Item" EntityType="Self.Line_Item" />
     <EntitySet Name="Provinces" EntityType="Self.Province" />
     <EntitySet Name="Publishers" EntityType="Self.Publisher" />
-    <EntitySet Name="Reviews" EntityType="Self.Review" />
     <EntitySet Name="Store_Event" EntityType="Self.Store_Event" />
     <EntitySet Name="Store_Event_User" EntityType="Self.Store_Event_User" />
     <EntitySet Name="Users" EntityType="Self.User" />
@@ -618,10 +580,6 @@
       <End Role="Game" EntitySet="Games" />
       <End Role="Line_Item" EntitySet="Line_Item" />
     </AssociationSet>
-    <AssociationSet Name="review_game_fk" Association="Self.review_game_fk">
-      <End Role="Game" EntitySet="Games" />
-      <End Role="Review" EntitySet="Reviews" />
-    </AssociationSet>
     <AssociationSet Name="user_game_game_fk" Association="Self.user_game_game_fk">
       <End Role="Game" EntitySet="Games" />
       <End Role="User_Game" EntitySet="User_Game" />
@@ -641,10 +599,6 @@
     <AssociationSet Name="line_item_invoice_fk" Association="Self.line_item_invoice_fk">
       <End Role="Invoice" EntitySet="Invoices" />
       <End Role="Line_Item" EntitySet="Line_Item" />
-    </AssociationSet>
-    <AssociationSet Name="review_user_fk" Association="Self.review_user_fk">
-      <End Role="User" EntitySet="Users" />
-      <End Role="Review" EntitySet="Reviews" />
     </AssociationSet>
     <AssociationSet Name="store_event_user_store_event_fk" Association="Self.store_event_user_store_event_fk">
       <End Role="Store_Event" EntitySet="Store_Event" />
@@ -666,5 +620,52 @@
       <End Role="User" EntitySet="Users" />
       <End Role="Wish_List" EntitySet="Wish_List" />
     </AssociationSet>
+    <EntitySet Name="Reviews" EntityType="VideoGameStoreDBModel.Review" />
+    <AssociationSet Name="review_game_fk" Association="VideoGameStoreDBModel.review_game_fk">
+      <End Role="Game" EntitySet="Games" />
+      <End Role="Review" EntitySet="Reviews" />
+    </AssociationSet>
+    <AssociationSet Name="review_user_fk" Association="VideoGameStoreDBModel.review_user_fk">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Review" EntitySet="Reviews" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Review">
+    <Key>
+      <PropertyRef Name="review_id" />
+    </Key>
+    <Property Name="review_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="game_id" Type="Int32" Nullable="false" />
+    <Property Name="review_date" Type="DateTime" Nullable="false" />
+    <Property Name="review_content" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="is_approved" Type="Boolean" Nullable="false" />
+    <Property Name="is_deleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Game" Relationship="VideoGameStoreDBModel.review_game_fk" FromRole="Review" ToRole="Game" />
+    <NavigationProperty Name="User" Relationship="VideoGameStoreDBModel.review_user_fk" FromRole="Review" ToRole="User" />
+  </EntityType>
+  <Association Name="review_game_fk">
+    <End Type="VideoGameStoreDBModel.Game" Role="Game" Multiplicity="1" />
+    <End Type="VideoGameStoreDBModel.Review" Role="Review" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game">
+        <PropertyRef Name="game_id" />
+      </Principal>
+      <Dependent Role="Review">
+        <PropertyRef Name="game_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="review_user_fk">
+    <End Type="VideoGameStoreDBModel.User" Role="User" Multiplicity="1" />
+    <End Type="VideoGameStoreDBModel.Review" Role="Review" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="Review">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -317,6 +317,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\banner.jpg" />
     <Content Include="images\covers\civilization_4.jpg" />
     <Content Include="images\covers\final_fantasy_vii.jpg" />
     <Content Include="images\covers\mass_effect.jpg" />
@@ -470,6 +471,7 @@
     <Content Include="Views\Profiles\Index.cshtml" />
     <Content Include="Views\Cart\Summary.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Events\UserEventsIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

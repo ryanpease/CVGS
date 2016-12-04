@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -40,7 +41,8 @@ namespace VideoGameStore.Controllers
         public ActionResult Create()
         {
             ViewBag.store_event_id = new SelectList(db.Store_Event, "store_event_id", "store_event_name");
-            ViewBag.user_id = new SelectList(db.Users, "user_id", "username");
+            int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+            ViewBag.user_id = user_id;
             return View();
         }
 
@@ -132,5 +134,58 @@ namespace VideoGameStore.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public string[] getUserIDS()
+        {
+            int num_of_users = 0;
+            string[] users;
+            SharedDB.setConnectionString();
+            SharedDB.command = new MySqlCommand("SELECT COUNT(user_id) FROM User;", SharedDB.connection);
+            SharedDB.connection.Open();
+            using (SharedDB.connection)
+            {
+                MySqlDataReader reader = SharedDB.command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        num_of_users = reader.GetInt32(0);
+                    }
+                }
+
+            }
+            users = new string[num_of_users];
+
+            int counter = 0;
+            SharedDB.command = new MySqlCommand("SELECT user_id FROM User;");
+            SharedDB.connection.Open();
+            using (SharedDB.connection)
+            {
+                MySqlDataReader reader = SharedDB.command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        users[counter] = reader.GetString(0);
+                        counter++;
+                    }
+                }
+            }
+
+            return users;
+        }
+
+        public void registerForEvent(int event_id, int user_id)
+        {
+            string[] users = getUserIDS();
+            SharedDB.setConnectionString();
+            SharedDB.command = new MySqlCommand("INSERT INTO Store_Event_User (store_event_id, user_id) VALUES (" + event_id + ", " + user_id + ")", SharedDB.connection);
+            SharedDB.connection.Open();
+            using (SharedDB.connection)
+            {
+                SharedDB.command.ExecuteNonQuery();
+            }
+        }
+
     }
 }

@@ -42,6 +42,7 @@ namespace VideoGameStore.Controllers
                     if (CheckPassword(password, hashedPassword))
                     {
                         var role = "";
+                        //role = "User";
                         if (user.is_admin)
                         {
                             role = "Admin";
@@ -59,7 +60,7 @@ namespace VideoGameStore.Controllers
                             role = "Customer";
                         }
                         var identity = new ClaimsIdentity(new[] {
-                            new Claim(ClaimTypes.Name, user.first_name),
+                            new Claim(ClaimTypes.Name, user.username),
                             new Claim(ClaimTypes.Email, user.email),
                             new Claim(ClaimTypes.Role, role)
                             },

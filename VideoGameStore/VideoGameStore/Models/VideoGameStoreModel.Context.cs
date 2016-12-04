@@ -36,7 +36,6 @@ namespace VideoGameStore.Models
         public virtual DbSet<Line_Item> Line_Item { get; set; }
         public virtual DbSet<Province> Provinces { get; set; }
         public virtual DbSet<Publisher> Publishers { get; set; }
-        public virtual DbSet<Review> Reviews { get; set; }
         public virtual DbSet<Store_Event> Store_Event { get; set; }
         public virtual DbSet<Store_Event_User> Store_Event_User { get; set; }
         public virtual DbSet<User> Users { get; set; }
@@ -44,5 +43,6 @@ namespace VideoGameStore.Models
         public virtual DbSet<User_Game> User_Game { get; set; }
         public virtual DbSet<Wish_List> Wish_List { get; set; }
         public virtual DbSet<Sales_Report> Sales_Report { get; set; }
+        public virtual DbSet<Review> Reviews { get; set; }
     }
 }

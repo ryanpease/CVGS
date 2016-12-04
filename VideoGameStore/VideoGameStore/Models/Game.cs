@@ -18,9 +18,9 @@ namespace VideoGameStore.Models
         public Game()
         {
             this.Line_Item = new HashSet<Line_Item>();
-            this.Reviews = new HashSet<Review>();
             this.User_Game = new HashSet<User_Game>();
             this.Wish_List = new HashSet<Wish_List>();
+            this.Reviews = new HashSet<Review>();
         }
     
         public int game_id { get; set; }
@@ -45,10 +45,10 @@ namespace VideoGameStore.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Line_Item> Line_Item { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Review> Reviews { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User_Game> User_Game { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Wish_List> Wish_List { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Review> Reviews { get; set; }
     }
 }
