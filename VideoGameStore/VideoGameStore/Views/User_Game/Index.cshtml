@@ -1,6 +1,6 @@
-﻿@model IEnumerable<VideoGameStore.Models.UserGameViewModel>
+﻿@model IEnumerable<VideoGameStore.Models.User_Game>
 
-@*@model System.Collections.Generic.IEnumerable<VideoGameStore.Models.UserGameViewModel>*@
+
 
 @{
     ViewBag.Title = "Library";
@@ -14,63 +14,49 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.imageLocation)
+            @Html.DisplayNameFor(model => model.Game.image_location)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.description)
+            @Html.DisplayNameFor(model => model.Game.description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.datePurchased)
+            @Html.DisplayNameFor(model => model.date_purchased)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.rating)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.gameName)
+            @Html.DisplayNameFor(model => model.Game.game_name)
         </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.User.username)
+        </th>*@
+        @*<th></th>*@
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            <img src="~/images/covers/@Html.DisplayFor(modelItem => item.imageLocation)" style="height:200px; width:200px;" />
+            <img src="~/images/covers/@Html.DisplayFor(modelItem => item.Game.image_location)" style="height:200px; width:200px;" />
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.description)
-            <br>
-            <br>
-            @if (item.reviewID == null || item.reviewID == 0) {
-            <div class="text-centre">
-                <a class="btn btn-primary" href="@Url.Action("Create", "Reviews")">Review Game</a>
-            </div>
-            }
-            else
-            {
-                <div class="text-centre">
-                    <a class="btn btn-primary" href="@Url.Action("Edit", "Reviews")">Review Game</a>
-                </div>
-            }
+            @Html.DisplayFor(modelItem => item.Game.description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.datePurchased)
+            @Html.DisplayFor(modelItem => item.date_purchased)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.rating)
-            <br>
-            <br>
-            <div class="text-centre">
-                <a class="btn btn-primary" href="">Rate Game</a>
-            </div>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.gameName)
+            @Html.DisplayFor(modelItem => item.Game.game_name)
         </td>
         @*<td>
             @Html.DisplayFor(modelItem => item.User.username)
         </td>*@
         <td>
             @*@Html.ActionLink("Edit", "Edit", new { id=item.user_game_id }) |*@
-            @Html.ActionLink("Details", "Details", "Games", new { id=item.gameID }, null) |
+            @Html.ActionLink("Details", "Details", "Games", new { id=item.game_id }, null) |
             Download(coming soon)
             @*@Html.ActionLink("Delete", "Delete", new { id=item.user_game_id })*@
         </td>

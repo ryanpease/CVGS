@@ -1,41 +1,14 @@
-﻿@model IEnumerable<VideoGameStore.Models.User>
-
+﻿
 @{
-    ViewBag.Title = "Profile";
+    ViewBag.Title = "Index";
 }
 
-<h2>Profile</h2>
+<h2>Profiles</h2>
 
-<table class="table">
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@Html.DisplayNameFor(model => model.username) </td>
-            <td>@Html.DisplayFor(modelItem => item.username)</td>
-        </tr>
-        <tr>
-            <td>@Html.DisplayFor(modelItem => item.first_name) </td>
-            <td>@Html.DisplayFor(modelItem => item.last_name)</td>
-        </tr>
-        <tr>
-            <td>@Html.DisplayNameFor(model => model.email) </td>
-            <td>@Html.DisplayFor(modelItem => item.email)</td>
-        </tr>
-        <tr>
-            <td>@Html.ActionLink("Friend List", "Index", "Friend_List", new { id = item.user_id }, null)</td>
-        </tr>
-        <tr>
-            <td>@Html.ActionLink("Wish List", "Index", "Wish_List", new { id = item.user_id }, null)</td>
-        </tr>
-        //User.Identity.Name contains first_name for some reason not username
-        if (this.User.Identity.Name == item.username)
-        {
-            <tr>
-                <td>@Html.ActionLink("Library", "Index", "User_Game", new { id = item.user_id }, null)</td>
-            </tr>
-            <tr>
-                <td>@Html.ActionLink("Details", "Index", "User_Details", new { id = item.user_id }, null)</td>
-            </tr>
-        }
-    }
-</table>
+<h3>Placeholder for profile index page</h3>
+<p>will eventually include links to:</p>
+<ul>
+    <li>My Profile -- show user profile for current user</li>
+    <li>View Profiles -- show list of users</li>
+    <li>etc...</li>
+</ul>
