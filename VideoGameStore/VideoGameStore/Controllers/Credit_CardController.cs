@@ -43,6 +43,13 @@ namespace VideoGameStore.Controllers
             return View();
         }
 
+        // GET: Credit_Card/CreateUserCreditCard
+        public ActionResult CreateUserCreditCard()
+        {
+            ViewBag.user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+            return View();
+        }
+
         // POST: Credit_Card/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -57,7 +64,25 @@ namespace VideoGameStore.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", credit_Card.user_id);
+            ViewBag.user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+            return View(credit_Card);
+        }
+
+        // POST: Credit_Card/CreateUserCreditCard
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateUserCreditCard([Bind(Include = "credit_card_id,user_id,card_number,expiry_date,is_expired,is_flagged")] Credit_Card credit_Card)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Credit_Card.Add(credit_Card);
+                db.SaveChanges();
+                return RedirectToAction("Checkout", "Cart");
+            }
+
+            ViewBag.user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
             return View(credit_Card);
         }
 

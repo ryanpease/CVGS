@@ -24,7 +24,7 @@ namespace RPClassLibrary
             /// </summary>
             public DateInFutureAttribute()
             {
-                ErrorMessage = "{0} must be in the on or after the current date.";
+                ErrorMessage = "{0} must be on or after the current date.";
             }
             /// <summary>
             /// This method checks to see if the date entered is valid
@@ -41,7 +41,7 @@ namespace RPClassLibrary
                 }
                 else
                 {
-                    if ((DateTime)value <= (DateTime.Now))
+                    if ((DateTime)value >= (DateTime.Now))
                     {
                         result = ValidationResult.Success;
                     }

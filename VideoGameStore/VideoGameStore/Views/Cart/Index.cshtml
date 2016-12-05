@@ -5,7 +5,6 @@
 }
 
 <h2>Cart</h2>
-
 <style>
     #cartTable td {
         vertical-align: middle;
@@ -47,7 +46,7 @@
                 </td>
                 <td>
                     @using (Html.BeginForm("RemoveFromCart", "Cart"))
-                {
+                    {
                         @Html.Hidden("game_id", item.Game.game_id)
                         @Html.HiddenFor(i => i.ReturnUrl)
                         <input class="btn btn-sm btn-warning" type="submit" value="Remove" />
@@ -64,6 +63,7 @@
     </tfoot>
 </table>
 
-<div class="text-centre">
+<div>
     <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
+    @Html.ActionLink("Checkout Now", "Checkout", null, new { @class = "btn btn-primary" })
 </div>
