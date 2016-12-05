@@ -1,1 +1,169 @@
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\obj\Debug\VideoGameStore.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\ApplicationInsights.config
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\csc.exe
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\vbc.exe
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.dll.config
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.pdb
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\nunit.framework.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\RPClassLibrary.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\Owin.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\RPClassLibrary.pdb
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.pdb
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\nunit.framework.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\obj\Debug\VideoGameStore.Tests.dll
+C:\Users\Ryan\Desktop\new auth - VideoGameStore - database server connection\VideoGameStore\VideoGameStore.Tests\obj\Debug\VideoGameStore.Tests.pdb
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\ApplicationInsights.config
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\csc.exe
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\vbc.exe
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.dll.config
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.pdb
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Newtonsoft.Json.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\nunit.framework.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\RPClassLibrary.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Helpers.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Mvc.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Razor.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Optimization.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\DataAnnotationsExtensions.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\EntityFramework.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Owin.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Security.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\RPClassLibrary.pdb
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.pdb
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\nunit.framework.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Newtonsoft.Json.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Helpers.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Mvc.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Razor.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Optimization.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\EntityFramework.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Security.xml
 G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\obj\Debug\VideoGameStore.Tests.csprojResolveAssemblyReference.cache
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\obj\Debug\VideoGameStore.Tests.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\obj\Debug\VideoGameStore.Tests.pdb
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\ApplicationInsights.config
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\csc.exe
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\vbc.exe
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.dll.config
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.Tests.pdb
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\nunit.framework.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\RPClassLibrary.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\MySql.Data.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Owin.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\RPClassLibrary.pdb
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\VideoGameStore.pdb
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\nunit.framework.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\MySql.Data.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\obj\Debug\VideoGameStore.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\obj\Debug\VideoGameStore.Tests.dll
+C:\Users\Ryan\projects\VideoGameStore-dbVersion\CVGS\VideoGameStore\VideoGameStore.Tests\obj\Debug\VideoGameStore.Tests.pdb
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\MySql.Data.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\bin\Debug\MySql.Data.xml

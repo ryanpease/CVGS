@@ -34,9 +34,6 @@ namespace VideoGameStore.Models
         public bool is_approved { get; set; }
         [Display(Name = "Deleted?")]
         public bool is_deleted { get; set; }
-        [Display(Name = "Review Content")]
-
-        public string review_content { get; set; }
     }
 
     [MetadataType(typeof(ReviewMetadata))]

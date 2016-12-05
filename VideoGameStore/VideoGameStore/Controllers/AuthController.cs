@@ -42,7 +42,6 @@ namespace VideoGameStore.Controllers
                     if (CheckPassword(password, hashedPassword))
                     {
                         var role = "";
-                        //role = "User";
                         if (user.is_admin)
                         {
                             role = "Admin";

@@ -21,11 +21,11 @@ namespace VideoGameStore.Models
             this.Friend_List = new HashSet<Friend_List>();
             this.Friend_List1 = new HashSet<Friend_List>();
             this.Invoices = new HashSet<Invoice>();
+            this.Reviews = new HashSet<Review>();
             this.Store_Event_User = new HashSet<Store_Event_User>();
             this.User_Address = new HashSet<User_Address>();
             this.User_Game = new HashSet<User_Game>();
             this.Wish_List = new HashSet<Wish_List>();
-            this.Reviews = new HashSet<Review>();
         }
     
         public int user_id { get; set; }
@@ -58,6 +58,8 @@ namespace VideoGameStore.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Invoice> Invoices { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Review> Reviews { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Store_Event_User> Store_Event_User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User_Address> User_Address { get; set; }
@@ -65,7 +67,5 @@ namespace VideoGameStore.Models
         public virtual ICollection<User_Game> User_Game { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Wish_List> Wish_List { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Review> Reviews { get; set; }
     }
 }

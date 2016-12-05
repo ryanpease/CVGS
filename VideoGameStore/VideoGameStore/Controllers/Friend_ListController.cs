@@ -15,32 +15,19 @@ namespace VideoGameStore.Controllers
         private VideoGameStoreDBContext db = new VideoGameStoreDBContext();
 
         // GET: Friend_List
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            var friend_List = db.Friend_List.Include(f => f.User).Include(f => f.User1);
+            var friend_List = db.Friend_List.Where(f => f.user_id == id || f.friend_id == id);
             return View(friend_List.ToList());
         }
 
-        // GET: Friend_List/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Friend_List friend_List = db.Friend_List.Find(id);
-            if (friend_List == null)
-            {
-                return HttpNotFound();
-            }
-            return View(friend_List);
-        }
 
         // GET: Friend_List/Create
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
-            ViewBag.friend_id = new SelectList(db.Users, "user_id", "username");
-            ViewBag.user_id = new SelectList(db.Users, "user_id", "username");
+            int userID = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+            ViewBag.friend_id = new SelectList(db.Users, "user_id", "username", id);
+            ViewBag.user_id = new SelectList(db.Users.Where(f => f.username == this.User.Identity.Name), "user_id", "username", userID);
             return View();
         }
 
@@ -55,7 +42,7 @@ namespace VideoGameStore.Controllers
             {
                 db.Friend_List.Add(friend_List);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { id = friend_List.user_id });
             }
 
             ViewBag.friend_id = new SelectList(db.Users, "user_id", "username", friend_List.friend_id);

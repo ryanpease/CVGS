@@ -49,33 +49,31 @@
         <dd>
             @Html.DisplayFor(model => model.max_registrants)
         </dd>
-        @{if (this.User.IsInRole("Admin") || this.User.IsInRole("Employee"))
-            {
-            <dt>
-                @Html.DisplayNameFor(model => model.is_full)
-            </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.is_full)
-            </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.is_full)
+        </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.is_members_only)
-            </dt>
+        <dd>
+            @Html.DisplayFor(model => model.is_full)
+        </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.is_members_only)
-            </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.is_members_only)
+        </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.is_cancelled)
-            </dt>
+        <dd>
+            @Html.DisplayFor(model => model.is_members_only)
+        </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.is_cancelled)
-            </dd>
-            }
-        }
+        <dt>
+            @Html.DisplayNameFor(model => model.is_cancelled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_cancelled)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.Address.street_address)
         </dt>
@@ -87,10 +85,6 @@
     </dl>
 </div>
 <p>
-    @{if (this.User.IsInRole("Admin") || this.User.IsInRole("Employee"))
-        {
-            <a class="btn btn-warning" href="@Url.Action("Edit", "Events")">Edit</a>
-        }
-    }
-    <a class="btn btn-primary" href="@Url.Action("Index", "Events")">Back To List</a>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.store_event_id }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>

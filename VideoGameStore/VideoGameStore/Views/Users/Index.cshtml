@@ -7,7 +7,9 @@
 <h2>Index</h2>
 @if (this.User.IsInRole("Admin"))
 {
-    <a class="btn btn-success" href="@Url.Action("Create", "Users")">Create New User</a>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
 }
 
 <table class="table">
@@ -18,7 +20,6 @@
         <th>
             @Html.DisplayNameFor(model => model.email)
         </th>
-
         @if (this.User.IsInRole("Admin"))
         {
             <th>
@@ -187,10 +188,16 @@
             <td>
                 @if (this.User.IsInRole("Admin") || this.User.IsInRole("Employee"))
                 {
-                    <p>@Html.ActionLink("Details", "Details", new { id = item.user_id })</p>
                     <p>@Html.ActionLink("Edit", "Edit", new { id = item.user_id })</p>
+                }
+
+                @Html.ActionLink("Details", "Details", new { id = item.user_id })
+
+                @if (this.User.IsInRole("Admin") || this.User.IsInRole("Employee"))
+                {
                     <p>@Html.ActionLink("Delete", "Delete", new { id = item.user_id })</p>
                 }
+                <p>@Html.ActionLink("Profile", "Index", "Profiles", new { id = item.user_id }, null)</p>
             </td>
         </tr>
     }
