@@ -1,0 +1,1 @@
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\VideoGameStore.Tests\obj\Debug\VideoGameStore.Tests.csprojResolveAssemblyReference.cache

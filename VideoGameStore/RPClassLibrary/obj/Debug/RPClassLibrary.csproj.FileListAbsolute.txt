@@ -1,0 +1,5 @@
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\RPClassLibrary\bin\Debug\RPClassLibrary.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\RPClassLibrary\bin\Debug\RPClassLibrary.pdb
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.csprojResolveAssemblyReference.cache
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.dll
+G:\MicrosoftEnterprise\CVGS\VideoGameStore\RPClassLibrary\obj\Debug\RPClassLibrary.pdb
