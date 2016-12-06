@@ -301,10 +301,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\VideoGameStoreModel.Designer.cs">
+    <Compile Include="Models\VideoGameStoreModelold.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VideoGameStoreModel.edmx</DependentUpon>
+      <DependentUpon>VideoGameStoreModelold.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Wish_List.cs">
       <DependentUpon>VideoGameStoreModel.tt</DependentUpon>
@@ -325,12 +325,12 @@
     <Content Include="images\covers\super_mario_world.jpg" />
     <Content Include="Models\VideoGameStoreModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VideoGameStoreModel.edmx</DependentUpon>
+      <DependentUpon>VideoGameStoreModelold.edmx</DependentUpon>
       <LastGenOutput>VideoGameStoreModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\VideoGameStoreModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VideoGameStoreModel.edmx</DependentUpon>
+      <DependentUpon>VideoGameStoreModelold.edmx</DependentUpon>
       <LastGenOutput>VideoGameStoreModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
@@ -338,12 +338,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\VideoGameStoreModel.edmx">
+    <EntityDeploy Include="Models\VideoGameStoreModelold.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>VideoGameStoreModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>VideoGameStoreModelold.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\VideoGameStoreModel.edmx.diagram">
-      <DependentUpon>VideoGameStoreModel.edmx</DependentUpon>
+    <Content Include="Models\VideoGameStoreModelold.edmx.diagram">
+      <DependentUpon>VideoGameStoreModelold.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

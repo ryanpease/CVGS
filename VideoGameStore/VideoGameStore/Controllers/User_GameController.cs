@@ -27,6 +27,7 @@ namespace VideoGameStore.Controllers
                 where (userGames.user_id == userID)
                 select new
                 {
+                    userGameID = userGames.user_game_id,
                     gameID = games.game_id,
                     imageLocation = games.image_location,
                     description = games.description,
@@ -35,38 +36,33 @@ namespace VideoGameStore.Controllers
                     datePurchased = userGames.date_purchased
                 }).ToList();
 
-            var reviewCheck = (
-                from review in db.Reviews
-                select new
-                {
-                    reviewID = review.user_id,
-                    gameID = review.game_id,
-                    userID = review.user_id
-                }
-                ).ToList();
+            
 
             List<UserGameViewModel> gamesQueryList = new List<UserGameViewModel>();
-            foreach( var item in gamesQuery)
+            foreach (var item in gamesQuery)
             {
-                int reviewID = 0;
+                var reviewCheck = (
+                from r in db.Reviews
+                where (item.gameID == r.game_id)
+                where (r.user_id == userID)
+                select r
+                ).ToList();
+                Review review = new Review();
+                foreach(var r in reviewCheck)
+                {
+                    review = r;
+                }
+
                 UserGameViewModel game = new UserGameViewModel();
+                game.userGameID = item.userGameID;
                 game.gameID = item.gameID;
                 game.imageLocation = item.imageLocation;
                 game.description = item.description;
                 game.gameName = item.gameName;
                 game.rating = item.rating;
                 game.datePurchased = item.datePurchased;
-                foreach (var review in reviewCheck)
-                {
-                    if(review.gameID == item.gameID && review.userID == userID)
-                    {
-                        game.reviewID = review.reviewID;
-                    }
-                    else if (game.reviewID < 1 || game.reviewID == null)
-                    {
-                        game.reviewID = reviewID;
-                    }
-                }
+                game.reviewID = review.review_id;
+
                 gamesQueryList.Add(game);
             }
 
@@ -115,40 +111,43 @@ namespace VideoGameStore.Controllers
             return View(user_Game);
         }
 
-        //// GET: User_Game/Edit/5
-        //public ActionResult Edit(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    User_Game user_Game = db.User_Game.Find(id);
-        //    if (user_Game == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name", user_Game.game_id);
-        //    ViewBag.user_id = new SelectList(db.Users, "user_id", "username", user_Game.user_id);
-        //    return View(user_Game);
-        //}
+        // GET: User_Game/Edit/5
+        public ActionResult Edit(int? id, int? reviewID)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            User_Game user_Game = db.User_Game.Find(id);
+            if (user_Game == null)
+            {
+                return HttpNotFound();
+            }
+            List<int> rating = new List<int>();
+            for (int i = 1; i < 6; i++)
+            {
+                rating.Add(i);
+            }
+            ViewBag.reviewID = reviewID;
+            ViewBag.rating = new SelectList(rating, user_Game.rating);
+            return View(user_Game);
+        }
 
-        //// POST: User_Game/Edit/5
-        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        //// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Edit([Bind(Include = "user_game_id,user_id,game_id,date_purchased,rating")] User_Game user_Game)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Entry(user_Game).State = EntityState.Modified;
-        //        db.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
-        //    ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name", user_Game.game_id);
-        //    ViewBag.user_id = new SelectList(db.Users, "user_id", "username", user_Game.user_id);
-        //    return View(user_Game);
-        //}
+        // POST: User_Game/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "user_game_id,user_id,game_id,date_purchased,rating")] User_Game user_Game)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(user_Game).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(user_Game);
+        }
 
         // GET: User_Game/Delete/5
         public ActionResult Delete(int? id)

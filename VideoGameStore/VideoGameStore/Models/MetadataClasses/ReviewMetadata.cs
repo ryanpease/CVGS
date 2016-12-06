@@ -30,6 +30,9 @@ namespace VideoGameStore.Models
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         [DateNotInFuture]
         public System.DateTime review_date { get; set; }
+        [Display(Name = "Review")]
+        public string review_content { get; set; }
+
         [Display(Name = "Approved?")]
         public bool is_approved { get; set; }
         [Display(Name = "Deleted?")]

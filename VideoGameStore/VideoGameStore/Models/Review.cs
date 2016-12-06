@@ -18,6 +18,7 @@ namespace VideoGameStore.Models
         public int user_id { get; set; }
         public int game_id { get; set; }
         public System.DateTime review_date { get; set; }
+        public string review_content { get; set; }
         public bool is_approved { get; set; }
         public bool is_deleted { get; set; }
     

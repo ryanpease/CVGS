@@ -22,3 +22,7 @@ select,
 textarea {
     max-width: 280px;
 }
+.reveiw-field{
+    min-width: 60vw;
+    min-height:300px;
+}

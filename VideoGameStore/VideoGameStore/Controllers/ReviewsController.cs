@@ -15,10 +15,17 @@ namespace VideoGameStore.Controllers
         private VideoGameStoreDBContext db = new VideoGameStoreDBContext();
 
         // GET: Reviews
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            var reviews = db.Reviews.Include(r => r.Game).Include(r => r.User);
-            return View(reviews.ToList());
+            if (id != null || id != 0)
+            {
+                var reviews = db.Reviews.Include(r => r.Game).Include(r => r.User).Where(r => r.game_id == id);
+                return View(reviews.ToList());
+            }
+            else
+            {
+                return RedirectToAction("Index","Games");
+            }
         }
 
         // GET: Reviews/Details/5
@@ -37,11 +44,37 @@ namespace VideoGameStore.Controllers
         }
 
         // GET: Reviews/Create
-        public ActionResult Create()
+        public ActionResult Create(int? userGameID)
         {
-            ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name");
-            ViewBag.user_id = new SelectList(db.Users, "user_id", "username");
-            return View();
+            Review review = new Review();
+
+            if (userGameID != 0)
+            {
+                User_Game userGame = db.User_Game.Find(userGameID);
+                ViewBag.rating = userGame.rating;
+                ViewBag.rating = userGame.rating;
+
+                Game game = db.Games.Find(userGame.game_id);
+
+                User user = db.Users.Find(userGame.user_id);
+
+                review.Game = game;
+                review.User = user;
+                review.user_id = user.user_id;
+                review.game_id = game.game_id;
+                review.review_date = DateTime.Now;
+                review.review_content = "";
+                review.is_approved = false;
+                review.is_deleted = false;
+            }
+            else
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+
+            ViewBag.userGameID = userGameID;
+            return View(review);
         }
 
         // POST: Reviews/Create
@@ -49,7 +82,7 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "review_id,user_id,game_id,review_date,is_approved,is_deleted")] Review review)
+        public ActionResult Create([Bind(Include = "review_id,user_id,game_id,review_date,review_content,is_approved,is_deleted")] Review review)
         {
             if (ModelState.IsValid)
             {
@@ -58,13 +91,11 @@ namespace VideoGameStore.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name", review.game_id);
-            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", review.user_id);
             return View(review);
         }
 
         // GET: Reviews/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int? id, int? userGameID, bool? approve, bool? delete)
         {
             if (id == null)
             {
@@ -75,8 +106,16 @@ namespace VideoGameStore.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name", review.game_id);
-            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", review.user_id);
+
+            if (userGameID != 0)
+            {
+                User_Game userGame = db.User_Game.Find(userGameID);
+                ViewBag.datePurchased = userGame.date_purchased;
+                ViewBag.rating = userGame.rating;
+            }
+            ViewBag.userGameID = userGameID;
+
+
             return View(review);
         }
 
@@ -85,16 +124,21 @@ namespace VideoGameStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "review_id,user_id,game_id,review_date,is_approved,is_deleted")] Review review)
+        public ActionResult Edit([Bind(Include = "review_id,user_id,game_id,review_date,review_content,is_approved,is_deleted")] Review review)
         {
+            Review oldReveiw = db.Reviews.Find(review.review_id);
+            if(review.review_content != oldReveiw.review_content)
+            {
+                review.is_approved = false;
+            }
+             
             if (ModelState.IsValid)
             {
                 db.Entry(review).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name", review.game_id);
-            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", review.user_id);
+
             return View(review);
         }
 
