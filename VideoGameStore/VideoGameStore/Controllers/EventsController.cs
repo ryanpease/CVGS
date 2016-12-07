@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -14,10 +15,34 @@ namespace VideoGameStore.Controllers
     {
         private VideoGameStoreDBContext db = new VideoGameStoreDBContext();
 
+        public ActionResult UserEventsIndex()
+        {
+            int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+            var store_Event_User = db.Store_Event_User.Where(f => f.user_id == user_id);
+            //checkIfUserIsRegisteredToEvent();
+            return View(store_Event_User.ToList());
+        }
+
+        public ActionResult Register(int store_event_id)
+        {
+            int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+
+            SharedDB.setConnectionString();
+            SharedDB.command = new MySqlCommand("INSERT INTO Store_Event_User (store_event_id, user_id) VALUES (" + store_event_id + ", " + user_id + ")", SharedDB.connection);
+            SharedDB.connection.Open();
+            using (SharedDB.connection)
+            {
+                SharedDB.command.ExecuteNonQuery();
+            }
+
+            return RedirectToAction("UserEventsIndex");
+        }
+
         // GET: Events
         public ActionResult Index()
         {
             var store_Event = db.Store_Event.Include(s => s.Address);
+            checkIfUserIsRegisteredToEvent();
             return View(store_Event.ToList());
         }
 
@@ -115,8 +140,29 @@ namespace VideoGameStore.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Store_Event store_Event = db.Store_Event.Find(id);
+            deleteEventRegistrations(id);
             db.Store_Event.Remove(store_Event);
             db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult UnRegister(int store_event_id)
+        {
+            int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+
+            SharedDB.setConnectionString();
+
+            SharedDB.command = new MySqlCommand("SELECT store_event_id FROM ", SharedDB.connection);
+
+
+            SharedDB.command = new MySqlCommand("DELETE FROM Store_Event_User WHERE store_event_id = " + store_event_id + " AND user_id = " + 
+                user_id, SharedDB.connection);
+            SharedDB.connection.Open();
+            using (SharedDB.connection)
+            {
+                SharedDB.command.ExecuteNonQuery();
+            }
+
             return RedirectToAction("Index");
         }
 
@@ -127,6 +173,83 @@ namespace VideoGameStore.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public string[] getEventIDS()
+        {
+            int num_of_events = 0;
+
+            SharedDB.setConnectionString();
+            SharedDB.command = new MySqlCommand("SELECT store_event_id FROM Store_Event ORDER BY store_event_id DESC LIMIT 1", SharedDB.connection);
+            SharedDB.connection.Open();
+            using (SharedDB.connection)
+            {
+                MySqlDataReader reader = SharedDB.command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        num_of_events = reader.GetInt32(0);
+                    }
+                }
+            }
+
+            string[] results = new string[num_of_events];
+            int counter = 0;
+
+            SharedDB.command = new MySqlCommand("SELECT store_event_id FROM Store_Event", SharedDB.connection);
+            SharedDB.connection.Open();
+            using (SharedDB.connection)
+            {
+                MySqlDataReader reader = SharedDB.command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        results[counter] = reader.GetString(0);
+                        counter++;
+                    }
+                }
+            }
+
+            return results;
+
+        }
+
+        public void deleteEventRegistrations(int id)
+        {
+            SharedDB.setConnectionString();
+            SharedDB.command = new MySqlCommand("DELETE FROM Store_Event_User WHERE store_event_id = " + id, SharedDB.connection);
+            SharedDB.connection.Open();
+            using (SharedDB.connection)
+            {
+                SharedDB.command.ExecuteNonQuery();
+            }
+        }
+
+
+        public void checkIfUserIsRegisteredToEvent()
+        {
+            string[] events = getEventIDS();
+            string[] user_events = new string[events.Length];
+            int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+
+            SharedDB.setConnectionString();
+            SharedDB.command = new MySqlCommand("SELECT store_event_id FROM Store_Event_User WHERE user_id = " + user_id, SharedDB.connection);
+            SharedDB.connection.Open();
+
+            using (SharedDB.connection)
+            {
+                MySqlDataReader reader = SharedDB.command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        user_events[reader.GetInt32(0) - 1] = reader.GetString(0);
+                    }
+                }
+            }
+            ViewData["user_events"] = user_events;
         }
     }
 }
