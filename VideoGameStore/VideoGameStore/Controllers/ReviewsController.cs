@@ -116,15 +116,16 @@ namespace VideoGameStore.Controllers
             }
 
             ViewBag.userGameID = userGameID;
-
-            if (isAdmin == null || isAdmin == false)
+            if(isAdmin != null)
             {
-                return View(review);
+                ViewBag.isAdmin = isAdmin;
             }
             else
             {
-                return RedirectToAction("AdminEdit", review);
+                ViewBag.isAdmin = false;
             }
+
+                return View(review);
         }
 
         // POST: Reviews/Edit/5
@@ -134,11 +135,6 @@ namespace VideoGameStore.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "review_id,user_id,game_id,review_date,review_content,is_approved,is_deleted")] Review review)
         {
-            Review oldReveiw = db.Reviews.Find(review.review_id);
-            if (review.review_content != oldReveiw.review_content)
-            {
-                review.is_approved = false;
-            }
 
             if (ModelState.IsValid)
             {

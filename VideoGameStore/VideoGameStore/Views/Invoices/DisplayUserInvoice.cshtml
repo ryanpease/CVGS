@@ -16,7 +16,6 @@
         </dt>
 
         <dd>
-            @*@Html.DisplayNameFor((DateTime)(model => model.invoice.invoice_date).ToString("MM/dd/yyyy"))*@
             @Model.GetDate()
         </dd>
         <dt>
@@ -79,88 +78,3 @@
         </tr>
     </tfoot>
 </table>
-@*<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.invoice_id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>*@
-
-
-
-
-@*@model VideoGameStore.Models.Invoice
-
-@{
-    ViewBag.Title = "Details";
-}
-
-<h2>Details</h2>
-
-<div>
-    <h4>Invoice</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.invoice_date)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.invoice_date)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.User.first_name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.User.first_name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.User.last_name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.User.last_name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Credit_Card.card_number)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Credit_Card.card_number)
-        </dd>
-    </dl>
-</div>
-<h4>Items</h4>
-<table>
-    <thead>
-        <tr>
-            <th>
-                Name
-            </th>
-            <th>
-                Quantity
-            </th>
-            <th>
-                Price
-            </th>
-            <th>
-                Subtotal
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in ViewBag.items)
-        {
-            <tr>
-                <td>@item.Game.game_name</td>
-                <td>@item.quantity</td>
-                <td>@item.price</td>
-                <td>(@item.quantity * item.price).ToString("c")</td>
-            </tr>
-        }
-    </tbody>
-</table>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.invoice_id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>*@

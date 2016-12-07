@@ -42,9 +42,7 @@ namespace VideoGameStore.Controllers
         [Authorize(Roles ="Customer, Admin, Employee, Member")]  //user must be logged in/registered in order to check out
         public ViewResult Checkout()
         {
-            // get current user_id
             int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
-            //int user_id = (int)Session["user_id"];
         
             // create a list of the user's addresses and credit cards - these will be displayed in a dropdown list
             var addresses = db.User_Address.Where(a => a.user_id == user_id).ToList();
@@ -66,7 +64,6 @@ namespace VideoGameStore.Controllers
         public ActionResult Checkout(int address_id, int credit_card_id)
         {
             int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;            
-            //int user_id = (int)Session["user_id"];                                            
             Cart cart = GetCart();
             if (cart.Items == null || cart.Items.Count() == 0)            // if there aren't any items in the cart - send back to index and show message
             {
@@ -75,8 +72,7 @@ namespace VideoGameStore.Controllers
             }
             else
             {
-                //try
-                //{
+                
                     // create invoice + populate with data from select list in view
                     Invoice invoice = new Invoice();
                     invoice.user_id = user_id;
@@ -97,8 +93,6 @@ namespace VideoGameStore.Controllers
                     invoiceAddress.is_billing_address = true;
                     db.Invoice_Address.Add(invoiceAddress);
 
-                    // need to add an option for shipping address
-
                     // get items in cart
                     foreach (CartLineItem item in cart.Items)
                     {
@@ -112,43 +106,18 @@ namespace VideoGameStore.Controllers
                         db.SaveChanges();                        
                     }
                 // clear out cart data
-                Session["Cart"] = new Cart();
-
-
-                //}
-                //catch (DbEntityValidationException ex)
-                //{
-                //    foreach (DbEntityValidationResult item in ex.EntityValidationErrors)
-                //    {
-                //        // Get entry
-
-                //        DbEntityEntry entry = item.Entry;
-                //        string entityTypeName = entry.Entity.GetType().Name;
-
-                //        // Display or log error messages
-
-                //        foreach (DbValidationError subItem in item.ValidationErrors)
-                //        {
-                //            string message = string.Format("Error '{0}' occurred in {1} at {2}",
-                //                     subItem.ErrorMessage, entityTypeName, subItem.PropertyName);
-                //            Console.WriteLine(message);
-                //        }
-                //    }
-                //}
-
-                //return View();
-                //return RedirectToAction("DisplayUserInvoice", "Invoices", invoiceNumber);        // this doesn't work right - want to send it to a view in invoice
-                return RedirectToAction("DisplayUserInvoice", "Invoices", new { invoice_id = invoiceNumber });
+                Session["Cart"] = new Cart();                
+                return RedirectToAction("DisplayUserInvoice", "Invoices", new { id = invoiceNumber });
             }
         }
 
-        [AllowAnonymous]
-        public ActionResult Test()      //just for testing
-        {
-            int invoiceNumber = 3;
-            return RedirectToAction("DisplayUserInvoice", "Invoices", new { invoice_id = invoiceNumber }); 
-            //return Redirect("/Invoices/DisplayUserInvoice/" + invoiceNumber);
-        }
+        //[AllowAnonymous]
+        //public ActionResult Test()      //just for testing
+        //{
+        //    int invoiceNumber = 3;
+        //    return RedirectToAction("DisplayUserInvoice", "Invoices", new { invoice_id = invoiceNumber }); 
+        //    //return Redirect("/Invoices/DisplayUserInvoice/" + invoiceNumber);
+        //}
 
         [AllowAnonymous]
         public RedirectToRouteResult AddToCart(int game_id, string returnUrl)

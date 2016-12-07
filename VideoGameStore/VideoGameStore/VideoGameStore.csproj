@@ -474,6 +474,9 @@
     <Content Include="Views\Events\UserEventsIndex.cshtml" />
     <Content Include="Views\Profiles\nonFriend.cshtml" />
     <Content Include="Views\Reviews\AdminEdit.cshtml" />
+    <Content Include="Views\Invoices\DisplayUserInvoice.cshtml" />
+    <Content Include="Views\Credit_Card\CreateUserCreditCard.cshtml" />
+    <Content Include="Views\Invoices\DisplayUserInvoices.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -23,29 +23,7 @@ namespace VideoGameStore.Controllers
             //return View();
         }
 
-        //public ActionResult SelectAddress()  -- was originally going to let user select address here - created CreateUserAddress in Address instead - remember to remove this and view for SelectAddress
-        //{
-        //    int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
-        //    var user_Address = db.User_Address.Include(u => u.Address).Include(u => u.User).Where(u => u.user_id == user_id);
-        //    ViewBag.userAddress = new SelectList(user_Address, "address_id", "Address.street_address");
-        //    return View();
-        //}
-
-        // GET: User_Address/Details/5          -- necessary? just show details for address
-        //public ActionResult Details(int? id)        // problem with this as user_address is a composite key
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    User_Address user_Address = db.User_Address.Find(id);
-        //    if (user_Address == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(user_Address);
-        //}
-
+        [Authorize(Roles = "Admin, Employee")]
         // GET: User_Address/Create
         public ActionResult Create()
         {
@@ -54,6 +32,7 @@ namespace VideoGameStore.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // POST: User_Address/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -73,6 +52,7 @@ namespace VideoGameStore.Controllers
             return View(user_Address);
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // GET: User_Address/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -90,6 +70,7 @@ namespace VideoGameStore.Controllers
             return View(user_Address);
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // POST: User_Address/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -108,6 +89,7 @@ namespace VideoGameStore.Controllers
             return View(user_Address);
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // GET: User_Address/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -123,6 +105,7 @@ namespace VideoGameStore.Controllers
             return View(user_Address);
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // POST: User_Address/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

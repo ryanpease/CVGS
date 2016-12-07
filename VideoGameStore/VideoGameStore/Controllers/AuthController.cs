@@ -52,7 +52,7 @@ namespace VideoGameStore.Controllers
                         }
                         else if (user.is_member)
                         {
-                            role = "Member";    //necessary?
+                            role = "Member";    
                         }
                         else
                         {

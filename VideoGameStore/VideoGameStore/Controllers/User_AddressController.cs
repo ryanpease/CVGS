@@ -20,7 +20,6 @@ namespace VideoGameStore.Controllers
             int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
             var user_Address = db.User_Address.Include(u => u.Address).Include(u => u.User).Where(u => u.user_id == user_id);
             return View(user_Address.ToList());
-            //return View();
         }
 
         [Authorize(Roles = "Admin, Employee")]

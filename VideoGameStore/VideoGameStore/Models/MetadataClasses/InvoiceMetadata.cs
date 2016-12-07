@@ -33,7 +33,6 @@ namespace VideoGameStore.Models
         public System.DateTime invoice_date { get; set; }
         [Display(Name = "Ship Date")]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
-        [DateNotInFuture]
         public Nullable<System.DateTime> ship_date { get; set; }
         [Display(Name = "Closed?")]
         public bool is_invoice_closed { get; set; }

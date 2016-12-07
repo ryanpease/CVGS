@@ -1,22 +1,20 @@
 ﻿@model VideoGameStore.Models.UserInvoiceViewModel
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Invoice Details";
 }
 
-<h2>Details</h2>
+<h2>@this.User.Identity.Name's Invoice</h2>
 
 <div>
     <h4>Invoice</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.invoice.invoice_date)
-            @*Invoice Date*@
+            @Html.DisplayNameFor(model => model.invoice.invoice_date)           
         </dt>
 
-        <dd>
-            @*@Html.DisplayNameFor((DateTime)(model => model.invoice.invoice_date).ToString("MM/dd/yyyy"))*@
+        <dd>            
             @Model.GetDate()
         </dd>
         <dt>
@@ -33,13 +31,11 @@
         <dd>
             @Html.DisplayFor(model => model.user.last_name)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.credit_card.card_number)
+            Address
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.credit_card.card_number)
+            @Html.DisplayFor(model => model.address.street_address)<br />@Html.DisplayFor(model => model.address.city), @Html.DisplayFor(model => model.address.Province.province_code)<br />@Html.DisplayFor(model => model.address.postal_code)
         </dd>
     </dl>
 </div>
@@ -79,88 +75,9 @@
         </tr>
     </tfoot>
 </table>
-@*<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.invoice_id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>*@
-
-
-
-
-@*@model VideoGameStore.Models.Invoice
-
-@{
-    ViewBag.Title = "Details";
-}
-
-<h2>Details</h2>
-
 <div>
-    <h4>Invoice</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.invoice_date)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.invoice_date)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.User.first_name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.User.first_name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.User.last_name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.User.last_name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Credit_Card.card_number)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Credit_Card.card_number)
-        </dd>
-    </dl>
+    @Html.ActionLink("Back to Invoices", "DisplayUserInvoices", "Invoices", null, null)
 </div>
-<h4>Items</h4>
-<table>
-    <thead>
-        <tr>
-            <th>
-                Name
-            </th>
-            <th>
-                Quantity
-            </th>
-            <th>
-                Price
-            </th>
-            <th>
-                Subtotal
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in ViewBag.items)
-        {
-            <tr>
-                <td>@item.Game.game_name</td>
-                <td>@item.quantity</td>
-                <td>@item.price</td>
-                <td>(@item.quantity * item.price).ToString("c")</td>
-            </tr>
-        }
-    </tbody>
-</table>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.invoice_id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>*@
+<div>
+    @Html.ActionLink("Back to Cart", "Checkout", "Cart", null, null)
+</div>

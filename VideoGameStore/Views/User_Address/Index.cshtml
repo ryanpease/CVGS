@@ -7,19 +7,16 @@
 <h2>@this.User.Identity.Name's Addresses</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+@Html.ActionLink("Add A New Address", "CreateUserAddress", "Addresses", null, new { @class = "btn btn-success" })
 </p>
 <table class="table">
     <tr>                        
         <th>
             @Html.DisplayNameFor(model => model.Address.street_address)
-        </th>
+        </th>        
         <th>
             @Html.DisplayNameFor(model => model.address_name)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.User.username)
-        </th>*@
+        </th>        
         <th></th>
     </tr>
 
@@ -30,14 +27,10 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.address_name)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.User.username)
-        </td>*@
+        </td>        
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |       
-            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            <p>@Html.ActionLink("Edit", "Edit", "Addresses", new { id = item.address_id }, null)</p>
+            <p>@Html.ActionLink("Delete", "Delete", "Addresses", new { id = item.address_id }, null)</p>
         </td>
     </tr>
 }

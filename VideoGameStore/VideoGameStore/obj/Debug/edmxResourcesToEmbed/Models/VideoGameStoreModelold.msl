@@ -75,18 +75,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Invoices">
-      <EntityTypeMapping TypeName="VideoGameStoreDBModel.Invoice">
-        <MappingFragment StoreEntitySet="Invoice">
-          <ScalarProperty Name="invoice_id" ColumnName="invoice_id" />
-          <ScalarProperty Name="user_id" ColumnName="user_id" />
-          <ScalarProperty Name="credit_card_id" ColumnName="credit_card_id" />
-          <ScalarProperty Name="invoice_date" ColumnName="invoice_date" />
-          <ScalarProperty Name="ship_date" ColumnName="ship_date" />
-          <ScalarProperty Name="is_invoice_closed" ColumnName="is_invoice_closed" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Invoice_Address">
       <EntityTypeMapping TypeName="VideoGameStoreDBModel.Invoice_Address">
         <MappingFragment StoreEntitySet="Invoice_Address">
@@ -125,19 +113,6 @@
           <ScalarProperty Name="contact_name" ColumnName="contact_name" />
           <ScalarProperty Name="contact_phone" ColumnName="contact_phone" />
           <ScalarProperty Name="contact_email" ColumnName="contact_email" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Reviews">
-      <EntityTypeMapping TypeName="VideoGameStoreDBModel.Review">
-        <MappingFragment StoreEntitySet="Review">
-          <ScalarProperty Name="review_content" ColumnName="review_content" />
-          <ScalarProperty Name="review_id" ColumnName="review_id" />
-          <ScalarProperty Name="user_id" ColumnName="user_id" />
-          <ScalarProperty Name="game_id" ColumnName="game_id" />
-          <ScalarProperty Name="review_date" ColumnName="review_date" />
-          <ScalarProperty Name="is_approved" ColumnName="is_approved" />
-          <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -230,6 +205,31 @@
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="username" ColumnName="username" />
           <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="VideoGameStoreDBModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="is_invoice_closed" ColumnName="is_invoice_closed" />
+          <ScalarProperty Name="ship_date" ColumnName="ship_date" />
+          <ScalarProperty Name="invoice_date" ColumnName="invoice_date" />
+          <ScalarProperty Name="credit_card_id" ColumnName="credit_card_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="invoice_id" ColumnName="invoice_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reviews">
+      <EntityTypeMapping TypeName="VideoGameStoreDBModel.Review">
+        <MappingFragment StoreEntitySet="Review">
+          <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+          <ScalarProperty Name="is_approved" ColumnName="is_approved" />
+          <ScalarProperty Name="review_content" ColumnName="review_content" />
+          <ScalarProperty Name="review_date" ColumnName="review_date" />
+          <ScalarProperty Name="game_id" ColumnName="game_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="review_id" ColumnName="review_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
