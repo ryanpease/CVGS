@@ -16,13 +16,13 @@ namespace VideoGameStore.Controllers
 
         // GET: friend Profile
         public ActionResult Index(int? id)
-        { 
-
+        {
             string uname = this.User.Identity.Name;
             var friend_List = db.Friend_List.Where(f => f.user_id == id || f.friend_id == id);
             bool friend = friend_List.Any(f => f.User.username == uname || f.User1.username == uname);
+            bool isUser = db.Users.Where(f => f.user_id == id).Any(f => f.username == uname);
             var profile = db.Users.Where(f => f.user_id == id);
-            if (friend)
+            if (friend || isUser)
             {
                 return View(profile.ToList());
             }
@@ -36,6 +36,12 @@ namespace VideoGameStore.Controllers
         {
             var profile = db.Users.Where(f => f.user_id == id);
             return View(profile.ToList());
+        }
+
+        public ActionResult MyIndex(string uname)
+        {
+            int id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+            return RedirectToAction("Index", new { id });
         }
     }
 }

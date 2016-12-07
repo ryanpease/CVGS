@@ -19,7 +19,6 @@ namespace VideoGameStore.Controllers
         public ActionResult Index()
         {
             int userID = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
-            //var user_Game = db.User_Game.Include(u => u.Game).Include(u => u.User).Where(u => u.user_id == userID);
 
             var gamesQuery = (
                 from userGames in db.User_Game

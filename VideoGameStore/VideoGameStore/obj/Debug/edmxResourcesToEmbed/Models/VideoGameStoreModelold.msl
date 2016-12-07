@@ -166,32 +166,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="VideoGameStoreDBModel.User">
-        <MappingFragment StoreEntitySet="User">
-          <ScalarProperty Name="user_id" ColumnName="user_id" />
-          <ScalarProperty Name="username" ColumnName="username" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="user_password" ColumnName="user_password" />
-          <ScalarProperty Name="login_failures" ColumnName="login_failures" />
-          <ScalarProperty Name="first_name" ColumnName="first_name" />
-          <ScalarProperty Name="last_name" ColumnName="last_name" />
-          <ScalarProperty Name="phone" ColumnName="phone" />
-          <ScalarProperty Name="gender" ColumnName="gender" />
-          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
-          <ScalarProperty Name="date_joined" ColumnName="date_joined" />
-          <ScalarProperty Name="is_employee" ColumnName="is_employee" />
-          <ScalarProperty Name="is_admin" ColumnName="is_admin" />
-          <ScalarProperty Name="is_member" ColumnName="is_member" />
-          <ScalarProperty Name="is_inactive" ColumnName="is_inactive" />
-          <ScalarProperty Name="is_locked_out" ColumnName="is_locked_out" />
-          <ScalarProperty Name="is_on_email_list" ColumnName="is_on_email_list" />
-          <ScalarProperty Name="favorite_platform" ColumnName="favorite_platform" />
-          <ScalarProperty Name="favorite_category" ColumnName="favorite_category" />
-          <ScalarProperty Name="notes" ColumnName="notes" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="User_Address">
       <EntityTypeMapping TypeName="VideoGameStoreDBModel.User_Address">
         <MappingFragment StoreEntitySet="User_Address">
@@ -230,6 +204,32 @@
           <ScalarProperty Name="Profit_Margin" ColumnName="Profit Margin" />
           <ScalarProperty Name="Sales_Volume" ColumnName="Sales Volume" />
           <ScalarProperty Name="Total_Profit" ColumnName="Total Profit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="VideoGameStoreDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="favorite_category" ColumnName="favorite_category" />
+          <ScalarProperty Name="favorite_platform" ColumnName="favorite_platform" />
+          <ScalarProperty Name="is_on_email_list" ColumnName="is_on_email_list" />
+          <ScalarProperty Name="is_locked_out" ColumnName="is_locked_out" />
+          <ScalarProperty Name="is_inactive" ColumnName="is_inactive" />
+          <ScalarProperty Name="is_member" ColumnName="is_member" />
+          <ScalarProperty Name="is_admin" ColumnName="is_admin" />
+          <ScalarProperty Name="is_employee" ColumnName="is_employee" />
+          <ScalarProperty Name="date_joined" ColumnName="date_joined" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="login_failures" ColumnName="login_failures" />
+          <ScalarProperty Name="user_password" ColumnName="user_password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

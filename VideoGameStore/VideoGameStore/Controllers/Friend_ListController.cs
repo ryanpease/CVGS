@@ -18,6 +18,7 @@ namespace VideoGameStore.Controllers
         public ActionResult Index(int? id)
         {
             var friend_List = db.Friend_List.Where(f => f.user_id == id || f.friend_id == id);
+            ViewBag.return_id = id;
             return View(friend_List.ToList());
         }
 
@@ -28,6 +29,7 @@ namespace VideoGameStore.Controllers
             int userID = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
             ViewBag.friend_id = new SelectList(db.Users, "user_id", "username", id);
             ViewBag.user_id = new SelectList(db.Users.Where(f => f.username == this.User.Identity.Name), "user_id", "username", userID);
+            ViewBag.return_id = id;
             return View();
         }
 
@@ -50,62 +52,24 @@ namespace VideoGameStore.Controllers
             return View(friend_List);
         }
 
-        // GET: Friend_List/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Friend_List friend_List = db.Friend_List.Find(id);
-            if (friend_List == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.friend_id = new SelectList(db.Users, "user_id", "username", friend_List.friend_id);
-            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", friend_List.user_id);
-            return View(friend_List);
-        }
-
-        // POST: Friend_List/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "user_id,friend_id,is_family,date_added")] Friend_List friend_List)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(friend_List).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            ViewBag.friend_id = new SelectList(db.Users, "user_id", "username", friend_List.friend_id);
-            ViewBag.user_id = new SelectList(db.Users, "user_id", "username", friend_List.user_id);
-            return View(friend_List);
-        }
-
         // GET: Friend_List/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int? uid, int? fid)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Friend_List friend_List = db.Friend_List.Find(id);
+            Friend_List friend_List = db.Friend_List.Where(f => f.user_id == uid && f.friend_id == fid).SingleOrDefault();
             if (friend_List == null)
             {
                 return HttpNotFound();
             }
+            ViewBag.return_id = db.Users.Where(f => f.username == this.User.Identity.Name).FirstOrDefault().user_id;
             return View(friend_List);
         }
 
         // POST: Friend_List/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int uid, int fid)
         {
-            Friend_List friend_List = db.Friend_List.Find(id);
+            Friend_List friend_List = db.Friend_List.Where(f => f.user_id == uid && f.friend_id == fid).SingleOrDefault();
             db.Friend_List.Remove(friend_List);
             db.SaveChanges();
             return RedirectToAction("Index");

@@ -24,7 +24,7 @@ namespace VideoGameStore.Controllers
             }
             else
             {
-                return RedirectToAction("Index","Games");
+                return RedirectToAction("Index", "Games");
             }
         }
 
@@ -95,7 +95,7 @@ namespace VideoGameStore.Controllers
         }
 
         // GET: Reviews/Edit/5
-        public ActionResult Edit(int? id, int? userGameID, bool? approve, bool? delete)
+        public ActionResult Edit(int? id, int? userGameID, bool? isAdmin)
         {
             if (id == null)
             {
@@ -107,16 +107,24 @@ namespace VideoGameStore.Controllers
                 return HttpNotFound();
             }
 
-            if (userGameID != 0 || userGameID != null)
+
+            if (userGameID != null)
             {
                 User_Game userGame = db.User_Game.Find(userGameID);
                 ViewBag.datePurchased = userGame.date_purchased;
                 ViewBag.rating = userGame.rating;
             }
+
             ViewBag.userGameID = userGameID;
 
-
-            return View(review);
+            if (isAdmin == null || isAdmin == false)
+            {
+                return View(review);
+            }
+            else
+            {
+                return RedirectToAction("AdminEdit", review);
+            }
         }
 
         // POST: Reviews/Edit/5
@@ -127,11 +135,11 @@ namespace VideoGameStore.Controllers
         public ActionResult Edit([Bind(Include = "review_id,user_id,game_id,review_date,review_content,is_approved,is_deleted")] Review review)
         {
             Review oldReveiw = db.Reviews.Find(review.review_id);
-            if(review.review_content != oldReveiw.review_content)
+            if (review.review_content != oldReveiw.review_content)
             {
                 review.is_approved = false;
             }
-             
+
             if (ModelState.IsValid)
             {
                 db.Entry(review).State = EntityState.Modified;

@@ -1,25 +1,23 @@
 ﻿@model IEnumerable<VideoGameStore.Models.Review>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Reviews";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.review_date)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.is_approved)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.is_deleted)
-        </th>
+        @if (this.User.IsInRole("Admin") || this.User.IsInRole("Employee"))
+        {
+            <th>
+                @Html.DisplayNameFor(model => model.is_approved)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.is_deleted)
+            </th>
+        }
         <th>
             @Html.DisplayNameFor(model => model.Game.game_name)
         </th>
@@ -39,12 +37,15 @@
         <td>
             @Html.DisplayFor(modelItem => item.review_date)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.is_approved)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.is_deleted)
-        </td>
+        @if (this.User.IsInRole("Admin") || this.User.IsInRole("Employee"))
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.is_approved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.is_deleted)
+            </td>
+        }
         <td>
             @Html.DisplayFor(modelItem => item.Game.game_name)
         </td>
@@ -54,11 +55,13 @@
         <td>
             @Html.DisplayFor(modelItem => item.User.username)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.review_id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.review_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.review_id })
-        </td>
+        @if (this.User.IsInRole("Admin") || this.User.IsInRole("Employee"))
+        {
+            <td>|
+                @Html.ActionLink("Delete", "Delete", new { id = item.review_id })
+                @Html.ActionLink("Edit", "Edit", new { id = item.review_id, isAdmin = true })
+            </td>
+        }
     </tr>
 }
 
