@@ -16,7 +16,8 @@ namespace VideoGameStore.Controllers
 
         // GET: friend Profile
         public ActionResult Index(int? id)
-        {
+        { 
+
             string uname = this.User.Identity.Name;
             var friend_List = db.Friend_List.Where(f => f.user_id == id || f.friend_id == id);
             bool friend = friend_List.Any(f => f.User.username == uname || f.User1.username == uname);
