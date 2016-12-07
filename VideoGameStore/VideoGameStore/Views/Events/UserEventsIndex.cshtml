@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<VideoGameStore.Models.Store_Event_User>
 
 @{
-    ViewBag.Title = "Index-user";
+    ViewBag.Title = "Index";
 }
 
 <h2>Registered Events</h2>
@@ -9,34 +9,34 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.store_event_name)
+            @Html.DisplayNameFor(model => model.Store_Event.store_event_name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.description)
+            @Html.DisplayNameFor(model => model.Store_Event.description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.start_date)
+            @Html.DisplayNameFor(model => model.Store_Event.start_date)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.end_date)
+            @Html.DisplayNameFor(model => model.Store_Event.end_date)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.max_registrants)
+            @Html.DisplayNameFor(model => model.Store_Event.max_registrants)
         </th>
         @if (this.User.IsInRole("Admin") || this.User.IsInRole("Employee"))
         {
             <th>
-                @Html.DisplayNameFor(model => model.is_full)
+                @Html.DisplayNameFor(model => model.Store_Event.is_full)
             </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.is_members_only)
+                    @Html.DisplayNameFor(model => model.Store_Event.is_members_only)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.is_cancelled)
+                    @Html.DisplayNameFor(model => model.Store_Event.is_cancelled)
                 </th>
         }
         <th>
-            @Html.DisplayNameFor(model => model.Address.street_address)
+            @Html.DisplayNameFor(model => model.Store_Event.Address.street_address)
         </th>
         <th></th>
     </tr>
@@ -46,63 +46,43 @@
 
         foreach (var item in Model)
         {
-            if (user_events[counter] != null)
-            {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.store_event_name)
+                        @Html.DisplayFor(modelItem => item.Store_Event.store_event_name)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.description)
+                        @Html.DisplayFor(modelItem => item.Store_Event.description)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.start_date)
+                        @Html.DisplayFor(modelItem => item.Store_Event.start_date)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.end_date)
+                        @Html.DisplayFor(modelItem => item.Store_Event.end_date)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.max_registrants)
+                        @Html.DisplayFor(modelItem => item.Store_Event.max_registrants)
                     </td>
 
                     @if (this.User.IsInRole("Admin") || this.User.IsInRole("Employee"))
                     {
                         <td>
-                            @Html.DisplayFor(modelItem => item.is_full)
+                            @Html.DisplayFor(modelItem => item.Store_Event.is_full)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.is_members_only)
+                            @Html.DisplayFor(modelItem => item.Store_Event.is_members_only)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.is_cancelled)
+                            @Html.DisplayFor(modelItem => item.Store_Event.is_cancelled)
                         </td>
                     }
                     <td>
-                        @Html.DisplayFor(modelItem => item.Address.street_address)
+                        @Html.DisplayFor(modelItem => item.Store_Event.Address.street_address)
                     </td>
                     <td>
-                        @{ if (user_events[counter] == null)
-                            {
-                                <a class="btn btn-success" href="@Url.Action("Create", "Store_Event_User", new { id = item.store_event_id })">Register For Event</a>
-                                <a class="btn btn-primary" href="@Url.Action("Details", "Events", new { id = item.store_event_id })">Event Details</a>
-                            }
-                            else
-                            {
-                                <a class="btn btn-danger" href="@Url.Action("UnRegister", "Events", new { store_event_id = item.store_event_id})">Un-Register For Event</a>
-                                <a class="btn btn-primary" href="@Url.Action("Details", "Events", new { id = item.store_event_id })">Event Details</a>
-                            }
-                        }
-
-
-                        @if (this.User.IsInRole("Admin") || this.User.IsInRole("Employee"))
-                        {
-                            <a class="btn btn-primary" href="@Url.Action("Edit", "Events", new { id = item.store_event_id })">Edit</a>
-                            <a class="btn btn-danger" href="@Url.Action("Delete", "Events", new { id = item.store_event_id })">Delete</a>
-                        }
+                        <p><a class="btn btn-danger" href="@Url.Action("UnRegister", "Events", new { store_event_id = item.store_event_id})">Un-Register For Event</a></p>
+                        <p><a class="btn btn-primary" href="@Url.Action("Details", "Events", new { id = item.store_event_id })">Event Details</a></p>
                     </td>
                 </tr>
             }
         }
-        counter++;
-    }
 </table>
