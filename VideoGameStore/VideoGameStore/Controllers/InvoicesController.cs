@@ -14,6 +14,7 @@ namespace VideoGameStore.Controllers
     {
         private VideoGameStoreDBContext db = new VideoGameStoreDBContext();
 
+        [Authorize(Roles = "Admin, Employee")]
         // GET: Invoices
         public ActionResult Index()
         {
@@ -22,19 +23,27 @@ namespace VideoGameStore.Controllers
         }
 
         [Authorize(Roles = "Customer, Admin, Employee, Member")]
-        public ActionResult DisplayUserInvoice(int? invoice_id)
+        public ActionResult DisplayUserInvoices()
         {
-            if (invoice_id == null)
+            int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
+            var invoices = db.Invoices.Include(i => i.Credit_Card).Include(i => i.User).Where(i => i.user_id == user_id);
+            return View(invoices.ToList());
+        }
+
+        [Authorize(Roles = "Customer, Admin, Employee, Member")]
+        public ActionResult DisplayUserInvoice(int? id)
+        {
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             else
             {
-                Invoice invoice = db.Invoices.Where(i => i.invoice_id == invoice_id).FirstOrDefault();
+                Invoice invoice = db.Invoices.Where(i => i.invoice_id == id).FirstOrDefault();
                 int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
                 if (invoice.user_id != user_id)
                 {
-                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);     //change to something else? this is if the user trying to access this isn't the user who created the order
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
                 }
                 else
                 {
@@ -42,19 +51,17 @@ namespace VideoGameStore.Controllers
                     int address_id = db.Invoice_Address.Where(a => a.invoice_id == invoice.invoice_id).FirstOrDefault().address_id;
                     Address address = db.Addresses.Where(a => a.address_id == address_id).FirstOrDefault();
                     Credit_Card credit_card = db.Credit_Card.Where(c => c.credit_card_id == invoice.credit_card_id).FirstOrDefault();
-                    IEnumerable<Line_Item> items = db.Line_Item.Where(l => l.invoice_id == invoice_id).Include(l => l.Game).ToList();
-                    //ViewBag.items = items;
-                    //return View(invoice);
+                    IEnumerable<Line_Item> items = db.Line_Item.Where(l => l.invoice_id == id).Include(l => l.Game).ToList();
                     return View(new UserInvoiceViewModel { invoice = invoice, user = user, address = address, credit_card = credit_card, items = items });
                 }
-            }                       
+            }
         }
 
         // GET: Invoices/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
-            {                
+            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Invoice invoice = db.Invoices.Find(id);
@@ -65,6 +72,7 @@ namespace VideoGameStore.Controllers
             return View(invoice);
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // GET: Invoices/Create
         public ActionResult Create()
         {
@@ -73,6 +81,7 @@ namespace VideoGameStore.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // POST: Invoices/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -92,6 +101,7 @@ namespace VideoGameStore.Controllers
             return View(invoice);
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // GET: Invoices/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -109,6 +119,7 @@ namespace VideoGameStore.Controllers
             return View(invoice);
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // POST: Invoices/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -127,6 +138,7 @@ namespace VideoGameStore.Controllers
             return View(invoice);
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // GET: Invoices/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -142,6 +154,7 @@ namespace VideoGameStore.Controllers
             return View(invoice);
         }
 
+        [Authorize(Roles = "Admin, Employee")]
         // POST: Invoices/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

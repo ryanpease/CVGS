@@ -16,6 +16,12 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Game.game_name)
                 </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.is_approved)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.is_deleted)
+                </th>
             </tr>
             <tr>
                 <td>
@@ -29,6 +35,12 @@
                 </td>
                 <td>
                     @Html.DisplayFor(model => model.Game.game_name)
+                </td>
+                <td>
+                    @Html.CheckBoxFor(model => model.is_approved)
+                </td>
+                <td>
+                    @Html.CheckBoxFor(model => model.is_deleted)
                 </td>
                 <td>
                     @Html.ActionLink("Details", "Details", "Games", new { id = Model.game_id }, null) |
@@ -56,8 +68,6 @@
         @Html.HiddenFor(model => model.user_id)
         @Html.HiddenFor(model => model.game_id)
         @Html.HiddenFor(model => model.review_date)
-        @Html.HiddenFor(model => model.is_approved)
-        @Html.HiddenFor(model => model.is_deleted)
     </div>
 }
 

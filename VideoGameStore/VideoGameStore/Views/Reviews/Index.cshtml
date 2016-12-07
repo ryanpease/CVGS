@@ -32,37 +32,55 @@
         </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.review_date)
-        </td>
-        @if (this.User.IsInRole("Admin") || this.User.IsInRole("Employee"))
+    @foreach (var item in Model)
+    {
+        if (this.User.IsInRole("Admin") || this.User.IsInRole("Employee"))
         {
-            <td>
-                @Html.DisplayFor(modelItem => item.is_approved)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.is_deleted)
-            </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.review_date)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.is_approved)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.is_deleted)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Game.game_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.review_content)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.username)
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.review_id }) |
+                    @Html.ActionLink("Edit", "Edit", new { id = item.review_id, isAdmin = true })
+                </td>
+
+            </tr>
         }
-        <td>
-            @Html.DisplayFor(modelItem => item.Game.game_name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.review_content)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.User.username)
-        </td>
-        @if (this.User.IsInRole("Admin") || this.User.IsInRole("Employee"))
+        else
         {
-            <td>|
-                @Html.ActionLink("Delete", "Delete", new { id = item.review_id })
-                @Html.ActionLink("Edit", "Edit", new { id = item.review_id, isAdmin = true })
-            </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.review_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Game.game_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.review_content)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.username)
+                </td>
+            </tr>
         }
-    </tr>
-}
+    }
 
 </table>
