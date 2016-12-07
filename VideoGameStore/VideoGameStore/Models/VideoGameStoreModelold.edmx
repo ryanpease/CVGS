@@ -663,8 +663,8 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
           <Property Name="expiry_date" Type="DateTime" Nullable="false" />
           <Property Name="is_expired" Type="Boolean" Nullable="false" />
           <Property Name="is_flagged" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Invoices" Relationship="Self.invoice_credit_card_fk" FromRole="Credit_Card" ToRole="Invoice" />
           <NavigationProperty Name="User" Relationship="VideoGameStoreDBModel.credit_card_user_fk" FromRole="Credit_Card" ToRole="User" />
+          <NavigationProperty Name="Invoices" Relationship="VideoGameStoreDBModel.invoice_credit_card_fk" FromRole="Credit_Card" ToRole="Invoice" />
         </EntityType>
         <EntityType Name="Developer">
           <Key>
@@ -712,9 +712,9 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
           <NavigationProperty Name="Genre" Relationship="Self.game_genre_fk" FromRole="Game" ToRole="Genre" />
           <NavigationProperty Name="Publisher" Relationship="Self.game_publisher_fk" FromRole="Game" ToRole="Publisher" />
           <NavigationProperty Name="Line_Item" Relationship="Self.line_item_game_fk" FromRole="Game" ToRole="Line_Item" />
-          <NavigationProperty Name="Reviews" Relationship="Self.review_game_fk" FromRole="Game" ToRole="Review" />
           <NavigationProperty Name="User_Game" Relationship="Self.user_game_game_fk" FromRole="Game" ToRole="User_Game" />
           <NavigationProperty Name="Wish_List" Relationship="Self.wish_list_game_fk" FromRole="Game" ToRole="Wish_List" />
+          <NavigationProperty Name="Reviews" Relationship="VideoGameStoreDBModel.review_game_fk" FromRole="Game" ToRole="Review" />
         </EntityType>
         <EntityType Name="Genre">
           <Key>
@@ -725,21 +725,6 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
           <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Games" Relationship="Self.game_genre_fk" FromRole="Genre" ToRole="Game" />
         </EntityType>
-        <EntityType Name="Invoice">
-          <Key>
-            <PropertyRef Name="invoice_id" />
-          </Key>
-          <Property Name="invoice_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="user_id" Type="Int32" Nullable="false" />
-          <Property Name="credit_card_id" Type="Int32" Nullable="false" />
-          <Property Name="invoice_date" Type="DateTime" Nullable="false" />
-          <Property Name="ship_date" Type="DateTime" />
-          <Property Name="is_invoice_closed" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Credit_Card" Relationship="Self.invoice_credit_card_fk" FromRole="Invoice" ToRole="Credit_Card" />
-          <NavigationProperty Name="Invoice_Address" Relationship="Self.invoice_address_invoice_fk" FromRole="Invoice" ToRole="Invoice_Address" />
-          <NavigationProperty Name="Line_Item" Relationship="Self.line_item_invoice_fk" FromRole="Invoice" ToRole="Line_Item" />
-          <NavigationProperty Name="User" Relationship="VideoGameStoreDBModel.invoice_user_fk" FromRole="Invoice" ToRole="User" />
-        </EntityType>
         <EntityType Name="Invoice_Address">
           <Key>
             <PropertyRef Name="invoice_address_id" />
@@ -749,7 +734,7 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
           <Property Name="address_id" Type="Int32" Nullable="false" />
           <Property Name="is_billing_address" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Address" Relationship="Self.invoice_address_address_fk" FromRole="Invoice_Address" ToRole="Address" />
-          <NavigationProperty Name="Invoice" Relationship="Self.invoice_address_invoice_fk" FromRole="Invoice_Address" ToRole="Invoice" />
+          <NavigationProperty Name="Invoice" Relationship="VideoGameStoreDBModel.invoice_address_invoice_fk" FromRole="Invoice_Address" ToRole="Invoice" />
         </EntityType>
         <EntityType Name="Line_Item">
           <Key>
@@ -761,7 +746,7 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
           <Property Name="quantity" Type="Int32" Nullable="false" />
           <Property Name="price" Type="Decimal" Nullable="false" />
           <NavigationProperty Name="Game" Relationship="Self.line_item_game_fk" FromRole="Line_Item" ToRole="Game" />
-          <NavigationProperty Name="Invoice" Relationship="Self.line_item_invoice_fk" FromRole="Line_Item" ToRole="Invoice" />
+          <NavigationProperty Name="Invoice" Relationship="VideoGameStoreDBModel.line_item_invoice_fk" FromRole="Line_Item" ToRole="Invoice" />
         </EntityType>
         <EntityType Name="Province">
           <Key>
@@ -782,20 +767,6 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
           <Property Name="contact_phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="contact_email" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Games" Relationship="Self.game_publisher_fk" FromRole="Publisher" ToRole="Game" />
-        </EntityType>
-        <EntityType Name="Review">
-          <Key>
-            <PropertyRef Name="review_id" />
-          </Key>
-          <Property Name="review_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="user_id" Type="Int32" Nullable="false" />
-          <Property Name="game_id" Type="Int32" Nullable="false" />
-          <Property Name="review_date" Type="DateTime" Nullable="false" />
-          <Property Name="is_approved" Type="Boolean" Nullable="false" />
-          <Property Name="is_deleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Game" Relationship="Self.review_game_fk" FromRole="Review" ToRole="Game" />
-          <Property Name="review_content" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="User" Relationship="VideoGameStoreDBModel.review_user_fk" FromRole="Review" ToRole="User" />
         </EntityType>
         <EntityType Name="Store_Event">
           <Key>
@@ -916,18 +887,6 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="invoice_credit_card_fk">
-          <End Role="Credit_Card" Type="Self.Credit_Card" Multiplicity="1" />
-          <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Credit_Card">
-              <PropertyRef Name="credit_card_id" />
-            </Principal>
-            <Dependent Role="Invoice">
-              <PropertyRef Name="credit_card_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="game_developer_fk">
           <End Role="Developer" Type="Self.Developer" Multiplicity="1" />
           <End Role="Game" Type="Self.Game" Multiplicity="*" />
@@ -976,18 +935,6 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="review_game_fk">
-          <End Role="Game" Type="Self.Game" Multiplicity="1" />
-          <End Role="Review" Type="Self.Review" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Game">
-              <PropertyRef Name="game_id" />
-            </Principal>
-            <Dependent Role="Review">
-              <PropertyRef Name="game_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="user_game_game_fk">
           <End Role="Game" Type="Self.Game" Multiplicity="1" />
           <End Role="User_Game" Type="Self.User_Game" Multiplicity="*" />
@@ -1012,30 +959,6 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="invoice_address_invoice_fk">
-          <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
-          <End Role="Invoice_Address" Type="Self.Invoice_Address" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Invoice">
-              <PropertyRef Name="invoice_id" />
-            </Principal>
-            <Dependent Role="Invoice_Address">
-              <PropertyRef Name="invoice_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="line_item_invoice_fk">
-          <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
-          <End Role="Line_Item" Type="Self.Line_Item" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Invoice">
-              <PropertyRef Name="invoice_id" />
-            </Principal>
-            <Dependent Role="Line_Item">
-              <PropertyRef Name="invoice_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="store_event_user_store_event_fk">
           <End Role="Store_Event" Type="Self.Store_Event" Multiplicity="1" />
           <End Role="Store_Event_User" Type="Self.Store_Event_User" Multiplicity="*" />
@@ -1055,12 +978,10 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
           <EntitySet Name="Friend_List" EntityType="Self.Friend_List" />
           <EntitySet Name="Games" EntityType="Self.Game" />
           <EntitySet Name="Genres" EntityType="Self.Genre" />
-          <EntitySet Name="Invoices" EntityType="Self.Invoice" />
           <EntitySet Name="Invoice_Address" EntityType="Self.Invoice_Address" />
           <EntitySet Name="Line_Item" EntityType="Self.Line_Item" />
           <EntitySet Name="Provinces" EntityType="Self.Province" />
           <EntitySet Name="Publishers" EntityType="Self.Publisher" />
-          <EntitySet Name="Reviews" EntityType="Self.Review" />
           <EntitySet Name="Store_Event" EntityType="Self.Store_Event" />
           <EntitySet Name="Store_Event_User" EntityType="Self.Store_Event_User" />
           <EntitySet Name="User_Address" EntityType="Self.User_Address" />
@@ -1083,10 +1004,6 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
             <End Role="Address" EntitySet="Addresses" />
             <End Role="User_Address" EntitySet="User_Address" />
           </AssociationSet>
-          <AssociationSet Name="invoice_credit_card_fk" Association="Self.invoice_credit_card_fk">
-            <End Role="Credit_Card" EntitySet="Credit_Card" />
-            <End Role="Invoice" EntitySet="Invoices" />
-          </AssociationSet>
           <AssociationSet Name="game_developer_fk" Association="Self.game_developer_fk">
             <End Role="Developer" EntitySet="Developers" />
             <End Role="Game" EntitySet="Games" />
@@ -1103,10 +1020,6 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
             <End Role="Game" EntitySet="Games" />
             <End Role="Line_Item" EntitySet="Line_Item" />
           </AssociationSet>
-          <AssociationSet Name="review_game_fk" Association="Self.review_game_fk">
-            <End Role="Game" EntitySet="Games" />
-            <End Role="Review" EntitySet="Reviews" />
-          </AssociationSet>
           <AssociationSet Name="user_game_game_fk" Association="Self.user_game_game_fk">
             <End Role="Game" EntitySet="Games" />
             <End Role="User_Game" EntitySet="User_Game" />
@@ -1115,54 +1028,64 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
             <End Role="Game" EntitySet="Games" />
             <End Role="Wish_List" EntitySet="Wish_List" />
           </AssociationSet>
-          <AssociationSet Name="invoice_address_invoice_fk" Association="Self.invoice_address_invoice_fk">
-            <End Role="Invoice" EntitySet="Invoices" />
-            <End Role="Invoice_Address" EntitySet="Invoice_Address" />
-          </AssociationSet>
-          <AssociationSet Name="line_item_invoice_fk" Association="Self.line_item_invoice_fk">
-            <End Role="Invoice" EntitySet="Invoices" />
-            <End Role="Line_Item" EntitySet="Line_Item" />
-          </AssociationSet>
           <AssociationSet Name="store_event_user_store_event_fk" Association="Self.store_event_user_store_event_fk">
             <End Role="Store_Event" EntitySet="Store_Event" />
             <End Role="Store_Event_User" EntitySet="Store_Event_User" />
           </AssociationSet>
-          <EntitySet Name="User" EntityType="VideoGameStoreDBModel.User" />
+          <EntitySet Name="Users" EntityType="VideoGameStoreDBModel.User" />
           <AssociationSet Name="credit_card_user_fk" Association="VideoGameStoreDBModel.credit_card_user_fk">
-            <End Role="User" EntitySet="User" />
+            <End Role="User" EntitySet="Users" />
             <End Role="Credit_Card" EntitySet="Credit_Card" />
           </AssociationSet>
           <AssociationSet Name="friend_user_friend_fk" Association="VideoGameStoreDBModel.friend_user_friend_fk">
-            <End Role="User" EntitySet="User" />
+            <End Role="User" EntitySet="Users" />
             <End Role="Friend_List" EntitySet="Friend_List" />
           </AssociationSet>
           <AssociationSet Name="friend_user_user_fk" Association="VideoGameStoreDBModel.friend_user_user_fk">
-            <End Role="User" EntitySet="User" />
+            <End Role="User" EntitySet="Users" />
             <End Role="Friend_List" EntitySet="Friend_List" />
           </AssociationSet>
-          <AssociationSet Name="invoice_user_fk" Association="VideoGameStoreDBModel.invoice_user_fk">
-            <End Role="User" EntitySet="User" />
-            <End Role="Invoice" EntitySet="Invoices" />
-          </AssociationSet>
-          <AssociationSet Name="review_user_fk" Association="VideoGameStoreDBModel.review_user_fk">
-            <End Role="User" EntitySet="User" />
-            <End Role="Review" EntitySet="Reviews" />
-          </AssociationSet>
           <AssociationSet Name="store_event_user_user_fk" Association="VideoGameStoreDBModel.store_event_user_user_fk">
-            <End Role="User" EntitySet="User" />
+            <End Role="User" EntitySet="Users" />
             <End Role="Store_Event_User" EntitySet="Store_Event_User" />
           </AssociationSet>
           <AssociationSet Name="user_address_user_fk" Association="VideoGameStoreDBModel.user_address_user_fk">
-            <End Role="User" EntitySet="User" />
+            <End Role="User" EntitySet="Users" />
             <End Role="User_Address" EntitySet="User_Address" />
           </AssociationSet>
           <AssociationSet Name="user_game_user_fk" Association="VideoGameStoreDBModel.user_game_user_fk">
-            <End Role="User" EntitySet="User" />
+            <End Role="User" EntitySet="Users" />
             <End Role="User_Game" EntitySet="User_Game" />
           </AssociationSet>
           <AssociationSet Name="wish_list_user_fk" Association="VideoGameStoreDBModel.wish_list_user_fk">
-            <End Role="User" EntitySet="User" />
+            <End Role="User" EntitySet="Users" />
             <End Role="Wish_List" EntitySet="Wish_List" />
+          </AssociationSet>
+          <EntitySet Name="Invoices" EntityType="VideoGameStoreDBModel.Invoice" />
+          <AssociationSet Name="invoice_credit_card_fk" Association="VideoGameStoreDBModel.invoice_credit_card_fk">
+            <End Role="Credit_Card" EntitySet="Credit_Card" />
+            <End Role="Invoice" EntitySet="Invoices" />
+          </AssociationSet>
+          <AssociationSet Name="invoice_address_invoice_fk" Association="VideoGameStoreDBModel.invoice_address_invoice_fk">
+            <End Role="Invoice" EntitySet="Invoices" />
+            <End Role="Invoice_Address" EntitySet="Invoice_Address" />
+          </AssociationSet>
+          <AssociationSet Name="invoice_user_fk" Association="VideoGameStoreDBModel.invoice_user_fk">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Invoice" EntitySet="Invoices" />
+          </AssociationSet>
+          <AssociationSet Name="line_item_invoice_fk" Association="VideoGameStoreDBModel.line_item_invoice_fk">
+            <End Role="Invoice" EntitySet="Invoices" />
+            <End Role="Line_Item" EntitySet="Line_Item" />
+          </AssociationSet>
+          <EntitySet Name="Reviews" EntityType="VideoGameStoreDBModel.Review" />
+          <AssociationSet Name="review_game_fk" Association="VideoGameStoreDBModel.review_game_fk">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="Review" EntitySet="Reviews" />
+          </AssociationSet>
+          <AssociationSet Name="review_user_fk" Association="VideoGameStoreDBModel.review_user_fk">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Review" EntitySet="Reviews" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="User">
@@ -1192,12 +1115,12 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
           <NavigationProperty Name="Credit_Card" Relationship="VideoGameStoreDBModel.credit_card_user_fk" FromRole="User" ToRole="Credit_Card" />
           <NavigationProperty Name="Friend_List" Relationship="VideoGameStoreDBModel.friend_user_friend_fk" FromRole="User" ToRole="Friend_List" />
           <NavigationProperty Name="Friend_List1" Relationship="VideoGameStoreDBModel.friend_user_user_fk" FromRole="User" ToRole="Friend_List" />
-          <NavigationProperty Name="Invoice" Relationship="VideoGameStoreDBModel.invoice_user_fk" FromRole="User" ToRole="Invoice" />
-          <NavigationProperty Name="Review" Relationship="VideoGameStoreDBModel.review_user_fk" FromRole="User" ToRole="Review" />
           <NavigationProperty Name="Store_Event_User" Relationship="VideoGameStoreDBModel.store_event_user_user_fk" FromRole="User" ToRole="Store_Event_User" />
           <NavigationProperty Name="User_Address" Relationship="VideoGameStoreDBModel.user_address_user_fk" FromRole="User" ToRole="User_Address" />
           <NavigationProperty Name="User_Game" Relationship="VideoGameStoreDBModel.user_game_user_fk" FromRole="User" ToRole="User_Game" />
           <NavigationProperty Name="Wish_List" Relationship="VideoGameStoreDBModel.wish_list_user_fk" FromRole="User" ToRole="Wish_List" />
+          <NavigationProperty Name="Invoices" Relationship="VideoGameStoreDBModel.invoice_user_fk" FromRole="User" ToRole="Invoice" />
+          <NavigationProperty Name="Reviews" Relationship="VideoGameStoreDBModel.review_user_fk" FromRole="User" ToRole="Review" />
         </EntityType>
         <Association Name="credit_card_user_fk">
           <End Type="VideoGameStoreDBModel.User" Role="User" Multiplicity="1" />
@@ -1231,30 +1154,6 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
               <PropertyRef Name="user_id" />
             </Principal>
             <Dependent Role="Friend_List">
-              <PropertyRef Name="user_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="invoice_user_fk">
-          <End Type="VideoGameStoreDBModel.User" Role="User" Multiplicity="1" />
-          <End Type="VideoGameStoreDBModel.Invoice" Role="Invoice" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="user_id" />
-            </Principal>
-            <Dependent Role="Invoice">
-              <PropertyRef Name="user_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="review_user_fk">
-          <End Type="VideoGameStoreDBModel.User" Role="User" Multiplicity="1" />
-          <End Type="VideoGameStoreDBModel.Review" Role="Review" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="user_id" />
-            </Principal>
-            <Dependent Role="Review">
               <PropertyRef Name="user_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -1307,7 +1206,108 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="invoice_id" />
+          </Key>
+          <Property Name="invoice_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="credit_card_id" Type="Int32" Nullable="false" />
+          <Property Name="invoice_date" Type="DateTime" Nullable="false" />
+          <Property Name="ship_date" Type="DateTime" />
+          <Property Name="is_invoice_closed" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Credit_Card" Relationship="VideoGameStoreDBModel.invoice_credit_card_fk" FromRole="Invoice" ToRole="Credit_Card" />
+          <NavigationProperty Name="Invoice_Address" Relationship="VideoGameStoreDBModel.invoice_address_invoice_fk" FromRole="Invoice" ToRole="Invoice_Address" />
+          <NavigationProperty Name="User" Relationship="VideoGameStoreDBModel.invoice_user_fk" FromRole="Invoice" ToRole="User" />
+          <NavigationProperty Name="Line_Item" Relationship="VideoGameStoreDBModel.line_item_invoice_fk" FromRole="Invoice" ToRole="Line_Item" />
+        </EntityType>
+        <Association Name="invoice_credit_card_fk">
+          <End Type="VideoGameStoreDBModel.Credit_Card" Role="Credit_Card" Multiplicity="1" />
+          <End Type="VideoGameStoreDBModel.Invoice" Role="Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Credit_Card">
+              <PropertyRef Name="credit_card_id" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="credit_card_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="invoice_address_invoice_fk">
+          <End Type="VideoGameStoreDBModel.Invoice" Role="Invoice" Multiplicity="1" />
+          <End Type="VideoGameStoreDBModel.Invoice_Address" Role="Invoice_Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="invoice_id" />
+            </Principal>
+            <Dependent Role="Invoice_Address">
+              <PropertyRef Name="invoice_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="invoice_user_fk">
+          <End Type="VideoGameStoreDBModel.User" Role="User" Multiplicity="1" />
+          <End Type="VideoGameStoreDBModel.Invoice" Role="Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="line_item_invoice_fk">
+          <End Type="VideoGameStoreDBModel.Invoice" Role="Invoice" Multiplicity="1" />
+          <End Type="VideoGameStoreDBModel.Line_Item" Role="Line_Item" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="invoice_id" />
+            </Principal>
+            <Dependent Role="Line_Item">
+              <PropertyRef Name="invoice_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Review">
+          <Key>
+            <PropertyRef Name="review_id" />
+          </Key>
+          <Property Name="review_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="game_id" Type="Int32" Nullable="false" />
+          <Property Name="review_date" Type="DateTime" Nullable="false" />
+          <Property Name="review_content" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="is_approved" Type="Boolean" Nullable="false" />
+          <Property Name="is_deleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Game" Relationship="VideoGameStoreDBModel.review_game_fk" FromRole="Review" ToRole="Game" />
+          <NavigationProperty Name="User" Relationship="VideoGameStoreDBModel.review_user_fk" FromRole="Review" ToRole="User" />
+        </EntityType>
+        <Association Name="review_game_fk">
+          <End Type="VideoGameStoreDBModel.Game" Role="Game" Multiplicity="1" />
+          <End Type="VideoGameStoreDBModel.Review" Role="Review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="game_id" />
+            </Principal>
+            <Dependent Role="Review">
+              <PropertyRef Name="game_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="review_user_fk">
+          <End Type="VideoGameStoreDBModel.User" Role="User" Multiplicity="1" />
+          <End Type="VideoGameStoreDBModel.Review" Role="Review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Review">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1387,18 +1387,6 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Invoices">
-            <EntityTypeMapping TypeName="VideoGameStoreDBModel.Invoice">
-              <MappingFragment StoreEntitySet="Invoice">
-                <ScalarProperty Name="invoice_id" ColumnName="invoice_id" />
-                <ScalarProperty Name="user_id" ColumnName="user_id" />
-                <ScalarProperty Name="credit_card_id" ColumnName="credit_card_id" />
-                <ScalarProperty Name="invoice_date" ColumnName="invoice_date" />
-                <ScalarProperty Name="ship_date" ColumnName="ship_date" />
-                <ScalarProperty Name="is_invoice_closed" ColumnName="is_invoice_closed" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Invoice_Address">
             <EntityTypeMapping TypeName="VideoGameStoreDBModel.Invoice_Address">
               <MappingFragment StoreEntitySet="Invoice_Address">
@@ -1437,19 +1425,6 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
                 <ScalarProperty Name="contact_name" ColumnName="contact_name" />
                 <ScalarProperty Name="contact_phone" ColumnName="contact_phone" />
                 <ScalarProperty Name="contact_email" ColumnName="contact_email" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Reviews">
-            <EntityTypeMapping TypeName="VideoGameStoreDBModel.Review">
-              <MappingFragment StoreEntitySet="Review">
-                <ScalarProperty Name="review_content" ColumnName="review_content" />
-                <ScalarProperty Name="review_id" ColumnName="review_id" />
-                <ScalarProperty Name="user_id" ColumnName="user_id" />
-                <ScalarProperty Name="game_id" ColumnName="game_id" />
-                <ScalarProperty Name="review_date" ColumnName="review_date" />
-                <ScalarProperty Name="is_approved" ColumnName="is_approved" />
-                <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1519,7 +1494,7 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="User">
+          <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="VideoGameStoreDBModel.User">
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="notes" ColumnName="notes" />
@@ -1545,6 +1520,31 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Invoices">
+            <EntityTypeMapping TypeName="VideoGameStoreDBModel.Invoice">
+              <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="is_invoice_closed" ColumnName="is_invoice_closed" />
+                <ScalarProperty Name="ship_date" ColumnName="ship_date" />
+                <ScalarProperty Name="invoice_date" ColumnName="invoice_date" />
+                <ScalarProperty Name="credit_card_id" ColumnName="credit_card_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="invoice_id" ColumnName="invoice_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reviews">
+            <EntityTypeMapping TypeName="VideoGameStoreDBModel.Review">
+              <MappingFragment StoreEntitySet="Review">
+                <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+                <ScalarProperty Name="is_approved" ColumnName="is_approved" />
+                <ScalarProperty Name="review_content" ColumnName="review_content" />
+                <ScalarProperty Name="review_date" ColumnName="review_date" />
+                <ScalarProperty Name="game_id" ColumnName="game_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="review_id" ColumnName="review_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -1559,7 +1559,7 @@ FROM `Sales_Report` AS `Sales_Report`</DefiningQuery>
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

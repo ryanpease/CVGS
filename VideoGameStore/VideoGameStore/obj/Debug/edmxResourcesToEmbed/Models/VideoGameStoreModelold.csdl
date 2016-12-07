@@ -488,41 +488,41 @@
       <End Role="Store_Event" EntitySet="Store_Event" />
       <End Role="Store_Event_User" EntitySet="Store_Event_User" />
     </AssociationSet>
-    <EntitySet Name="User" EntityType="VideoGameStoreDBModel.User" />
+    <EntitySet Name="Users" EntityType="VideoGameStoreDBModel.User" />
     <AssociationSet Name="credit_card_user_fk" Association="VideoGameStoreDBModel.credit_card_user_fk">
-      <End Role="User" EntitySet="User" />
+      <End Role="User" EntitySet="Users" />
       <End Role="Credit_Card" EntitySet="Credit_Card" />
     </AssociationSet>
     <AssociationSet Name="friend_user_friend_fk" Association="VideoGameStoreDBModel.friend_user_friend_fk">
-      <End Role="User" EntitySet="User" />
+      <End Role="User" EntitySet="Users" />
       <End Role="Friend_List" EntitySet="Friend_List" />
     </AssociationSet>
     <AssociationSet Name="friend_user_user_fk" Association="VideoGameStoreDBModel.friend_user_user_fk">
-      <End Role="User" EntitySet="User" />
+      <End Role="User" EntitySet="Users" />
       <End Role="Friend_List" EntitySet="Friend_List" />
     </AssociationSet>
     <AssociationSet Name="invoice_user_fk" Association="VideoGameStoreDBModel.invoice_user_fk">
-      <End Role="User" EntitySet="User" />
+      <End Role="User" EntitySet="Users" />
       <End Role="Invoice" EntitySet="Invoices" />
     </AssociationSet>
     <AssociationSet Name="review_user_fk" Association="VideoGameStoreDBModel.review_user_fk">
-      <End Role="User" EntitySet="User" />
+      <End Role="User" EntitySet="Users" />
       <End Role="Review" EntitySet="Reviews" />
     </AssociationSet>
     <AssociationSet Name="store_event_user_user_fk" Association="VideoGameStoreDBModel.store_event_user_user_fk">
-      <End Role="User" EntitySet="User" />
+      <End Role="User" EntitySet="Users" />
       <End Role="Store_Event_User" EntitySet="Store_Event_User" />
     </AssociationSet>
     <AssociationSet Name="user_address_user_fk" Association="VideoGameStoreDBModel.user_address_user_fk">
-      <End Role="User" EntitySet="User" />
+      <End Role="User" EntitySet="Users" />
       <End Role="User_Address" EntitySet="User_Address" />
     </AssociationSet>
     <AssociationSet Name="user_game_user_fk" Association="VideoGameStoreDBModel.user_game_user_fk">
-      <End Role="User" EntitySet="User" />
+      <End Role="User" EntitySet="Users" />
       <End Role="User_Game" EntitySet="User_Game" />
     </AssociationSet>
     <AssociationSet Name="wish_list_user_fk" Association="VideoGameStoreDBModel.wish_list_user_fk">
-      <End Role="User" EntitySet="User" />
+      <End Role="User" EntitySet="Users" />
       <End Role="Wish_List" EntitySet="Wish_List" />
     </AssociationSet>
   </EntityContainer>
@@ -553,8 +553,8 @@
     <NavigationProperty Name="Credit_Card" Relationship="VideoGameStoreDBModel.credit_card_user_fk" FromRole="User" ToRole="Credit_Card" />
     <NavigationProperty Name="Friend_List" Relationship="VideoGameStoreDBModel.friend_user_friend_fk" FromRole="User" ToRole="Friend_List" />
     <NavigationProperty Name="Friend_List1" Relationship="VideoGameStoreDBModel.friend_user_user_fk" FromRole="User" ToRole="Friend_List" />
-    <NavigationProperty Name="Invoice" Relationship="VideoGameStoreDBModel.invoice_user_fk" FromRole="User" ToRole="Invoice" />
-    <NavigationProperty Name="Review" Relationship="VideoGameStoreDBModel.review_user_fk" FromRole="User" ToRole="Review" />
+    <NavigationProperty Name="Invoices" Relationship="VideoGameStoreDBModel.invoice_user_fk" FromRole="User" ToRole="Invoice" />
+    <NavigationProperty Name="Reviews" Relationship="VideoGameStoreDBModel.review_user_fk" FromRole="User" ToRole="Review" />
     <NavigationProperty Name="Store_Event_User" Relationship="VideoGameStoreDBModel.store_event_user_user_fk" FromRole="User" ToRole="Store_Event_User" />
     <NavigationProperty Name="User_Address" Relationship="VideoGameStoreDBModel.user_address_user_fk" FromRole="User" ToRole="User_Address" />
     <NavigationProperty Name="User_Game" Relationship="VideoGameStoreDBModel.user_game_user_fk" FromRole="User" ToRole="User_Game" />
