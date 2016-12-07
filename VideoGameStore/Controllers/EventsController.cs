@@ -1,4 +1,10 @@
-﻿using MySql.Data.MySqlClient;
+﻿/* File Name:
+ * EventsController.cs
+ * 
+ * 
+ */
+
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
