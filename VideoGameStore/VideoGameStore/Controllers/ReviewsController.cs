@@ -48,7 +48,7 @@ namespace VideoGameStore.Controllers
         {
             Review review = new Review();
 
-            if (userGameID != 0)
+            if (userGameID != 0 || userGameID != null)
             {
                 User_Game userGame = db.User_Game.Find(userGameID);
                 ViewBag.rating = userGame.rating;
@@ -107,7 +107,7 @@ namespace VideoGameStore.Controllers
                 return HttpNotFound();
             }
 
-            if (userGameID != 0)
+            if (userGameID != 0 || userGameID != null)
             {
                 User_Game userGame = db.User_Game.Find(userGameID);
                 ViewBag.datePurchased = userGame.date_purchased;

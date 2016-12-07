@@ -62,7 +62,7 @@
                         else
                         {
                             <div class="text-centre">
-                                <a class="btn btn-primary" href="@Url.Action("Edit", "Reviews", new { id = ViewBag.reviewID })">Review Game</a>
+                                <a class="btn btn-primary" href="@Url.Action("Edit", "Reviews", new { id = ViewBag.reviewID, userGameID = Model.user_game_id })">Review Game</a>
                             </div>
                         }
                 </td>
