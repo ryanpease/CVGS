@@ -1,4 +1,11 @@
-﻿using System;
+﻿/* Filename: InvoicesController.cs
+ * Description: This class is responsible for handing the interaction between the user and the Invoice model.
+ * 
+ * Revision History:
+ *     Ryan Pease, 2016-10-23: Created 
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -22,6 +29,7 @@ namespace VideoGameStore.Controllers
             return View(invoices.ToList());
         }
 
+        // This action retrieves the invoices for the current user and provides them for the view.
         [Authorize(Roles = "Customer, Admin, Employee, Member")]
         public ActionResult DisplayUserInvoices()
         {
@@ -30,6 +38,7 @@ namespace VideoGameStore.Controllers
             return View(invoices.ToList());
         }
 
+        // This action retreives a particular invoice for the current user and provides them for the view.
         [Authorize(Roles = "Customer, Admin, Employee, Member")]
         public ActionResult DisplayUserInvoice(int? id)
         {

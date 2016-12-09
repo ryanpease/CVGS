@@ -1,4 +1,11 @@
-﻿using MySql.Data.MySqlClient;
+﻿/* Filename: EventsController.cs
+ * Description: This class is responsible for handing the interaction between the user and the Event model.
+ * 
+ * Revision History:
+ *     Ryan Pease, 2016-10-23: Created 
+*/
+
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;

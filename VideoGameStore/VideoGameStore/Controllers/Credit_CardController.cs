@@ -1,4 +1,11 @@
-﻿using System;
+﻿/* Filename: Credit_CardController.cs
+ * Description: This class is responsible for handing the interaction between the user and the Credit Card model.
+ * 
+ * Revision History:
+ *     Ryan Pease, 2016-10-23: Created 
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -22,6 +29,7 @@ namespace VideoGameStore.Controllers
             return View(credit_Card.ToList());
         }
 
+        // This action retrieves the current user's credit cards and provides them for the view.
         [Authorize(Roles = "Admin, Employee, Customer, Member")]
         public ActionResult UserCards()
         {
@@ -54,6 +62,7 @@ namespace VideoGameStore.Controllers
             return View();
         }
 
+        // This action creates a credit card for the current user.
         // GET: Credit_Card/CreateUserCreditCard
         public ActionResult CreateUserCreditCard()
         {
@@ -80,6 +89,7 @@ namespace VideoGameStore.Controllers
             return View(credit_Card);
         }
 
+        // This action creates a credit card for the current user.
         // POST: Credit_Card/CreateUserCreditCard
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.

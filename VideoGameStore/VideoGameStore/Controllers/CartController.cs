@@ -1,5 +1,7 @@
 ﻿/* Filename: CartController.cs
- * Description: This class is responsible for handing the interaction between the user and the cart model.
+ * Description: This class is responsible for handing the interaction between the user and the Cart model.
+ *
+ * Note: Some of this code was adapted from example code found in Chapter 9 of "Pro ASP.NET MVC 5" by Adam Freeman.
  * 
  * Revision History:
  *     Ryan Pease, 2016-11-29: Created 
@@ -22,12 +24,7 @@ namespace VideoGameStore.Controllers
 
         [AllowAnonymous]
         public PartialViewResult Summary(Cart cart)
-        {
-            //if (this.User.Identity.IsAuthenticated)
-            //{
-            //    int user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
-            //    ViewBag.user_id = user_id;
-            //}            
+        {         
             return PartialView(cart);
         }     
 
@@ -111,14 +108,6 @@ namespace VideoGameStore.Controllers
             }
         }
 
-        //[AllowAnonymous]
-        //public ActionResult Test()      //just for testing
-        //{
-        //    int invoiceNumber = 3;
-        //    return RedirectToAction("DisplayUserInvoice", "Invoices", new { invoice_id = invoiceNumber }); 
-        //    //return Redirect("/Invoices/DisplayUserInvoice/" + invoiceNumber);
-        //}
-
         [AllowAnonymous]
         public RedirectToRouteResult AddToCart(int game_id, string returnUrl)
         {
@@ -143,7 +132,7 @@ namespace VideoGameStore.Controllers
             return RedirectToAction("Index", new { returnUrl });
         }
 
-
+        // The purpose of this method is to retrieve the cart from the session variable, or create a new one
         private Cart GetCart()
         {
             Cart cart = (Cart)Session["Cart"];

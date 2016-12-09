@@ -1,4 +1,11 @@
-﻿using System;
+﻿/* Filename: LoginModel.cs
+ * Description: This class is responsible for the characteristics for the user login model.
+ * 
+ * Revision History:
+ *     Ryan Pease, 2016-11-29: Created 
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;

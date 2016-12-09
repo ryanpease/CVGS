@@ -1,4 +1,11 @@
-﻿using System;
+﻿/* Filename: Wish_ListController.cs
+ * Description: This class is responsible for handing the interaction between the user and the Wish List model.
+ * 
+ * Revision History:
+ *     Ryan Pease, 2016-10-23: Created 
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -41,7 +48,6 @@ namespace VideoGameStore.Controllers
         public ActionResult Create(int? id)
         {
             ViewBag.game_id = new SelectList(db.Games, "game_id", "game_name");
-            //need a way to pass in the user_id of current user 
             ViewBag.user_id = new SelectList(db.Users.Where(f => f.username == this.User.Identity.Name), "user_id", "username");
             return View();
         }

@@ -1,4 +1,11 @@
-﻿using MySql.Data.MySqlClient;
+﻿/* Filename: GamesController.cs
+ * Description: This class is responsible for handing the interaction between the user and the Game model.
+ * 
+ * Revision History:
+ *     Ryan Pease, 2016-10-23: Created 
+*/
+
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -247,7 +254,6 @@ namespace VideoGameStore.Controllers
                     using (SharedDB.connection)
                     {
                         SharedDB.connection.Open();
-                        //Maybe break it into two queries.
                         SharedDB.command = new MySqlCommand("SELECT rating FROM User_Game WHERE rating IS NOT NULL AND game_id = " + id, SharedDB.connection);
                         MySqlDataReader reader = SharedDB.command.ExecuteReader();
                         if (reader.HasRows)

@@ -1,4 +1,11 @@
-﻿using System;
+﻿/* Filename: AddressesController.cs
+ * Description: This class is responsible for handing the interaction between the user and the Address model.
+ * 
+ * Revision History:
+ *     Ryan Pease, 2016-10-23: Created 
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -64,7 +71,6 @@ namespace VideoGameStore.Controllers
         // GET: Addresses/CreateUserAddress
         public ActionResult CreateUserAddress()
         {
-            //ViewBag.user_id = db.Users.Where(u => u.username == this.User.Identity.Name).FirstOrDefault().user_id;
             ViewBag.province_id = new SelectList(db.Provinces, "province_id", "province_code");
             return View();
         }

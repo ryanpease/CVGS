@@ -1,6 +1,9 @@
 ﻿/* Filename: CartController.cs
  * Description: This class is responsible for handing the user authorization and authentication.
  * 
+ * Note: Some of the code is based on the tutorial found at the link below:
+ * http://kristianguevara.net/creating-your-asp-net-mvc-5-application-from-scratch-for-beginners-using-entity-framework-6-and-identity-with-crud-functionalities/
+ * 
  * Revision History:
  *     Ryan Pease, 2016-11-22: Created 
 */
